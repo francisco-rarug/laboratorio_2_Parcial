@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Rarug.Francisco.Parcial/1.0.0": {
+        "dependencies": {
+          "Fabrica": "1.0.0"
+        },
+        "runtime": {
+          "Rarug.Francisco.Parcial.dll": {}
+        }
+      },
+      "Fabrica/1.0.0": {
+        "runtime": {
+          "Fabrica.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rarug.Francisco.Parcial/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fabrica/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

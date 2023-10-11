@@ -1,0 +1,11 @@
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\bin\Debug\net6.0\Fabrica.deps.json
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\bin\Debug\net6.0\Fabrica.dll
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\bin\Debug\net6.0\Fabrica.pdb
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.AssemblyInfoInputs.cache
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.AssemblyInfo.cs
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.csproj.CoreCompileInputs.cache
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.dll
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\refint\Fabrica.dll
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.pdb
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\ref\Fabrica.dll
