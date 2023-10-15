@@ -9,9 +9,14 @@ namespace Fabrica
     public class Supervisor:Personal
     {
         private string legajo;
+        private static List<Supervisor> supervisor = new List<Supervisor>();
+
+        public static List<Supervisor> ListaSupervisor { get => supervisor; set => supervisor = value; }
+
         public Supervisor(string nombre, string password, Rango rango, string apellido) : base(nombre, password, rango)
         {
             this.legajo = apellido;
         }
+
     }
 }

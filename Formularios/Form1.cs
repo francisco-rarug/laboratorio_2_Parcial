@@ -8,9 +8,6 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
-    List<Operario> operarios = new List<Operario>();
-    List<Supervisor> supervisor = new List<Supervisor>();
-
     private void button2_Click(object sender, EventArgs e)
     {
         Close();
@@ -38,7 +35,7 @@ public partial class Form1 : Form
 
 
 
-        foreach (Operario operario in operarios)
+        foreach (Operario operario in Operario.ListaOperarios)
         {
             if (usuario ==operario.Usuario && password == operario.Password && rangoAuxiliar==Rango.Operario)
             {
@@ -54,7 +51,7 @@ public partial class Form1 : Form
         }
 
 
-        foreach (Supervisor supervisor in supervisor)
+        foreach (Supervisor supervisor in Supervisor.ListaSupervisor)
         {
             if (usuario == supervisor.Usuario && password == supervisor.Password && rangoAuxiliar == Rango.Supervisor)
             {
@@ -89,15 +86,23 @@ public partial class Form1 : Form
     {
         Operario operario1 = new Operario("thiago", "brisa", Rango.Operario, "ramos");
         Operario operario2 = new Operario("dylan", "zoe", Rango.Operario, "alvarez");
+        Operario operario3 = new Operario("ramiro", "mari", Rango.Operario, "mion");
+        Operario operario4 = new Operario("lauti", "profe", Rango.Operario, "profe");
+        Operario operario5 = new Operario("lucas", "profe", Rango.Operario, "profe");
+        Operario operario6 = new Operario("mathi", "profe", Rango.Operario, "profe");
 
-        operarios.Add(operario1);
-        operarios.Add(operario2);
+        Operario.ListaOperarios.Add(operario1);
+        Operario.ListaOperarios.Add(operario2);
+        Operario.ListaOperarios.Add(operario3);
+        Operario.ListaOperarios.Add(operario4);
+        Operario.ListaOperarios.Add(operario5);
+        Operario.ListaOperarios.Add(operario6);
 
         Supervisor supervisor1 = new Supervisor("francisco", "mica", Rango.Supervisor, "rarug");
         Supervisor supervisor2 = new Supervisor("rama", "mari", Rango.Supervisor, "mion");
 
-        supervisor.Add(supervisor1);
-        supervisor.Add(supervisor2);
+        Supervisor.ListaSupervisor.Add(supervisor1);
+        Supervisor.ListaSupervisor.Add(supervisor2);
     }
 
 }

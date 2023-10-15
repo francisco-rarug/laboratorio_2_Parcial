@@ -37,7 +37,7 @@
             button5 = new Button();
             buttonCreate = new Button();
             button1 = new Button();
-            button7 = new Button();
+            buttonOperariosConectados = new Button();
             button8 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -130,16 +130,17 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button7
+            // buttonOperariosConectados
             // 
-            button7.BackColor = Color.LightGoldenrodYellow;
-            button7.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.Location = new Point(602, 203);
-            button7.Name = "button7";
-            button7.Size = new Size(186, 70);
-            button7.TabIndex = 11;
-            button7.Text = "Ver operarios conectados";
-            button7.UseVisualStyleBackColor = false;
+            buttonOperariosConectados.BackColor = Color.LightGoldenrodYellow;
+            buttonOperariosConectados.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOperariosConectados.Location = new Point(602, 203);
+            buttonOperariosConectados.Name = "buttonOperariosConectados";
+            buttonOperariosConectados.Size = new Size(186, 70);
+            buttonOperariosConectados.TabIndex = 11;
+            buttonOperariosConectados.Text = "Ver operarios conectados";
+            buttonOperariosConectados.UseVisualStyleBackColor = false;
+            buttonOperariosConectados.Click += buttonOperariosConectados_Click;
             // 
             // button8
             // 
@@ -159,7 +160,7 @@
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 450);
             Controls.Add(button8);
-            Controls.Add(button7);
+            Controls.Add(buttonOperariosConectados);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(button3);
@@ -183,7 +184,7 @@
         private Button button5;
         private Button buttonCreate;
         private Button button1;
-        private Button button7;
+        private Button buttonOperariosConectados;
         private Button button8;
     }
 }

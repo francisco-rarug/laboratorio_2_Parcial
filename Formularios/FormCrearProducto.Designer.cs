@@ -32,28 +32,20 @@
             button4 = new Button();
             groupBox2 = new GroupBox();
             btnCrearDona = new Button();
-            progressBar8 = new ProgressBar();
-            progressBar7 = new ProgressBar();
-            progressBar6 = new ProgressBar();
-            progressBar5 = new ProgressBar();
             radioButton7 = new RadioButton();
             radioButton6 = new RadioButton();
             radioButton8 = new RadioButton();
             radioButton5 = new RadioButton();
-            groupBox1 = new GroupBox();
+            gbChocolate = new GroupBox();
             btnCrearChocolate = new Button();
-            progressBar4 = new ProgressBar();
-            progressBar3 = new ProgressBar();
-            progressBar2 = new ProgressBar();
-            progressBar1 = new ProgressBar();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton4 = new RadioButton();
-            radioButton1 = new RadioButton();
+            gbMani = new RadioButton();
+            gbVegano = new RadioButton();
+            gbBlanco = new RadioButton();
+            gbAmargo = new RadioButton();
             label2 = new Label();
             label1 = new Label();
             groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            gbChocolate.SuspendLayout();
             SuspendLayout();
             // 
             // button4
@@ -73,10 +65,6 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(btnCrearDona);
-            groupBox2.Controls.Add(progressBar8);
-            groupBox2.Controls.Add(progressBar7);
-            groupBox2.Controls.Add(progressBar6);
-            groupBox2.Controls.Add(progressBar5);
             groupBox2.Controls.Add(radioButton7);
             groupBox2.Controls.Add(radioButton6);
             groupBox2.Controls.Add(radioButton8);
@@ -99,42 +87,6 @@
             btnCrearDona.Text = "Crear Dona";
             btnCrearDona.UseVisualStyleBackColor = true;
             btnCrearDona.Click += btnCrearDona_Click;
-            // 
-            // progressBar8
-            // 
-            progressBar8.ImeMode = ImeMode.NoControl;
-            progressBar8.Location = new Point(156, 219);
-            progressBar8.Name = "progressBar8";
-            progressBar8.Size = new Size(100, 23);
-            progressBar8.TabIndex = 8;
-            progressBar8.Value = 100;
-            // 
-            // progressBar7
-            // 
-            progressBar7.ImeMode = ImeMode.NoControl;
-            progressBar7.Location = new Point(156, 161);
-            progressBar7.Name = "progressBar7";
-            progressBar7.Size = new Size(100, 23);
-            progressBar7.TabIndex = 7;
-            progressBar7.Value = 100;
-            // 
-            // progressBar6
-            // 
-            progressBar6.ImeMode = ImeMode.NoControl;
-            progressBar6.Location = new Point(156, 101);
-            progressBar6.Name = "progressBar6";
-            progressBar6.Size = new Size(100, 23);
-            progressBar6.TabIndex = 6;
-            progressBar6.Value = 100;
-            // 
-            // progressBar5
-            // 
-            progressBar5.ImeMode = ImeMode.NoControl;
-            progressBar5.Location = new Point(156, 44);
-            progressBar5.Name = "progressBar5";
-            progressBar5.Size = new Size(100, 23);
-            progressBar5.TabIndex = 5;
-            progressBar5.Value = 100;
             // 
             // radioButton7
             // 
@@ -184,24 +136,20 @@
             radioButton5.Text = "Glaseadas";
             radioButton5.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbChocolate
             // 
-            groupBox1.Controls.Add(btnCrearChocolate);
-            groupBox1.Controls.Add(progressBar4);
-            groupBox1.Controls.Add(progressBar3);
-            groupBox1.Controls.Add(progressBar2);
-            groupBox1.Controls.Add(progressBar1);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton4);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(47, 75);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(272, 319);
-            groupBox1.TabIndex = 13;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Tipo de chocolate";
+            gbChocolate.Controls.Add(btnCrearChocolate);
+            gbChocolate.Controls.Add(gbMani);
+            gbChocolate.Controls.Add(gbVegano);
+            gbChocolate.Controls.Add(gbBlanco);
+            gbChocolate.Controls.Add(gbAmargo);
+            gbChocolate.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            gbChocolate.Location = new Point(47, 75);
+            gbChocolate.Name = "gbChocolate";
+            gbChocolate.Size = new Size(272, 319);
+            gbChocolate.TabIndex = 13;
+            gbChocolate.TabStop = false;
+            gbChocolate.Text = "Tipo de chocolate";
             // 
             // btnCrearChocolate
             // 
@@ -214,89 +162,53 @@
             btnCrearChocolate.UseVisualStyleBackColor = true;
             btnCrearChocolate.Click += btnCrearChocolate_Click_1;
             // 
-            // progressBar4
+            // gbMani
             // 
-            progressBar4.ImeMode = ImeMode.NoControl;
-            progressBar4.Location = new Point(166, 219);
-            progressBar4.Name = "progressBar4";
-            progressBar4.Size = new Size(100, 23);
-            progressBar4.TabIndex = 7;
-            progressBar4.Value = 100;
+            gbMani.AutoSize = true;
+            gbMani.ImeMode = ImeMode.NoControl;
+            gbMani.Location = new Point(9, 159);
+            gbMani.Name = "gbMani";
+            gbMani.Size = new Size(90, 24);
+            gbMani.TabIndex = 3;
+            gbMani.TabStop = true;
+            gbMani.Text = "Con mani";
+            gbMani.UseVisualStyleBackColor = true;
             // 
-            // progressBar3
+            // gbVegano
             // 
-            progressBar3.ImeMode = ImeMode.NoControl;
-            progressBar3.Location = new Point(166, 160);
-            progressBar3.Name = "progressBar3";
-            progressBar3.Size = new Size(100, 23);
-            progressBar3.TabIndex = 6;
-            progressBar3.Value = 100;
+            gbVegano.AutoSize = true;
+            gbVegano.ImeMode = ImeMode.NoControl;
+            gbVegano.Location = new Point(9, 101);
+            gbVegano.Name = "gbVegano";
+            gbVegano.Size = new Size(77, 24);
+            gbVegano.TabIndex = 2;
+            gbVegano.TabStop = true;
+            gbVegano.Text = "Vegano";
+            gbVegano.UseVisualStyleBackColor = true;
             // 
-            // progressBar2
+            // gbBlanco
             // 
-            progressBar2.ImeMode = ImeMode.NoControl;
-            progressBar2.Location = new Point(166, 103);
-            progressBar2.Name = "progressBar2";
-            progressBar2.Size = new Size(100, 23);
-            progressBar2.TabIndex = 5;
-            progressBar2.Value = 100;
+            gbBlanco.AutoSize = true;
+            gbBlanco.ImeMode = ImeMode.NoControl;
+            gbBlanco.Location = new Point(6, 218);
+            gbBlanco.Name = "gbBlanco";
+            gbBlanco.Size = new Size(145, 24);
+            gbBlanco.TabIndex = 1;
+            gbBlanco.TabStop = true;
+            gbBlanco.Text = "Chocolate Blanco";
+            gbBlanco.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
+            // gbAmargo
             // 
-            progressBar1.ImeMode = ImeMode.NoControl;
-            progressBar1.Location = new Point(166, 43);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(100, 23);
-            progressBar1.TabIndex = 4;
-            progressBar1.Value = 100;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.ImeMode = ImeMode.NoControl;
-            radioButton3.Location = new Point(9, 159);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(90, 24);
-            radioButton3.TabIndex = 3;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Con mani";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.ImeMode = ImeMode.NoControl;
-            radioButton2.Location = new Point(9, 101);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(77, 24);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Vegano";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            radioButton4.AutoSize = true;
-            radioButton4.ImeMode = ImeMode.NoControl;
-            radioButton4.Location = new Point(6, 218);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(145, 24);
-            radioButton4.TabIndex = 1;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Chocolate Blanco";
-            radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.ImeMode = ImeMode.NoControl;
-            radioButton1.Location = new Point(9, 42);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(79, 24);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Amargo";
-            radioButton1.UseVisualStyleBackColor = true;
+            gbAmargo.AutoSize = true;
+            gbAmargo.ImeMode = ImeMode.NoControl;
+            gbAmargo.Location = new Point(9, 42);
+            gbAmargo.Name = "gbAmargo";
+            gbAmargo.Size = new Size(79, 24);
+            gbAmargo.TabIndex = 0;
+            gbAmargo.TabStop = true;
+            gbAmargo.Text = "Amargo";
+            gbAmargo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -328,7 +240,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(gbChocolate);
             Controls.Add(label2);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -336,8 +248,8 @@
             Text = "Crear producto";
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gbChocolate.ResumeLayout(false);
+            gbChocolate.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -347,24 +259,16 @@
         private Button button4;
         private GroupBox groupBox2;
         private Button btnCrearDona;
-        private ProgressBar progressBar8;
-        private ProgressBar progressBar7;
-        private ProgressBar progressBar6;
-        private ProgressBar progressBar5;
         private RadioButton radioButton7;
         private RadioButton radioButton6;
         private RadioButton radioButton8;
         private RadioButton radioButton5;
-        private GroupBox groupBox1;
+        private GroupBox gbChocolate;
         private Button btnCrearChocolate;
-        private ProgressBar progressBar4;
-        private ProgressBar progressBar3;
-        private ProgressBar progressBar2;
-        private ProgressBar progressBar1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton4;
-        private RadioButton radioButton1;
+        private RadioButton gbMani;
+        private RadioButton gbVegano;
+        private RadioButton gbBlanco;
+        private RadioButton gbAmargo;
         private Label label2;
         private Label label1;
     }

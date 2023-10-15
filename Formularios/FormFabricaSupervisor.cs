@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,9 @@ using System.Windows.Forms;
 namespace Rarug.Francisco.Parcial
 {
     public partial class FormFabricaSupervisor : Form
+
     {
+        
         public FormFabricaSupervisor()
         {
             InitializeComponent();
@@ -32,6 +35,18 @@ namespace Rarug.Francisco.Parcial
             FormCrearProducto formProduct = new FormCrearProducto();
             Hide();
             DialogResult result = formProduct.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void buttonOperariosConectados_Click(object sender, EventArgs e)
+        {
+            VerOperarios formOperarios = new VerOperarios();
+            Hide();
+            DialogResult result = formOperarios.ShowDialog();
 
             if (result == DialogResult.Cancel)
             {
