@@ -14,7 +14,7 @@ namespace Rarug.Francisco.Parcial
     public partial class FormFabricaSupervisor : Form
 
     {
-        
+
         public FormFabricaSupervisor()
         {
             InitializeComponent();
@@ -52,6 +52,18 @@ namespace Rarug.Francisco.Parcial
             {
                 Show();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormVerMateriaPrima form = new FormVerMateriaPrima();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormProductosCreados formProductosCreados =new FormProductosCreados();
+            formProductosCreados.Show();
         }
     }
 }

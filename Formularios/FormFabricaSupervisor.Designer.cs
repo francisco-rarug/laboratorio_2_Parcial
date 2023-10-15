@@ -64,6 +64,7 @@
             button3.TabIndex = 8;
             button3.Text = "Ver stock";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -71,10 +72,11 @@
             button2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(589, 384);
             button2.Name = "button2";
-            button2.Size = new Size(152, 26);
+            button2.Size = new Size(199, 26);
             button2.TabIndex = 7;
-            button2.Text = "Ver materia prima";
+            button2.Text = "Ver Productos creados";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // groupBox1
             // 
@@ -150,7 +152,7 @@
             button8.Name = "button8";
             button8.Size = new Size(186, 70);
             button8.TabIndex = 12;
-            button8.Text = "Rellenar materia prima";
+            button8.Text = "Rellenar stock";
             button8.UseVisualStyleBackColor = false;
             // 
             // FormFabricaSupervisor

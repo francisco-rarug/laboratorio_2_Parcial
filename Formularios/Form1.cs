@@ -70,23 +70,23 @@ public partial class Form1 : Form
     private void HardSuper_Click(object sender, EventArgs e)
     {
         this.textBoxUsername.Text = "francisco";
-        this.textBoxPassword.Text = "mica";
+        this.textBoxPassword.Text = "7777";
         this.rbSupervisor.Checked = true;
 
     }
 
     private void HardOper_Click(object sender, EventArgs e)
     {
-        this.textBoxUsername.Text = "thiago";
-        this.textBoxPassword.Text = "brisa";
+        this.textBoxUsername.Text = "lauti";
+        this.textBoxPassword.Text = "profe";
         this.rbOperario.Checked = true;
     }
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        Operario operario1 = new Operario("thiago", "brisa", Rango.Operario, "ramos");
-        Operario operario2 = new Operario("dylan", "zoe", Rango.Operario, "alvarez");
-        Operario operario3 = new Operario("ramiro", "mari", Rango.Operario, "mion");
+        Operario operario1 = new Operario("thiago", "12345", Rango.Operario, "npc");
+        Operario operario2 = new Operario("dylan", "12345", Rango.Operario, "npc");
+        Operario operario3 = new Operario("ramiro", "12345", Rango.Operario, "npc");
         Operario operario4 = new Operario("lauti", "profe", Rango.Operario, "profe");
         Operario operario5 = new Operario("lucas", "profe", Rango.Operario, "profe");
         Operario operario6 = new Operario("mathi", "profe", Rango.Operario, "profe");
@@ -98,8 +98,8 @@ public partial class Form1 : Form
         Operario.ListaOperarios.Add(operario5);
         Operario.ListaOperarios.Add(operario6);
 
-        Supervisor supervisor1 = new Supervisor("francisco", "mica", Rango.Supervisor, "rarug");
-        Supervisor supervisor2 = new Supervisor("rama", "mari", Rango.Supervisor, "mion");
+        Supervisor supervisor1 = new Supervisor("francisco", "7777", Rango.Supervisor, "rarug");
+        Supervisor supervisor2 = new Supervisor("lionel", "1010", Rango.Supervisor, "messi");
 
         Supervisor.ListaSupervisor.Add(supervisor1);
         Supervisor.ListaSupervisor.Add(supervisor2);

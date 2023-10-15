@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
-    public partial class FormVerMateriaPrima : Form
+    public partial class FormProductosCreados : Form
     {
-        public FormVerMateriaPrima()
+        public FormProductosCreados()
         {
             InitializeComponent();
-            dataGridView1.DataSource = Produccion.Materiales1.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
+            dataGridView1.DataSource = Chocolate.ListaChocolates;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

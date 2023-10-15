@@ -62,6 +62,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GreenYellow;
             ClientSize = new Size(800, 450);
+            ControlBox = false;
             Controls.Add(progressBar1);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");

@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace Fabrica
 {
-    public class Chocolate:ChocoDona
+    public class Chocolate
     {
-        private string mani;
-        public Chocolate(string cacao, string leche, Rango rango, string azucar, string mani) : base(cacao, leche, azucar)
+        private string tamaño;
+        private string tipoChocolate;
+        
+        private static List<Chocolate> listaChocolates = new List<Chocolate>();
+
+        public Chocolate(string tamaño, string tipoChocolate)
         {
-            this.mani = mani;
+            this.tamaño = tamaño;
+            this.tipoChocolate = tipoChocolate;
         }
 
+        public string Tamaño { get => tamaño; set => tamaño = value; }
+        public static List<Chocolate> ListaChocolates { get => listaChocolates; set => listaChocolates = value; }
+        public string TipoChocolate { get => tipoChocolate; set => tipoChocolate = value; }
     }
 }

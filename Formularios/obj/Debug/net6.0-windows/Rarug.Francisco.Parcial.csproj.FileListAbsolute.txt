@@ -48,3 +48,4 @@ C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormModal3.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.Properties.Resources.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.Finalizado.resources
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormProductosCreados.resources

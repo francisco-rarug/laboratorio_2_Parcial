@@ -2,49 +2,40 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Fabrica
 {
     public class Produccion
     {
-        public List<MateriaPrima> MateriasPrimas { get; set; }
 
-        public Produccion()
+        private static Dictionary<string, int> Materiales = new Dictionary<string, int>()
         {
-            MateriasPrimas = new List<MateriaPrima>();
-            MateriasPrimas.Add(new MateriaPrima("Cacao", 1000)); 
-            MateriasPrimas.Add(new MateriaPrima("Azúcar", 1500));
-            
-        }
-        public void ProducirChocolate(string tipoChocolate)
+            {"chocolate blanco", 100 },
+            {"chocolate amargo", 100 },
+            {"chocolate vegano", 100 },
+            {"chocolate con mani", 50 },
+        };
+
+        public static Dictionary<string, int> Materiales1 { get => Materiales; set => Materiales = value; }
+
+        public static bool Stock(string tipoChocolate)
         {
-            switch (tipoChocolate)
+
+            foreach (var componente in Materiales)
             {
-                case "Chocolate Amargo":
-                    foreach (MateriaPrima materia in MateriasPrimas)
-                    {
-                        if (materia.Nombre == "Cacao")
-                        {
-                            materia.Consumir(10);
-                            break;  
-                        }
-                    }
-                    break;
-                case "Chocolate con Leche":
-                    foreach (MateriaPrima materia in MateriasPrimas)
-                    {
-                        if (materia.Nombre == "Cacao")
-                        {
-                            materia.Consumir(5);
-                            break; 
-                        }
-                    }
-                    break;
-
-
+                if (componente.Key == tipoChocolate && componente.Value > 0 )
+                {
+                    Materiales[componente.Key]--;
+                    return true;
+                }
             }
-        }
+            
+            return false;
+
+           
+        } 
     }
 
 }

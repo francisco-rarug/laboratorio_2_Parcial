@@ -31,21 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearProducto));
             button4 = new Button();
             groupBox2 = new GroupBox();
-            btnCrearDona = new Button();
-            radioButton7 = new RadioButton();
             radioButton6 = new RadioButton();
+            radioButton7 = new RadioButton();
             radioButton8 = new RadioButton();
             radioButton5 = new RadioButton();
             gbChocolate = new GroupBox();
-            btnCrearChocolate = new Button();
             gbMani = new RadioButton();
             gbVegano = new RadioButton();
             gbBlanco = new RadioButton();
             gbAmargo = new RadioButton();
+            btnCrearChocolate = new Button();
             label2 = new Label();
             label1 = new Label();
+            gbTamaño = new GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            groupBox3 = new GroupBox();
+            radioButton4 = new RadioButton();
+            radioButton3 = new RadioButton();
+            button1 = new Button();
             groupBox2.SuspendLayout();
             gbChocolate.SuspendLayout();
+            gbTamaño.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // button4
@@ -64,35 +72,34 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(btnCrearDona);
-            groupBox2.Controls.Add(radioButton7);
             groupBox2.Controls.Add(radioButton6);
+            groupBox2.Controls.Add(radioButton7);
             groupBox2.Controls.Add(radioButton8);
             groupBox2.Controls.Add(radioButton5);
             groupBox2.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox2.Location = new Point(481, 75);
+            groupBox2.Location = new Point(24, 251);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(272, 319);
+            groupBox2.Size = new Size(477, 88);
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             groupBox2.Text = "Tipo de dona";
             // 
-            // btnCrearDona
+            // radioButton6
             // 
-            btnCrearDona.ImeMode = ImeMode.NoControl;
-            btnCrearDona.Location = new Point(75, 274);
-            btnCrearDona.Name = "btnCrearDona";
-            btnCrearDona.Size = new Size(132, 26);
-            btnCrearDona.TabIndex = 9;
-            btnCrearDona.Text = "Crear Dona";
-            btnCrearDona.UseVisualStyleBackColor = true;
-            btnCrearDona.Click += btnCrearDona_Click;
+            radioButton6.AutoSize = true;
+            radioButton6.Location = new Point(110, 43);
+            radioButton6.Name = "radioButton6";
+            radioButton6.Size = new Size(90, 24);
+            radioButton6.TabIndex = 4;
+            radioButton6.TabStop = true;
+            radioButton6.Text = "Cubiertas";
+            radioButton6.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
             radioButton7.AutoSize = true;
             radioButton7.ImeMode = ImeMode.NoControl;
-            radioButton7.Location = new Point(6, 160);
+            radioButton7.Location = new Point(217, 43);
             radioButton7.Name = "radioButton7";
             radioButton7.Size = new Size(109, 24);
             radioButton7.TabIndex = 3;
@@ -100,23 +107,11 @@
             radioButton7.Text = "Con chispas";
             radioButton7.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
-            // 
-            radioButton6.AutoSize = true;
-            radioButton6.ImeMode = ImeMode.NoControl;
-            radioButton6.Location = new Point(6, 103);
-            radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(103, 24);
-            radioButton6.TabIndex = 2;
-            radioButton6.TabStop = true;
-            radioButton6.Text = "Con relleno";
-            radioButton6.UseVisualStyleBackColor = true;
-            // 
             // radioButton8
             // 
             radioButton8.AutoSize = true;
             radioButton8.ImeMode = ImeMode.NoControl;
-            radioButton8.Location = new Point(6, 218);
+            radioButton8.Location = new Point(332, 43);
             radioButton8.Name = "radioButton8";
             radioButton8.Size = new Size(144, 24);
             radioButton8.TabIndex = 1;
@@ -138,39 +133,26 @@
             // 
             // gbChocolate
             // 
-            gbChocolate.Controls.Add(btnCrearChocolate);
             gbChocolate.Controls.Add(gbMani);
             gbChocolate.Controls.Add(gbVegano);
             gbChocolate.Controls.Add(gbBlanco);
             gbChocolate.Controls.Add(gbAmargo);
             gbChocolate.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            gbChocolate.Location = new Point(47, 75);
+            gbChocolate.Location = new Point(30, 44);
             gbChocolate.Name = "gbChocolate";
-            gbChocolate.Size = new Size(272, 319);
+            gbChocolate.Size = new Size(457, 79);
             gbChocolate.TabIndex = 13;
             gbChocolate.TabStop = false;
             gbChocolate.Text = "Tipo de chocolate";
-            // 
-            // btnCrearChocolate
-            // 
-            btnCrearChocolate.ImeMode = ImeMode.NoControl;
-            btnCrearChocolate.Location = new Point(61, 274);
-            btnCrearChocolate.Name = "btnCrearChocolate";
-            btnCrearChocolate.Size = new Size(132, 26);
-            btnCrearChocolate.TabIndex = 4;
-            btnCrearChocolate.Text = "Crear chocolate";
-            btnCrearChocolate.UseVisualStyleBackColor = true;
-            btnCrearChocolate.Click += btnCrearChocolate_Click_1;
             // 
             // gbMani
             // 
             gbMani.AutoSize = true;
             gbMani.ImeMode = ImeMode.NoControl;
-            gbMani.Location = new Point(9, 159);
+            gbMani.Location = new Point(193, 42);
             gbMani.Name = "gbMani";
             gbMani.Size = new Size(90, 24);
             gbMani.TabIndex = 3;
-            gbMani.TabStop = true;
             gbMani.Text = "Con mani";
             gbMani.UseVisualStyleBackColor = true;
             // 
@@ -178,11 +160,10 @@
             // 
             gbVegano.AutoSize = true;
             gbVegano.ImeMode = ImeMode.NoControl;
-            gbVegano.Location = new Point(9, 101);
+            gbVegano.Location = new Point(110, 42);
             gbVegano.Name = "gbVegano";
             gbVegano.Size = new Size(77, 24);
             gbVegano.TabIndex = 2;
-            gbVegano.TabStop = true;
             gbVegano.Text = "Vegano";
             gbVegano.UseVisualStyleBackColor = true;
             // 
@@ -190,17 +171,17 @@
             // 
             gbBlanco.AutoSize = true;
             gbBlanco.ImeMode = ImeMode.NoControl;
-            gbBlanco.Location = new Point(6, 218);
+            gbBlanco.Location = new Point(289, 42);
             gbBlanco.Name = "gbBlanco";
             gbBlanco.Size = new Size(145, 24);
             gbBlanco.TabIndex = 1;
-            gbBlanco.TabStop = true;
             gbBlanco.Text = "Chocolate Blanco";
             gbBlanco.UseVisualStyleBackColor = true;
             // 
             // gbAmargo
             // 
             gbAmargo.AutoSize = true;
+            gbAmargo.Checked = true;
             gbAmargo.ImeMode = ImeMode.NoControl;
             gbAmargo.Location = new Point(9, 42);
             gbAmargo.Name = "gbAmargo";
@@ -210,12 +191,23 @@
             gbAmargo.Text = "Amargo";
             gbAmargo.UseVisualStyleBackColor = true;
             // 
+            // btnCrearChocolate
+            // 
+            btnCrearChocolate.ImeMode = ImeMode.NoControl;
+            btnCrearChocolate.Location = new Point(559, 156);
+            btnCrearChocolate.Name = "btnCrearChocolate";
+            btnCrearChocolate.Size = new Size(132, 26);
+            btnCrearChocolate.TabIndex = 4;
+            btnCrearChocolate.Text = "Crear chocolate";
+            btnCrearChocolate.UseVisualStyleBackColor = true;
+            btnCrearChocolate.Click += btnCrearChocolate_Click_1;
+            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Swis721 LtEx BT", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(570, 26);
+            label2.Location = new Point(305, 216);
             label2.Name = "label2";
             label2.Size = new Size(102, 32);
             label2.TabIndex = 12;
@@ -226,22 +218,105 @@
             label1.AutoSize = true;
             label1.Font = new Font("Swis721 LtEx BT", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(99, 26);
+            label1.Location = new Point(305, 9);
             label1.Name = "label1";
             label1.Size = new Size(166, 32);
             label1.TabIndex = 11;
             label1.Text = "Chocolates";
             // 
+            // gbTamaño
+            // 
+            gbTamaño.Controls.Add(radioButton2);
+            gbTamaño.Controls.Add(radioButton1);
+            gbTamaño.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            gbTamaño.Location = new Point(539, 44);
+            gbTamaño.Name = "gbTamaño";
+            gbTamaño.Size = new Size(200, 79);
+            gbTamaño.TabIndex = 16;
+            gbTamaño.TabStop = false;
+            gbTamaño.Text = "Tamaño";
+            gbTamaño.Enter += gbTamaño_Enter;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(102, 30);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(50, 24);
+            radioButton2.TabIndex = 1;
+            radioButton2.Text = "6x6";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Checked = true;
+            radioButton1.Location = new Point(9, 30);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(50, 24);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "2x2";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(radioButton4);
+            groupBox3.Controls.Add(radioButton3);
+            groupBox3.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox3.Location = new Point(539, 251);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(200, 88);
+            groupBox3.TabIndex = 0;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Relleno";
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.Location = new Point(5, 58);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(125, 24);
+            radioButton4.TabIndex = 1;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Dulce de leche";
+            radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(5, 28);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(74, 24);
+            radioButton3.TabIndex = 0;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Cereza";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.ImeMode = ImeMode.NoControl;
+            button1.Location = new Point(559, 372);
+            button1.Name = "button1";
+            button1.Size = new Size(132, 26);
+            button1.TabIndex = 17;
+            button1.Text = "Crear Dona";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // FormCrearProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PeachPuff;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(842, 463);
+            Controls.Add(button1);
+            Controls.Add(btnCrearChocolate);
+            Controls.Add(label2);
+            Controls.Add(groupBox3);
+            Controls.Add(gbTamaño);
             Controls.Add(button4);
             Controls.Add(groupBox2);
             Controls.Add(gbChocolate);
-            Controls.Add(label2);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCrearProducto";
@@ -250,6 +325,10 @@
             groupBox2.PerformLayout();
             gbChocolate.ResumeLayout(false);
             gbChocolate.PerformLayout();
+            gbTamaño.ResumeLayout(false);
+            gbTamaño.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,9 +337,7 @@
 
         private Button button4;
         private GroupBox groupBox2;
-        private Button btnCrearDona;
         private RadioButton radioButton7;
-        private RadioButton radioButton6;
         private RadioButton radioButton8;
         private RadioButton radioButton5;
         private GroupBox gbChocolate;
@@ -271,5 +348,13 @@
         private RadioButton gbAmargo;
         private Label label2;
         private Label label1;
+        private GroupBox gbTamaño;
+        private GroupBox groupBox3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Button button1;
+        private RadioButton radioButton6;
+        private RadioButton radioButton4;
+        private RadioButton radioButton3;
     }
 }
