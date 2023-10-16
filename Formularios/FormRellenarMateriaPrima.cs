@@ -51,9 +51,13 @@ namespace Rarug.Francisco.Parcial
 
             foreach (string producto in productosSeleccionados)
             {
-                if (Produccion.Materiales.ContainsKey(producto))
+                foreach (string clave in Produccion.Materiales.Keys)
                 {
-                    Produccion.Materiales[producto] += cantidad;
+                    if (producto == clave)
+                    {
+                        Produccion.Materiales[producto] += cantidad;
+                        break;
+                    }
                 }
             }
 

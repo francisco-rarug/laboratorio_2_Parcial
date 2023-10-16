@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRellenarMateriaPrima));
             gbChocolates = new GroupBox();
+            label2 = new Label();
             checkBox6 = new CheckBox();
             checkBox5 = new CheckBox();
             checkBox4 = new CheckBox();
@@ -37,6 +38,7 @@
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
             gbDonas = new GroupBox();
+            label3 = new Label();
             checkBox7 = new CheckBox();
             checkBox8 = new CheckBox();
             checkBox9 = new CheckBox();
@@ -47,8 +49,6 @@
             numCantidad = new NumericUpDown();
             label1 = new Label();
             btnRellenar = new Button();
-            label2 = new Label();
-            label3 = new Label();
             gbChocolates.SuspendLayout();
             gbDonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
@@ -71,6 +71,15 @@
             gbChocolates.TabIndex = 0;
             gbChocolates.TabStop = false;
             gbChocolates.Text = "Materiales para rellenar (Chocolates)";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(789, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Tabletas";
             // 
             // checkBox6
             // 
@@ -155,6 +164,15 @@
             gbDonas.TabIndex = 1;
             gbDonas.TabStop = false;
             gbDonas.Text = "Materiales para rellenar (Donas)";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(789, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 21);
+            label3.TabIndex = 6;
+            label3.Text = "Relleno";
             // 
             // checkBox7
             // 
@@ -264,24 +282,6 @@
             btnRellenar.Text = "Rellenar";
             btnRellenar.UseVisualStyleBackColor = false;
             btnRellenar.Click += btnRellenar_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(789, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 21);
-            label2.TabIndex = 6;
-            label2.Text = "Tabletas";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(789, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 21);
-            label3.TabIndex = 6;
-            label3.Text = "Relleno";
             // 
             // FormRellenarMateriaPrima
             // 

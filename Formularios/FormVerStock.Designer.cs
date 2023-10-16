@@ -38,12 +38,15 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(274, 54);
+            label1.BackColor = Color.Transparent;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Arial Rounded MT Bold", 26.25F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
+            label1.Location = new Point(156, 47);
             label1.Name = "label1";
-            label1.Size = new Size(183, 25);
+            label1.Size = new Size(267, 42);
             label1.TabIndex = 1;
             label1.Text = "Stock restante";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button1
             // 
@@ -61,10 +64,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(239, 99);
+            dataGridView1.Location = new Point(158, 126);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(246, 174);
+            dataGridView1.Size = new Size(265, 182);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -73,7 +76,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(702, 395);
+            ClientSize = new Size(571, 395);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);

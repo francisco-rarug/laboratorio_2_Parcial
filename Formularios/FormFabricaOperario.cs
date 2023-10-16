@@ -25,14 +25,26 @@ namespace Rarug.Francisco.Parcial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormVerStock form = new FormVerStock();
-            form.Show();
+            FormVerStock formVerStock = new FormVerStock();
+            Hide();
+            DialogResult result = formVerStock.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormProductosCreados formProductosCreados = new FormProductosCreados();
-            formProductosCreados.Show();
+            Hide();
+            DialogResult result = formProductosCreados.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
 
         private void btnDonaDefault_Click(object sender, EventArgs e)
@@ -78,6 +90,18 @@ namespace Rarug.Francisco.Parcial
             Chocolate.ListaChocolates.Add(chocolate);
 
             Produccion.Stock(chocolates, tamaños);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormCrearProducto formProduct = new FormCrearProducto();
+            Hide();
+            DialogResult result = formProduct.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
     }
 }

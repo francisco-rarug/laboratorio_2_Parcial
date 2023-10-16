@@ -81,6 +81,7 @@
             button4.TabIndex = 0;
             button4.Text = "Crear producto";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button1
             // 

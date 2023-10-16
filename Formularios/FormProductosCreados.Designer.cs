@@ -42,10 +42,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(311, 153);
+            dataGridView1.Location = new Point(37, 170);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 76);
+            dataGridView1.Size = new Size(240, 172);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -54,7 +54,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(325, 47);
+            label1.Location = new Point(299, 25);
             label1.Name = "label1";
             label1.Size = new Size(227, 25);
             label1.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(311, 112);
+            label2.Location = new Point(47, 113);
             label2.Name = "label2";
             label2.Size = new Size(230, 25);
             label2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(333, 270);
+            label3.Location = new Point(560, 113);
             label3.Name = "label3";
             label3.Size = new Size(178, 25);
             label3.TabIndex = 5;
@@ -96,10 +96,10 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(311, 312);
+            dataGridView2.Location = new Point(527, 170);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(240, 76);
+            dataGridView2.Size = new Size(240, 171);
             dataGridView2.TabIndex = 6;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 

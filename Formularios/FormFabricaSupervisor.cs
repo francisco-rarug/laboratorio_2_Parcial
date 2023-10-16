@@ -49,20 +49,38 @@ namespace Rarug.Francisco.Parcial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormVerStock form = new FormVerStock();
-            form.Show();
+            FormVerStock formVerStock = new FormVerStock();
+            Hide();
+            DialogResult result = formVerStock.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormProductosCreados formProductosCreados = new FormProductosCreados();
-            formProductosCreados.Show();
+            Hide();
+            DialogResult result = formProductosCreados.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            FormRellenarMateriaPrima rellenarMateriaPrima = new FormRellenarMateriaPrima();
-            rellenarMateriaPrima.Show();
+            FormRellenarMateriaPrima formRellenarMateriaPrima = new FormRellenarMateriaPrima();
+            Hide();
+            DialogResult result = formRellenarMateriaPrima.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
         }
 
         private void btnChocolateDefault_Click(object sender, EventArgs e)
