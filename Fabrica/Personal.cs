@@ -8,7 +8,7 @@ namespace Fabrica
         Supervisor
     }
 
-    public class Personal
+    public abstract class Personal
     {
         private string usuario;
         private string password;
@@ -25,16 +25,8 @@ namespace Fabrica
         public string Password { get => password; set => password = value; }
         public Rango Rango { get => rango; set => rango = value; }
 
-        public string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"Usuario: {usuario}");
-            sb.AppendLine($"Password: {password}");
-            sb.AppendLine($"Rango: {rango}");
-
-            return sb.ToString();
-        }
+        public abstract string Mostrar();
+        
     }
 }
 

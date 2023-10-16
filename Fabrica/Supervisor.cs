@@ -13,10 +13,18 @@ namespace Fabrica
 
         public static List<Supervisor> ListaSupervisor { get => supervisor; set => supervisor = value; }
 
-        public Supervisor(string nombre, string password, Rango rango, string legajo) : base(nombre, password, rango)
+        public Supervisor(string usuario, string password, Rango rango, string legajo) : base(usuario, password, rango)
         {
             this.legajo =legajo ;
         }
 
+        public override string Mostrar()
+        {
+            StringBuilder sb=new StringBuilder();
+            sb.AppendLine($"Nombre: {Usuario}");
+            sb.AppendLine($"Legajo: {legajo}");
+            sb.AppendLine($"Rango: {Rango}");
+            return sb.ToString();
+        }
     }
 }

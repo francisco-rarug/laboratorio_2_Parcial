@@ -39,6 +39,7 @@ public partial class Form1 : Form
         {
             if (usuario == operario.Usuario && password == operario.Password && rangoAuxiliar == Rango.Operario)
             {
+                MessageBox.Show(operario.Mostrar(),"Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 FormFabricaOperario formFabrica = new FormFabricaOperario();
                 Hide();
                 DialogResult result = formFabrica.ShowDialog();
@@ -55,10 +56,12 @@ public partial class Form1 : Form
         {
             if (usuario == supervisor.Usuario && password == supervisor.Password && rangoAuxiliar == Rango.Supervisor)
             {
+                MessageBox.Show(supervisor.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 FormFabricaSupervisor formFabrica = new FormFabricaSupervisor();
                 Hide();
                 DialogResult result = formFabrica.ShowDialog();
 
+                
                 if (result == DialogResult.Cancel)
                 {
                     Show();
@@ -69,7 +72,7 @@ public partial class Form1 : Form
 
     private void HardSuper_Click(object sender, EventArgs e)
     {
-        this.textBoxUsername.Text = "francisco";
+        this.textBoxUsername.Text = "Francisco";
         this.textBoxPassword.Text = "7777";
         this.rbSupervisor.Checked = true;
 
@@ -77,19 +80,19 @@ public partial class Form1 : Form
 
     private void HardOper_Click(object sender, EventArgs e)
     {
-        this.textBoxUsername.Text = "lauti";
-        this.textBoxPassword.Text = "profe";
+        this.textBoxUsername.Text = "Lauti";
+        this.textBoxPassword.Text = "Profe";
         this.rbOperario.Checked = true;
     }
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        Operario operario1 = new Operario("martin", "12345", Rango.Operario, "chacal");
-        Operario operario2 = new Operario("federico", "12345", Rango.Operario, "galarza");
-        Operario operario3 = new Operario("paola", "12345", Rango.Operario, "argento");
-        Operario operario4 = new Operario("lauti", "profe", Rango.Operario, "profe");
-        Operario operario5 = new Operario("lucas", "profe", Rango.Operario, "profe");
-        Operario operario6 = new Operario("mathi", "profe", Rango.Operario, "profe");
+        Operario operario1 = new Operario("Martin", "12345", Rango.Operario, "Chacal");
+        Operario operario2 = new Operario("Federico", "12345", Rango.Operario, "Galarza");
+        Operario operario3 = new Operario("Paola", "12345", Rango.Operario, "Argento");
+        Operario operario4 = new Operario("Lauti", "profe", Rango.Operario, "Profe");
+        Operario operario5 = new Operario("Lucas", "profe", Rango.Operario, "Profe");
+        Operario operario6 = new Operario("Mathi", "profe", Rango.Operario, "Bustamante");
 
         Operario.ListaOperarios.Add(operario1);
         Operario.ListaOperarios.Add(operario2);
@@ -98,8 +101,8 @@ public partial class Form1 : Form
         Operario.ListaOperarios.Add(operario5);
         Operario.ListaOperarios.Add(operario6);
 
-        Supervisor supervisor1 = new Supervisor("francisco", "7777", Rango.Supervisor, "rarug");
-        Supervisor supervisor2 = new Supervisor("raul", "1010", Rango.Supervisor, "musk");
+        Supervisor supervisor1 = new Supervisor("Francisco", "7777", Rango.Supervisor, "11777");
+        Supervisor supervisor2 = new Supervisor("Raul", "1010", Rango.Supervisor, "11567");
 
         Supervisor.ListaSupervisor.Add(supervisor1);
         Supervisor.ListaSupervisor.Add(supervisor2);

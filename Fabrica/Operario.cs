@@ -18,6 +18,15 @@ namespace Fabrica
         }
 
         public string Apellido { get => apellido; set => apellido = value; }
-        
+
+        public override string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Nombre: {Usuario}");
+            sb.AppendLine($"Apeliido: {apellido}");
+            sb.AppendLine($"Rango: {Rango}");
+            return sb.ToString();
+        }
+
     }
 }
