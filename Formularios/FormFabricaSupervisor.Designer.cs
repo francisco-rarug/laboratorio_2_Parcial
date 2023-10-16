@@ -33,8 +33,8 @@
             button3 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
-            button6 = new Button();
-            button5 = new Button();
+            btnDonaDefault = new Button();
+            btnChocolateDefault = new Button();
             buttonCreate = new Button();
             button1 = new Button();
             buttonOperariosConectados = new Button();
@@ -80,8 +80,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(btnDonaDefault);
+            groupBox1.Controls.Add(btnChocolateDefault);
             groupBox1.Controls.Add(buttonCreate);
             groupBox1.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox1.Location = new Point(218, 105);
@@ -91,23 +91,25 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Linea produccion";
             // 
-            // button6
+            // btnDonaDefault
             // 
-            button6.Location = new Point(88, 50);
-            button6.Name = "button6";
-            button6.Size = new Size(172, 31);
-            button6.TabIndex = 2;
-            button6.Text = "Crear dona default";
-            button6.UseVisualStyleBackColor = true;
+            btnDonaDefault.Location = new Point(88, 50);
+            btnDonaDefault.Name = "btnDonaDefault";
+            btnDonaDefault.Size = new Size(172, 31);
+            btnDonaDefault.TabIndex = 2;
+            btnDonaDefault.Text = "Crear dona default";
+            btnDonaDefault.UseVisualStyleBackColor = true;
+            btnDonaDefault.Click += btnDonaDefault_Click;
             // 
-            // button5
+            // btnChocolateDefault
             // 
-            button5.Location = new Point(88, 108);
-            button5.Name = "button5";
-            button5.Size = new Size(172, 32);
-            button5.TabIndex = 1;
-            button5.Text = "Crear chocolate default";
-            button5.UseVisualStyleBackColor = true;
+            btnChocolateDefault.Location = new Point(88, 108);
+            btnChocolateDefault.Name = "btnChocolateDefault";
+            btnChocolateDefault.Size = new Size(172, 32);
+            btnChocolateDefault.TabIndex = 1;
+            btnChocolateDefault.Text = "Crear chocolate default";
+            btnChocolateDefault.UseVisualStyleBackColor = true;
+            btnChocolateDefault.Click += btnChocolateDefault_Click;
             // 
             // buttonCreate
             // 
@@ -171,6 +173,7 @@
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormFabricaSupervisor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Supervisor";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
@@ -183,8 +186,8 @@
         private Button button3;
         private Button button2;
         private GroupBox groupBox1;
-        private Button button6;
-        private Button button5;
+        private Button btnDonaDefault;
+        private Button btnChocolateDefault;
         private Button buttonCreate;
         private Button button1;
         private Button buttonOperariosConectados;

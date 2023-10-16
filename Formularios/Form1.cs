@@ -37,7 +37,7 @@ public partial class Form1 : Form
 
         foreach (Operario operario in Operario.ListaOperarios)
         {
-            if (usuario ==operario.Usuario && password == operario.Password && rangoAuxiliar==Rango.Operario)
+            if (usuario == operario.Usuario && password == operario.Password && rangoAuxiliar == Rango.Operario)
             {
                 FormFabricaOperario formFabrica = new FormFabricaOperario();
                 Hide();
@@ -84,9 +84,9 @@ public partial class Form1 : Form
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        Operario operario1 = new Operario("thiago", "12345", Rango.Operario, "npc");
-        Operario operario2 = new Operario("dylan", "12345", Rango.Operario, "npc");
-        Operario operario3 = new Operario("ramiro", "12345", Rango.Operario, "npc");
+        Operario operario1 = new Operario("martin", "12345", Rango.Operario, "chacal");
+        Operario operario2 = new Operario("federico", "12345", Rango.Operario, "galarza");
+        Operario operario3 = new Operario("paola", "12345", Rango.Operario, "argento");
         Operario operario4 = new Operario("lauti", "profe", Rango.Operario, "profe");
         Operario operario5 = new Operario("lucas", "profe", Rango.Operario, "profe");
         Operario operario6 = new Operario("mathi", "profe", Rango.Operario, "profe");
@@ -99,7 +99,7 @@ public partial class Form1 : Form
         Operario.ListaOperarios.Add(operario6);
 
         Supervisor supervisor1 = new Supervisor("francisco", "7777", Rango.Supervisor, "rarug");
-        Supervisor supervisor2 = new Supervisor("lionel", "1010", Rango.Supervisor, "messi");
+        Supervisor supervisor2 = new Supervisor("raul", "1010", Rango.Supervisor, "musk");
 
         Supervisor.ListaSupervisor.Add(supervisor1);
         Supervisor.ListaSupervisor.Add(supervisor2);

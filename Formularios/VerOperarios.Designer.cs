@@ -81,6 +81,7 @@
             Controls.Add(dataOperarios);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VerOperarios";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Operarios Conectados";
             ((System.ComponentModel.ISupportInitialize)dataOperarios).EndInit();
             ResumeLayout(false);

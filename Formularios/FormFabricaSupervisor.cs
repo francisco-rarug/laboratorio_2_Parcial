@@ -14,15 +14,9 @@ namespace Rarug.Francisco.Parcial
     public partial class FormFabricaSupervisor : Form
 
     {
-
         public FormFabricaSupervisor()
         {
             InitializeComponent();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +35,6 @@ namespace Rarug.Francisco.Parcial
                 Show();
             }
         }
-
         private void buttonOperariosConectados_Click(object sender, EventArgs e)
         {
             VerOperarios formOperarios = new VerOperarios();
@@ -56,7 +49,7 @@ namespace Rarug.Francisco.Parcial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormVerMateriaPrima form = new FormVerMateriaPrima();
+            FormVerStock form = new FormVerStock();
             form.Show();
         }
 
@@ -71,5 +64,52 @@ namespace Rarug.Francisco.Parcial
             FormRellenarMateriaPrima rellenarMateriaPrima = new FormRellenarMateriaPrima();
             rellenarMateriaPrima.Show();
         }
+
+        private void btnChocolateDefault_Click(object sender, EventArgs e)
+        {
+            string chocolates = "Amargo";
+            string tamaños = "2x2";
+
+            if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
+            {
+                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            FormModal1 formProduct = new FormModal1();
+
+            formProduct.ShowDialog();
+
+            Chocolate chocolate = new Chocolate(tamaños, chocolates);
+            Chocolate.ListaChocolates.Add(chocolate);
+
+            Produccion.Stock(chocolates, tamaños);
+        }
+        private void btnDonaDefault_Click(object sender, EventArgs e)
+        {
+            string donas = "Glaseadas";
+            string relleno = "Dulce de leche";
+
+
+            if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+            {
+                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            FormModal1 formProduct = new FormModal1();
+
+            formProduct.ShowDialog();
+
+            Dona dona = new Dona(relleno, donas);
+            Dona.ListaDonas.Add(dona);
+
+
+            Produccion.Stock(donas, relleno);
+        }
     }
 }
+
+
+

@@ -22,6 +22,16 @@ namespace Rarug.Francisco.Parcial
             Close();
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormVerStock form = new FormVerStock();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormProductosCreados formProductosCreados = new FormProductosCreados();
+            formProductosCreados.Show();
+        }
     }
 }

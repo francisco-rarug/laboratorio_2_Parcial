@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRellenarMateriaPrima));
             groupBox1 = new GroupBox();
             checkBox6 = new CheckBox();
             checkBox5 = new CheckBox();
@@ -237,6 +238,7 @@
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(233, 28);
             numericUpDown1.TabIndex = 3;
+            numericUpDown1.Value = new decimal(new int[] { 7, 0, 0, 0 });
             // 
             // label1
             // 
@@ -262,6 +264,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1029, 630);
             Controls.Add(button2);
             Controls.Add(label1);
@@ -270,9 +273,11 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Swis721 WGL4 BT", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "FormRellenarMateriaPrima";
-            Text = "FormRellenarMateriaPrima";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Rellenar Stock";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

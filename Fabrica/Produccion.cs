@@ -17,7 +17,7 @@ namespace Fabrica
             {"Cubiertas", 100 },
             {"Con chispas", 100 },
             {"Cereza", 50 },
-            {"Dulce de Leche", 50 }
+            {"Dulce de leche", 50 }
         };
 
         private static void DecrementarStock(string tipoProducto, int cantidad)

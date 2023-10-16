@@ -32,7 +32,7 @@
     <Compile Update="FormRellenarMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormVerMateriaPrima.cs">
+    <Compile Update="FormVerStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="VerOperarios.cs">

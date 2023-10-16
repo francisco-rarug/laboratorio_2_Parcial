@@ -91,7 +91,6 @@
             radioButton6.Name = "radioButton6";
             radioButton6.Size = new Size(90, 24);
             radioButton6.TabIndex = 4;
-            radioButton6.TabStop = true;
             radioButton6.Text = "Cubiertas";
             radioButton6.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +102,6 @@
             radioButton7.Name = "radioButton7";
             radioButton7.Size = new Size(109, 24);
             radioButton7.TabIndex = 3;
-            radioButton7.TabStop = true;
             radioButton7.Text = "Con chispas";
             radioButton7.UseVisualStyleBackColor = true;
             // 
@@ -115,13 +113,13 @@
             radioButton8.Name = "radioButton8";
             radioButton8.Size = new Size(144, 24);
             radioButton8.TabIndex = 1;
-            radioButton8.TabStop = true;
             radioButton8.Text = "Chocolate blanco";
             radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton5
             // 
             radioButton5.AutoSize = true;
+            radioButton5.Checked = true;
             radioButton5.ImeMode = ImeMode.NoControl;
             radioButton5.Location = new Point(6, 43);
             radioButton5.Name = "radioButton5";
@@ -275,6 +273,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
+            radioButton4.Checked = true;
             radioButton4.Location = new Point(5, 58);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(125, 24);
@@ -290,7 +289,6 @@
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(74, 24);
             radioButton3.TabIndex = 0;
-            radioButton3.TabStop = true;
             radioButton3.Text = "Cereza";
             radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -311,7 +309,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(842, 463);
             Controls.Add(btnCrearDona);
             Controls.Add(btnCrearChocolate);
@@ -324,6 +322,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCrearProducto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Crear producto";
             gbDonas.ResumeLayout(false);
             gbDonas.PerformLayout();

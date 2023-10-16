@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
-    public partial class FormVerMateriaPrima : Form
+    public partial class FormVerStock : Form
     {
-        public FormVerMateriaPrima()
+        public FormVerStock()
         {
             InitializeComponent();
             dataGridView1.DataSource = Produccion.Materiales.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();

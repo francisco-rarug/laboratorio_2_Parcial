@@ -79,7 +79,6 @@
             button4.TabIndex = 0;
             button4.Text = "Crear producto";
             button4.UseVisualStyleBackColor = true;
-            
             // 
             // button1
             // 
@@ -98,23 +97,25 @@
             // 
             button2.BackColor = Color.DarkSeaGreen;
             button2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(616, 193);
+            button2.Location = new Point(616, 199);
             button2.Name = "button2";
-            button2.Size = new Size(152, 26);
+            button2.Size = new Size(172, 53);
             button2.TabIndex = 2;
-            button2.Text = "Ver materia prima";
+            button2.Text = "Ver productos creados";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
             button3.BackColor = Color.MediumPurple;
             button3.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(616, 252);
+            button3.Location = new Point(616, 281);
             button3.Name = "button3";
-            button3.Size = new Size(152, 30);
+            button3.Size = new Size(172, 55);
             button3.TabIndex = 3;
             button3.Text = "Ver stock";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label3
             // 
@@ -142,6 +143,7 @@
             ForeColor = SystemColors.ActiveCaptionText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormFabricaOperario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Operario";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);

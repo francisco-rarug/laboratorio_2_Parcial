@@ -52,11 +52,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Linen;
-            label1.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(323, 33);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label1.Location = new Point(325, 47);
             label1.Name = "label1";
-            label1.Size = new Size(216, 25);
+            label1.Size = new Size(227, 25);
             label1.TabIndex = 2;
             label1.Text = "Productos creados";
             // 
@@ -117,6 +117,7 @@
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormProductosCreados";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Monitoreo de productos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

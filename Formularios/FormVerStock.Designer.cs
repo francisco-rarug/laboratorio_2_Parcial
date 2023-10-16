@@ -1,6 +1,6 @@
 ﻿namespace Rarug.Francisco.Parcial
 {
-    partial class FormVerMateriaPrima
+    partial class FormVerStock
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerMateriaPrima));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerStock));
             label1 = new Label();
             button1 = new Button();
             dataGridView1 = new DataGridView();
@@ -38,12 +38,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(227, 51);
+            label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label1.Location = new Point(274, 54);
             label1.Name = "label1";
-            label1.Size = new Size(258, 25);
+            label1.Size = new Size(183, 25);
             label1.TabIndex = 1;
-            label1.Text = "Materia prima restante";
+            label1.Text = "Stock restante";
             // 
             // button1
             // 
@@ -68,17 +68,19 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // FormVerMateriaPrima
+            // FormVerStock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(702, 395);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "FormVerMateriaPrima";
-            Text = "Materia prima disponible";
+            Name = "FormVerStock";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Stock disponible";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
