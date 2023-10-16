@@ -33,13 +33,15 @@ public partial class Form1 : Form
             rangoAuxiliar = Rango.Operario;
         }
 
-
+        bool esOperario = false;
+        bool esSupervisor = false;
 
         foreach (Operario operario in Operario.ListaOperarios)
         {
             if (usuario == operario.Usuario && password == operario.Password && rangoAuxiliar == Rango.Operario)
             {
-                MessageBox.Show(operario.Mostrar(),"Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                esOperario = true;
+                MessageBox.Show(operario.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 FormFabricaOperario formFabrica = new FormFabricaOperario();
                 Hide();
                 DialogResult result = formFabrica.ShowDialog();
@@ -48,25 +50,34 @@ public partial class Form1 : Form
                 {
                     Show();
                 }
+                break;
             }
         }
 
-
-        foreach (Supervisor supervisor in Supervisor.ListaSupervisor)
+        if (!esOperario)
         {
-            if (usuario == supervisor.Usuario && password == supervisor.Password && rangoAuxiliar == Rango.Supervisor)
+            foreach (Supervisor supervisor in Supervisor.ListaSupervisor)
             {
-                MessageBox.Show(supervisor.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                FormFabricaSupervisor formFabrica = new FormFabricaSupervisor();
-                Hide();
-                DialogResult result = formFabrica.ShowDialog();
-
-                
-                if (result == DialogResult.Cancel)
+                if (usuario == supervisor.Usuario && password == supervisor.Password && rangoAuxiliar == Rango.Supervisor)
                 {
-                    Show();
+                    esSupervisor = true;
+                    MessageBox.Show(supervisor.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    FormFabricaSupervisor formFabrica = new FormFabricaSupervisor();
+                    Hide();
+                    DialogResult result = formFabrica.ShowDialog();
+
+                    if (result == DialogResult.Cancel)
+                    {
+                        Show();
+                    }
+                    break;
                 }
             }
+        }
+
+        if (!esOperario && !esSupervisor)
+        {
+            MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
@@ -81,7 +92,7 @@ public partial class Form1 : Form
     private void HardOper_Click(object sender, EventArgs e)
     {
         this.textBoxUsername.Text = "Lauti";
-        this.textBoxPassword.Text = "Profe";
+        this.textBoxPassword.Text = "profe";
         this.rbOperario.Checked = true;
     }
 

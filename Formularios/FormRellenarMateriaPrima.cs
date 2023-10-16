@@ -1,11 +1,6 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
@@ -17,9 +12,55 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
         }
 
+        private List<string> productosSeleccionados = new List<string>();
+
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void RecopilarProductosSeleccionados(GroupBox groupBox)
+        {
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox && ((CheckBox)control).Checked)
+                {
+                    productosSeleccionados.Add(((CheckBox)control).Text);
+                }
+            }
+        }
+        private void DesmarcarCheckBoxes(GroupBox groupBox)
+        {
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    ((CheckBox)control).Checked = false;
+                }
+            }
+        }
+
+
+        private void btnRellenar_Click(object sender, EventArgs e)
+        {
+            int cantidad = (int)numCantidad.Value;
+
+            productosSeleccionados.Clear();
+            RecopilarProductosSeleccionados(gbChocolates);
+            RecopilarProductosSeleccionados(gbDonas);
+
+            foreach (string producto in productosSeleccionados)
+            {
+                if (Produccion.Materiales.ContainsKey(producto))
+                {
+                    Produccion.Materiales[producto] += cantidad;
+                }
+            }
+
+            MessageBox.Show("Se agregó el stock correctamente", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DesmarcarCheckBoxes(gbChocolates);
+            DesmarcarCheckBoxes(gbDonas);
+        }
     }
 }
+

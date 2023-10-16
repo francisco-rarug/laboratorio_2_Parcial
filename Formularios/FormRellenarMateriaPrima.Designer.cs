@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRellenarMateriaPrima));
-            groupBox1 = new GroupBox();
+            gbChocolates = new GroupBox();
             checkBox6 = new CheckBox();
             checkBox5 = new CheckBox();
             checkBox4 = new CheckBox();
             checkBox3 = new CheckBox();
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
-            groupBox2 = new GroupBox();
+            gbDonas = new GroupBox();
             checkBox7 = new CheckBox();
             checkBox8 = new CheckBox();
             checkBox9 = new CheckBox();
@@ -44,51 +44,54 @@
             checkBox11 = new CheckBox();
             checkBox12 = new CheckBox();
             button1 = new Button();
-            numericUpDown1 = new NumericUpDown();
+            numCantidad = new NumericUpDown();
             label1 = new Label();
-            button2 = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            btnRellenar = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            gbChocolates.SuspendLayout();
+            gbDonas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
             SuspendLayout();
             // 
-            // groupBox1
+            // gbChocolates
             // 
-            groupBox1.Controls.Add(checkBox6);
-            groupBox1.Controls.Add(checkBox5);
-            groupBox1.Controls.Add(checkBox4);
-            groupBox1.Controls.Add(checkBox3);
-            groupBox1.Controls.Add(checkBox2);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Location = new Point(13, 45);
-            groupBox1.Margin = new Padding(4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(998, 155);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Materiales para rellenar (Chocolates)";
+            gbChocolates.Controls.Add(label2);
+            gbChocolates.Controls.Add(checkBox6);
+            gbChocolates.Controls.Add(checkBox5);
+            gbChocolates.Controls.Add(checkBox4);
+            gbChocolates.Controls.Add(checkBox3);
+            gbChocolates.Controls.Add(checkBox2);
+            gbChocolates.Controls.Add(checkBox1);
+            gbChocolates.Location = new Point(13, 45);
+            gbChocolates.Margin = new Padding(4);
+            gbChocolates.Name = "gbChocolates";
+            gbChocolates.Padding = new Padding(4);
+            gbChocolates.Size = new Size(998, 155);
+            gbChocolates.TabIndex = 0;
+            gbChocolates.TabStop = false;
+            gbChocolates.Text = "Materiales para rellenar (Chocolates)";
             // 
             // checkBox6
             // 
             checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(789, 69);
+            checkBox6.Location = new Point(870, 69);
             checkBox6.Margin = new Padding(4);
             checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(113, 25);
+            checkBox6.Size = new Size(55, 25);
             checkBox6.TabIndex = 5;
-            checkBox6.Text = "Tableta 6x6";
+            checkBox6.Text = "6x6";
             checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
             checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(611, 69);
+            checkBox5.Location = new Point(730, 69);
             checkBox5.Margin = new Padding(4);
             checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(113, 25);
+            checkBox5.Size = new Size(55, 25);
             checkBox5.TabIndex = 4;
-            checkBox5.Text = "Tableta 2x2";
+            checkBox5.Text = "2x2";
             checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -135,43 +138,44 @@
             checkBox1.Text = "Amargo";
             checkBox1.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gbDonas
             // 
-            groupBox2.Controls.Add(checkBox7);
-            groupBox2.Controls.Add(checkBox8);
-            groupBox2.Controls.Add(checkBox9);
-            groupBox2.Controls.Add(checkBox10);
-            groupBox2.Controls.Add(checkBox11);
-            groupBox2.Controls.Add(checkBox12);
-            groupBox2.Location = new Point(13, 241);
-            groupBox2.Margin = new Padding(4);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4);
-            groupBox2.Size = new Size(998, 155);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Materiales para rellenar (Donas)";
+            gbDonas.Controls.Add(label3);
+            gbDonas.Controls.Add(checkBox7);
+            gbDonas.Controls.Add(checkBox8);
+            gbDonas.Controls.Add(checkBox9);
+            gbDonas.Controls.Add(checkBox10);
+            gbDonas.Controls.Add(checkBox11);
+            gbDonas.Controls.Add(checkBox12);
+            gbDonas.Location = new Point(13, 241);
+            gbDonas.Margin = new Padding(4);
+            gbDonas.Name = "gbDonas";
+            gbDonas.Padding = new Padding(4);
+            gbDonas.Size = new Size(998, 155);
+            gbDonas.TabIndex = 1;
+            gbDonas.TabStop = false;
+            gbDonas.Text = "Materiales para rellenar (Donas)";
             // 
             // checkBox7
             // 
             checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(789, 69);
+            checkBox7.Location = new Point(854, 69);
             checkBox7.Margin = new Padding(4);
             checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(200, 25);
+            checkBox7.Size = new Size(136, 25);
             checkBox7.TabIndex = 5;
-            checkBox7.Text = "Relleno Dulce de Leche";
+            checkBox7.Text = "Dulce de leche";
             checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
             checkBox8.AutoSize = true;
-            checkBox8.Location = new Point(611, 69);
+            checkBox8.Location = new Point(705, 69);
             checkBox8.Margin = new Padding(4);
             checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(139, 25);
+            checkBox8.Size = new Size(80, 25);
             checkBox8.TabIndex = 4;
-            checkBox8.Text = "Relleno Cereza";
+            checkBox8.Text = "Cereza";
             checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox9
@@ -231,14 +235,14 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // numericUpDown1
+            // numCantidad
             // 
-            numericUpDown1.Location = new Point(40, 521);
-            numericUpDown1.Margin = new Padding(4);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(233, 28);
-            numericUpDown1.TabIndex = 3;
-            numericUpDown1.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            numCantidad.Location = new Point(40, 521);
+            numCantidad.Margin = new Padding(4);
+            numCantidad.Name = "numCantidad";
+            numCantidad.Size = new Size(233, 28);
+            numCantidad.TabIndex = 3;
+            numCantidad.Value = new decimal(new int[] { 7, 0, 0, 0 });
             // 
             // label1
             // 
@@ -250,15 +254,34 @@
             label1.TabIndex = 4;
             label1.Text = "Seleccione cuanto quiere rellenar";
             // 
-            // button2
+            // btnRellenar
             // 
-            button2.BackColor = Color.Bisque;
-            button2.Location = new Point(451, 517);
-            button2.Name = "button2";
-            button2.Size = new Size(155, 32);
-            button2.TabIndex = 5;
-            button2.Text = "Rellenar";
-            button2.UseVisualStyleBackColor = false;
+            btnRellenar.BackColor = Color.Bisque;
+            btnRellenar.Location = new Point(451, 517);
+            btnRellenar.Name = "btnRellenar";
+            btnRellenar.Size = new Size(155, 32);
+            btnRellenar.TabIndex = 5;
+            btnRellenar.Text = "Rellenar";
+            btnRellenar.UseVisualStyleBackColor = false;
+            btnRellenar.Click += btnRellenar_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(789, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Tabletas";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(789, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 21);
+            label3.TabIndex = 6;
+            label3.Text = "Relleno";
             // 
             // FormRellenarMateriaPrima
             // 
@@ -266,37 +289,37 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1029, 630);
-            Controls.Add(button2);
+            Controls.Add(btnRellenar);
             Controls.Add(label1);
-            Controls.Add(numericUpDown1);
+            Controls.Add(numCantidad);
             Controls.Add(button1);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(gbDonas);
+            Controls.Add(gbChocolates);
             Font = new Font("Swis721 WGL4 BT", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "FormRellenarMateriaPrima";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Rellenar Stock";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            gbChocolates.ResumeLayout(false);
+            gbChocolates.PerformLayout();
+            gbDonas.ResumeLayout(false);
+            gbDonas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private GroupBox groupBox1;
+        private GroupBox gbChocolates;
         private CheckBox checkBox6;
         private CheckBox checkBox5;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
         private CheckBox checkBox2;
         private CheckBox checkBox1;
-        private GroupBox groupBox2;
+        private GroupBox gbDonas;
         private CheckBox checkBox7;
         private CheckBox checkBox8;
         private CheckBox checkBox9;
@@ -304,8 +327,10 @@
         private CheckBox checkBox11;
         private CheckBox checkBox12;
         private Button button1;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numCantidad;
         private Label label1;
-        private Button button2;
+        private Button btnRellenar;
+        private Label label2;
+        private Label label3;
     }
 }
