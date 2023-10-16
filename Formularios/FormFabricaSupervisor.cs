@@ -62,8 +62,14 @@ namespace Rarug.Francisco.Parcial
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormProductosCreados formProductosCreados =new FormProductosCreados();
+            FormProductosCreados formProductosCreados = new FormProductosCreados();
             formProductosCreados.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FormRellenarMateriaPrima rellenarMateriaPrima = new FormRellenarMateriaPrima();
+            rellenarMateriaPrima.Show();
         }
     }
 }

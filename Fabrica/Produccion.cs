@@ -1,41 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Fabrica
 {
     public class Produccion
     {
-
-        private static Dictionary<string, int> Materiales = new Dictionary<string, int>()
+        public static Dictionary<string, int> Materiales = new Dictionary<string, int>()
         {
-            {"chocolate blanco", 100 },
-            {"chocolate amargo", 100 },
-            {"chocolate vegano", 100 },
-            {"chocolate con mani", 50 },
+            {"Amargo", 100 },
+            {"Vegano", 100 },
+            {"Con mani", 100 },
+            {"Chocolate Blanco", 50 },
+            {"2x2", 50 },
+            {"6x6", 50 },
+            {"Glaseadas", 100 },
+            {"Cubiertas", 100 },
+            {"Con chispas", 100 },
+            {"Cereza", 50 },
+            {"Dulce de Leche", 50 }
         };
 
-        public static Dictionary<string, int> Materiales1 { get => Materiales; set => Materiales = value; }
-
-        public static bool Stock(string tipoChocolate)
+        private static void DecrementarStock(string tipoProducto, int cantidad)
         {
+            foreach (var componente in Materiales)
+            {
+                if (componente.Key == tipoProducto && componente.Value >= cantidad)
+                {
+                    Materiales[componente.Key] -= cantidad;
+                    break;
+                }
+            }
+        }
+
+        public static void Stock(string tipoProducto, string item)
+        {
+            DecrementarStock(tipoProducto, 30);
+            DecrementarStock(item, 20);
+        }
+
+        public static bool HayStockSuficiente(string tipoProducto, string item, int cantidadTipo, int cantidadItem)
+        {
+            bool tieneStockTipo = false;
+            bool tieneStockItem = false;
 
             foreach (var componente in Materiales)
             {
-                if (componente.Key == tipoChocolate && componente.Value > 0 )
+                if (componente.Key == tipoProducto && componente.Value >= cantidadTipo)
                 {
-                    Materiales[componente.Key]--;
-                    return true;
+                    tieneStockTipo = true;
+                }
+                if (componente.Key == item && componente.Value >= cantidadItem)
+                {
+                    tieneStockItem = true;
                 }
             }
-            
-            return false;
 
-           
-        } 
+            return tieneStockTipo && tieneStockItem;
+        }
+
+        public static Dictionary<string, int> ObtenerMateriales()
+        {
+            return new Dictionary<string, int>(Materiales);
+        }
     }
-
 }
+
+
+
+

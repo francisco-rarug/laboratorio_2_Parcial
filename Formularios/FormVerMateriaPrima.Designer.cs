@@ -39,7 +39,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(221, 46);
+            label1.Location = new Point(227, 51);
             label1.Name = "label1";
             label1.Size = new Size(258, 25);
             label1.TabIndex = 1;
@@ -61,10 +61,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(194, 104);
+            dataGridView1.Location = new Point(239, 99);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(305, 174);
+            dataGridView1.Size = new Size(246, 174);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 

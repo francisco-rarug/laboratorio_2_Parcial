@@ -13,17 +13,17 @@ namespace Rarug.Francisco.Parcial
 {
     public partial class FormModal1 : Form
     {
-        private System.Windows.Forms.Timer _timer;
+        private System.Windows.Forms.Timer timer;
         public FormModal1()
         {
             InitializeComponent();
 
             progressBar1.Maximum = 100;
             progressBar1.Value = progressBar1.Maximum;
-            _timer = new System.Windows.Forms.Timer();
-            _timer.Interval = 2000;
-            _timer.Tick += timer1_Tick;
-            _timer.Start();
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 2000;
+            timer.Tick += timer1_Tick;
+            timer.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Rarug.Francisco.Parcial
                 progressBar1.Value--;
             }
 
-            _timer.Stop();
+            timer.Stop();
 
             FormModal2 form2 = new FormModal2();
 

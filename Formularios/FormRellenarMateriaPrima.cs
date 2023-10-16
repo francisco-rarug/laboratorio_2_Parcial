@@ -1,5 +1,4 @@
-﻿using Fabrica;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
-    public partial class FormVerMateriaPrima : Form
+    public partial class FormRellenarMateriaPrima : Form
     {
-        public FormVerMateriaPrima()
+        public FormRellenarMateriaPrima()
         {
             InitializeComponent();
-            dataGridView1.DataSource = Produccion.Materiales.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

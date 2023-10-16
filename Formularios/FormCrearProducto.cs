@@ -1,19 +1,9 @@
 ﻿using Fabrica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace Rarug.Francisco.Parcial
 {
-
-
     public partial class FormCrearProducto : Form
     {
         public FormCrearProducto()
@@ -26,53 +16,68 @@ namespace Rarug.Francisco.Parcial
             Close();
         }
 
+        private string ObtenerSeleccion(GroupBox grupo)
+        {
+            foreach (Control item in grupo.Controls)
+            {
+                if (item is RadioButton && ((RadioButton)item).Checked)
+                {
+                    return ((RadioButton)item).Text;
+                }
+            }
+            return string.Empty;
+        }
+
+        private DialogResult MostrarFormularioModal()
+        {
+            using (FormModal1 formProduct = new FormModal1())
+            {
+                Hide();
+                var result = formProduct.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    Show();
+                }
+                return result;
+            }
+        }
+
         private void btnCrearChocolate_Click_1(object sender, EventArgs e)
         {
+            string chocolates = ObtenerSeleccion(gbChocolate);
+            string tamaños = ObtenerSeleccion(gbTamaño);
 
-            string chocolates = string.Empty;
-            string tamaños = string.Empty;
-
-            foreach (Control item in gbChocolate.Controls)
+            if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
             {
-                if (item is RadioButton && ((RadioButton)item).Checked)
-                {
-                    chocolates = ((RadioButton)item).Text;
-                }
+                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            foreach (Control item in gbTamaño.Controls)
-            {
-                if (item is RadioButton && ((RadioButton)item).Checked)
-                {
-                    tamaños = ((RadioButton)item).Text;
-                }
-            }
-
-            MessageBox.Show(chocolates);
-            MessageBox.Show(tamaños);
-
-            FormModal1 formProduct = new FormModal1();
-            Hide();
-            DialogResult result = formProduct.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
+            MostrarFormularioModal();
 
             Chocolate chocolate = new Chocolate(tamaños, chocolates);
-
             Chocolate.ListaChocolates.Add(chocolate);
+
+            Produccion.Stock(chocolates, tamaños);
         }
 
-        private void btnCrearDona_Click(object sender, EventArgs e)
+        private void btnCrearDona_Click_1(object sender, EventArgs e)
         {
+            string donas = ObtenerSeleccion(gbDonas);
+            string relleno = ObtenerSeleccion(gbRelleno);
 
-        }
+            if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+            {
+                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        private void gbTamaño_Enter(object sender, EventArgs e)
-        {
+            MostrarFormularioModal();
 
+            Dona dona = new Dona(relleno, donas);
+            Dona.ListaDonas.Add(dona);
+
+            Produccion.Stock(donas, relleno);
         }
     }
-}
+    }

@@ -32,24 +32,29 @@
             dataGridView1 = new DataGridView();
             label1 = new Label();
             button1 = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            dataGridView2 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(247, 124);
+            dataGridView1.Location = new Point(311, 153);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(305, 174);
+            dataGridView1.Size = new Size(240, 76);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Linen;
             label1.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(298, 67);
+            label1.Location = new Point(323, 33);
             label1.Name = "label1";
             label1.Size = new Size(216, 25);
             label1.TabIndex = 2;
@@ -60,7 +65,7 @@
             button1.BackColor = Color.Brown;
             button1.Font = new Font("Swis721 WGL4 BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(39, 376);
+            button1.Location = new Point(12, 404);
             button1.Name = "button1";
             button1.Size = new Size(130, 34);
             button1.TabIndex = 3;
@@ -68,11 +73,45 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(311, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(230, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Chocolates creados";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Swis721 LtEx BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(333, 270);
+            label3.Name = "label3";
+            label3.Size = new Size(178, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Donas creadas";
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(311, 312);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(240, 76);
+            dataGridView2.TabIndex = 6;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
             // FormProductosCreados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView2);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
@@ -80,6 +119,7 @@
             Name = "FormProductosCreados";
             Text = "Monitoreo de productos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,5 +129,8 @@
         private DataGridView dataGridView1;
         private Label label1;
         private Button button1;
+        private Label label2;
+        private Label label3;
+        private DataGridView dataGridView2;
     }
 }

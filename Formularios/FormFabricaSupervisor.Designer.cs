@@ -154,6 +154,7 @@
             button8.TabIndex = 12;
             button8.Text = "Rellenar stock";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // FormFabricaSupervisor
             // 
