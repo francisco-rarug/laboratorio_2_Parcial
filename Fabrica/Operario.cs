@@ -36,6 +36,36 @@ namespace Fabrica
         /// </summary>
         public string Apellido { get => apellido; set => apellido = value; }
 
+        public static void InicializarOperarios()
+        {
+            Operario operario1 = new Operario("Martin", "12345", Rango.Operario, "Chacal");
+            Operario operario2 = new Operario("Federico", "12345", Rango.Operario, "Galarza");
+            Operario operario3 = new Operario("Paola", "12345", Rango.Operario, "Argento");
+            Operario operario4 = new Operario("Lauti", "profe", Rango.Operario, "Profe");
+            Operario operario5 = new Operario("Lucas", "profe", Rango.Operario, "Profe");
+            Operario operario6 = new Operario("Mathi", "profe", Rango.Operario, "Bustamante");
+
+            ListaOperarios.Add(operario1);
+            ListaOperarios.Add(operario2);
+            ListaOperarios.Add(operario3);
+            ListaOperarios.Add(operario4);
+            ListaOperarios.Add(operario5);
+            ListaOperarios.Add(operario6);
+        }
+
+        public static Operario BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
+        {
+            foreach (Operario operario in ListaOperarios)
+            {
+                if (operario.Autenticar(usuario, password) && operario.Rango == rango)
+                {
+                    return operario;
+                }
+            }
+            return null;
+        }
+
+
         /// <summary>
         /// Proporciona una representación en texto de la información del operario.
         /// </summary>

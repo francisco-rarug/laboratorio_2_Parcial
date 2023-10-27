@@ -43,7 +43,7 @@
             dataOperarios.RowTemplate.Height = 25;
             dataOperarios.Size = new Size(355, 189);
             dataOperarios.TabIndex = 0;
-            dataOperarios.CellContentClick += dataOperarios_CellContentClick;
+            
             // 
             // label1
             // 
@@ -55,7 +55,7 @@
             label1.Size = new Size(257, 25);
             label1.TabIndex = 1;
             label1.Text = "Operarios Conectados";
-            label1.Click += label1_Click;
+            
             // 
             // button1
             // 

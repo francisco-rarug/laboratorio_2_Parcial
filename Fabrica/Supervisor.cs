@@ -30,6 +30,28 @@ namespace Fabrica
         {
             this.legajo = legajo;
         }
+        public static void InicializarSupervisores()
+        {
+            Supervisor supervisor1 = new Supervisor("Francisco", "7777", Rango.Supervisor, "11777");
+            Supervisor supervisor2 = new Supervisor("Raul", "1010", Rango.Supervisor, "11567");
+
+            ListaSupervisor.Add(supervisor1);
+            ListaSupervisor.Add(supervisor2);
+        }
+
+        public static Supervisor BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
+        {
+            foreach (Supervisor supervisor in ListaSupervisor)
+            {
+                if (supervisor.Autenticar(usuario, password) && supervisor.Rango == rango)
+                {
+                    return supervisor;
+                }
+            }
+            return null;
+        }
+
+
 
         /// <summary>
         /// Proporciona una representación en texto de la información del supervisor.

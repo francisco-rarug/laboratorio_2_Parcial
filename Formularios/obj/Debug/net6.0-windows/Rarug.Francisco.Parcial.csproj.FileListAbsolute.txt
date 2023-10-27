@@ -50,3 +50,35 @@ C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormProductosCreados.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormRellenarMateriaPrima.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormVerStock.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Rarug.Francisco.Parcial.exe
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Rarug.Francisco.Parcial.deps.json
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Rarug.Francisco.Parcial.runtimeconfig.json
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Rarug.Francisco.Parcial.dll
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Rarug.Francisco.Parcial.pdb
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Fabrica.dll
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\bin\Debug\net6.0-windows\Fabrica.pdb
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.csproj.AssemblyReference.cache
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormCrearProducto.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormFabricaOperario.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormFabricaSupervisor.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormModal1.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormModal2.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormModal3.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.Finalizado.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormProductosCreados.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormRellenarMateriaPrima.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormVerStock.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.Properties.Resources.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.VerOperarios.resources
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.csproj.GenerateResource.cache
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.AssemblyInfoInputs.cache
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.AssemblyInfo.cs
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.csproj.CoreCompileInputs.cache
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.csproj.CopyComplete
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.dll
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\refint\Rarug.Francisco.Parcial.dll
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.pdb
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.genruntimeconfig.cache
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\ref\Rarug.Francisco.Parcial.dll
+C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormLogin.resources

@@ -47,7 +47,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(240, 172);
             dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            
             // 
             // label1
             // 
@@ -101,7 +101,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(240, 171);
             dataGridView2.TabIndex = 6;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            
             // 
             // FormProductosCreados
             // 

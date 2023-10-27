@@ -19,16 +19,6 @@ namespace Rarug.Francisco.Parcial
             dataOperarios.DataSource = Operario.ListaOperarios;
         }
 
-        private void dataOperarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Close();

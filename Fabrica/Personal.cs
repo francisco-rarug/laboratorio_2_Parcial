@@ -55,6 +55,17 @@ namespace Fabrica
         /// </summary>
         public Rango Rango { get => rango; set => rango = value; }
 
+        public bool Autenticar(string usuario)
+        {
+            return this.usuario == usuario;
+        }
+
+        public bool Autenticar(string usuario, string password)
+        {
+            return this.usuario == usuario && this.password == password;
+        }
+
+
         /// <summary>
         /// Método abstracto para mostrar información del personal. Las clases derivadas deben implementar este método.
         /// </summary>
