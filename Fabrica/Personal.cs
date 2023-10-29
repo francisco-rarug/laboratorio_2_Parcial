@@ -55,11 +55,22 @@ namespace Fabrica
         /// </summary>
         public Rango Rango { get => rango; set => rango = value; }
 
+        /// <summary>
+        /// Verifica si el nombre de usuario proporcionado coincide con el nombre de usuario del objeto actual.
+        /// </summary>
+        /// <param name="usuario">Nombre de usuario a verificar.</param>
+        /// <returns>Verdadero si coincide, falso de lo contrario.</returns>
         public bool Autenticar(string usuario)
         {
             return this.usuario == usuario;
         }
 
+        /// <summary>
+        /// Verifica si el nombre de usuario y contraseña proporcionados coinciden con los del objeto actual.
+        /// </summary>
+        /// <param name="usuario">Nombre de usuario a verificar.</param>
+        /// <param name="password">Contraseña a verificar.</param>
+        /// <returns>Verdadero si ambos coinciden, falso de lo contrario.</returns>
         public bool Autenticar(string usuario, string password)
         {
             return this.usuario == usuario && this.password == password;
@@ -70,6 +81,9 @@ namespace Fabrica
         /// Método abstracto para mostrar información del personal. Las clases derivadas deben implementar este método.
         /// </summary>
         /// <returns>Una cadena que representa la información del personal.</returns>
+        /// 
+
+        ///No encontre un mejor uso de polimorfismo al menos en esta parte del parcial, mediante avance con la segunda parte le agregare en alguna cosa que me parecezca mejor usarlo 
         public abstract string Mostrar();
     }
 }

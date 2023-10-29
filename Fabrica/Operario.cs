@@ -36,6 +36,9 @@ namespace Fabrica
         /// </summary>
         public string Apellido { get => apellido; set => apellido = value; }
 
+        /// <summary>
+        /// Inicializa una lista estática de operarios con valores predeterminados.
+        /// </summary>
         public static void InicializarOperarios()
         {
             Operario operario1 = new Operario("Martin", "12345", Rango.Operario, "Chacal");
@@ -53,6 +56,13 @@ namespace Fabrica
             ListaOperarios.Add(operario6);
         }
 
+        /// <summary>
+        /// Busca un operario por su usuario, contraseña y rango.
+        /// </summary>
+        /// <param name="usuario">Usuario del operario a buscar.</param>
+        /// <param name="password">Contraseña del operario a buscar.</param>
+        /// <param name="rango">Rango del operario a buscar.</param>
+        /// <returns>Retorna el operario si se encuentra, de lo contrario retorna null.</returns>
         public static Operario BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
         {
             foreach (Operario operario in ListaOperarios)
@@ -64,7 +74,6 @@ namespace Fabrica
             }
             return null;
         }
-
 
         /// <summary>
         /// Proporciona una representación en texto de la información del operario.

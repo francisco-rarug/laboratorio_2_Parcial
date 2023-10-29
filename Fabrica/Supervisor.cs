@@ -30,6 +30,9 @@ namespace Fabrica
         {
             this.legajo = legajo;
         }
+        /// <summary>
+        /// Inicializa una lista estática de supervisores con valores predeterminados.
+        /// </summary>
         public static void InicializarSupervisores()
         {
             Supervisor supervisor1 = new Supervisor("Francisco", "7777", Rango.Supervisor, "11777");
@@ -39,6 +42,13 @@ namespace Fabrica
             ListaSupervisor.Add(supervisor2);
         }
 
+        /// <summary>
+        /// Busca un supervisor por su usuario, contraseña y rango.
+        /// </summary>
+        /// <param name="usuario">Usuario del supervisor a buscar.</param>
+        /// <param name="password">Contraseña del supervisor a buscar.</param>
+        /// <param name="rango">Rango del supervisor a buscar.</param>
+        /// <returns>Retorna el supervisor si se encuentra, de lo contrario retorna null.</returns>
         public static Supervisor BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
         {
             foreach (Supervisor supervisor in ListaSupervisor)
@@ -50,6 +60,7 @@ namespace Fabrica
             }
             return null;
         }
+
 
 
 

@@ -44,15 +44,18 @@ namespace Fabrica
         }
 
         /// <summary>
-        /// Decrementa el stock del tipo de producto y del ítem proporcionados.
+        /// Disminuye el stock de un tipo de producto específico.
         /// </summary>
-        /// <param name="tipoProducto">Tipo de producto a decrementar.</param>
-        /// <param name="item">Ítem a decrementar.</param>
+        /// <param name="tipoProducto">El tipo de producto a decrementar.</param>
         public static void Stock(string tipoProducto)
         {
             DecrementarStock(tipoProducto, 30);
         }
-
+        /// <summary>
+        /// Disminuye el stock de un tipo de producto y un ítem específicos.
+        /// </summary>
+        /// <param name="tipoProducto">El tipo de producto a decrementar.</param>
+        /// <param name="item">El ítem a decrementar.</param>
         public static void Stock(string tipoProducto, string item)
         {
             DecrementarStock(tipoProducto, 30);
