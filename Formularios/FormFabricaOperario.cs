@@ -17,36 +17,6 @@ namespace Rarug.Francisco.Parcial
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FormVerStock formVerStock = new FormVerStock();
-            Hide();
-            DialogResult result = formVerStock.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormProductosCreados formProductosCreados = new FormProductosCreados();
-            Hide();
-            DialogResult result = formProductosCreados.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
         private void btnDonaDefault_Click(object sender, EventArgs e)
         {
             string donas = "Glaseadas";
@@ -92,7 +62,31 @@ namespace Rarug.Francisco.Parcial
             Produccion.Stock(chocolates, tamaños);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnVerProductos_Click(object sender, EventArgs e)
+        {
+            FormProductosCreados formProductosCreados = new FormProductosCreados();
+            Hide();
+            DialogResult result = formProductosCreados.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnVerStock_Click(object sender, EventArgs e)
+        {
+            FormVerStock formVerStock = new FormVerStock();
+            Hide();
+            DialogResult result = formVerStock.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnCrearProducto_Click(object sender, EventArgs e)
         {
             FormCrearProducto formProduct = new FormCrearProducto();
             Hide();
@@ -102,6 +96,11 @@ namespace Rarug.Francisco.Parcial
             {
                 Show();
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

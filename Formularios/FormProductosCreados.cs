@@ -19,11 +19,10 @@ namespace Rarug.Francisco.Parcial
             dataGridView1.DataSource = Chocolate.ListaChocolates;
             dataGridView2.DataSource = Dona.ListaDonas;
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        
     }
 }

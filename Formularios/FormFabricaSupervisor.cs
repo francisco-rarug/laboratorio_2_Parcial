@@ -18,12 +18,6 @@ namespace Rarug.Francisco.Parcial
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             FormCrearProducto formProduct = new FormCrearProducto();
@@ -35,54 +29,6 @@ namespace Rarug.Francisco.Parcial
                 Show();
             }
         }
-        private void buttonOperariosConectados_Click(object sender, EventArgs e)
-        {
-            VerOperarios formOperarios = new VerOperarios();
-            Hide();
-            DialogResult result = formOperarios.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FormVerStock formVerStock = new FormVerStock();
-            Hide();
-            DialogResult result = formVerStock.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormProductosCreados formProductosCreados = new FormProductosCreados();
-            Hide();
-            DialogResult result = formProductosCreados.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            FormRellenarMateriaPrima formRellenarMateriaPrima = new FormRellenarMateriaPrima();
-            Hide();
-            DialogResult result = formRellenarMateriaPrima.ShowDialog();
-
-            if (result == DialogResult.Cancel)
-            {
-                Show();
-            }
-        }
-
         private void btnChocolateDefault_Click(object sender, EventArgs e)
         {
             string chocolates = "Amargo";
@@ -125,6 +71,59 @@ namespace Rarug.Francisco.Parcial
 
 
             Produccion.Stock(donas, relleno);
+        }
+
+        private void btnVerStock_Click(object sender, EventArgs e)
+        {
+            FormVerStock formVerStock = new FormVerStock();
+            Hide();
+            DialogResult result = formVerStock.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnVerProductos_Click(object sender, EventArgs e)
+        {
+            FormProductosCreados formProductosCreados = new FormProductosCreados();
+            Hide();
+            DialogResult result = formProductosCreados.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnRellenarStock_Click(object sender, EventArgs e)
+        {
+            FormRellenarMateriaPrima formRellenarMateriaPrima = new FormRellenarMateriaPrima();
+            Hide();
+            DialogResult result = formRellenarMateriaPrima.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnOperariosConectados_Click(object sender, EventArgs e)
+        {
+            VerOperarios formOperarios = new VerOperarios();
+            Hide();
+            DialogResult result = formOperarios.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

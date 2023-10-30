@@ -14,11 +14,6 @@ namespace Rarug.Francisco.Parcial
 
         private List<string> productosSeleccionados = new List<string>();
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void RecopilarProductosSeleccionados(GroupBox groupBox)
         {
             foreach (Control control in groupBox.Controls)
@@ -64,6 +59,11 @@ namespace Rarug.Francisco.Parcial
             MessageBox.Show("Se agregó el stock correctamente", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DesmarcarCheckBoxes(gbChocolates);
             DesmarcarCheckBoxes(gbDonas);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

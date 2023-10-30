@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerStock));
             label1 = new Label();
-            button1 = new Button();
+            btnCerrar = new Button();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -41,46 +41,49 @@
             label1.BackColor = Color.Transparent;
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Arial Rounded MT Bold", 26.25F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(156, 47);
+            label1.Location = new Point(178, 63);
             label1.Name = "label1";
-            label1.Size = new Size(267, 42);
+            label1.Size = new Size(338, 53);
             label1.TabIndex = 1;
             label1.Text = "Stock restante";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // button1
+            // btnCerrar
             // 
-            button1.BackColor = Color.Brown;
-            button1.Font = new Font("Swis721 WGL4 BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(25, 349);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 34);
-            button1.TabIndex = 2;
-            button1.Text = "Cerrar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnCerrar.BackColor = Color.Brown;
+            btnCerrar.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCerrar.ForeColor = SystemColors.Control;
+            btnCerrar.Location = new Point(29, 465);
+            btnCerrar.Margin = new Padding(3, 4, 3, 4);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(104, 45);
+            btnCerrar.TabIndex = 2;
+            btnCerrar.Text = "Cerrar";
+            btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(158, 126);
+            dataGridView1.Location = new Point(181, 168);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(265, 182);
+            dataGridView1.Size = new Size(303, 243);
             dataGridView1.TabIndex = 0;
-            
             // 
             // FormVerStock
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(571, 395);
-            Controls.Add(button1);
+            ClientSize = new Size(653, 527);
+            Controls.Add(btnCerrar);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormVerStock";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Stock disponible";
@@ -91,7 +94,7 @@
 
         #endregion
         private Label label1;
-        private Button button1;
+        private Button btnCerrar;
         private DataGridView dataGridView1;
     }
 }

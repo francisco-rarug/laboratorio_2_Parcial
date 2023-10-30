@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFabricaSupervisor));
             label3 = new Label();
-            button3 = new Button();
-            button2 = new Button();
+            btnVerStock = new Button();
+            btnVerProductos = new Button();
             groupBox1 = new GroupBox();
             btnDonaDefault = new Button();
             btnChocolateDefault = new Button();
             buttonCreate = new Button();
-            button1 = new Button();
-            buttonOperariosConectados = new Button();
-            button8 = new Button();
+            btnCerrar = new Button();
+            btnOperariosConectados = new Button();
+            btnRellenarStock = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,54 +48,59 @@
             label3.BackColor = Color.CadetBlue;
             label3.Font = new Font("Castellar", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(178, 48);
+            label3.Location = new Point(203, 64);
             label3.Name = "label3";
-            label3.Size = new Size(436, 19);
+            label3.Size = new Size(531, 25);
             label3.TabIndex = 9;
             label3.Text = "Bienvenido a la fabrica MísticaMousse";
             // 
-            // button3
+            // btnVerStock
             // 
-            button3.BackColor = Color.MediumPurple;
-            button3.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(326, 384);
-            button3.Name = "button3";
-            button3.Size = new Size(152, 26);
-            button3.TabIndex = 8;
-            button3.Text = "Ver stock";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnVerStock.BackColor = Color.MediumPurple;
+            btnVerStock.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVerStock.Location = new Point(373, 512);
+            btnVerStock.Margin = new Padding(3, 4, 3, 4);
+            btnVerStock.Name = "btnVerStock";
+            btnVerStock.Size = new Size(174, 35);
+            btnVerStock.TabIndex = 8;
+            btnVerStock.Text = "Ver stock";
+            btnVerStock.UseVisualStyleBackColor = false;
+            btnVerStock.Click += btnVerStock_Click;
             // 
-            // button2
+            // btnVerProductos
             // 
-            button2.BackColor = Color.DarkSeaGreen;
-            button2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(589, 384);
-            button2.Name = "button2";
-            button2.Size = new Size(199, 26);
-            button2.TabIndex = 7;
-            button2.Text = "Ver Productos creados";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnVerProductos.BackColor = Color.DarkSeaGreen;
+            btnVerProductos.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVerProductos.Location = new Point(673, 512);
+            btnVerProductos.Margin = new Padding(3, 4, 3, 4);
+            btnVerProductos.Name = "btnVerProductos";
+            btnVerProductos.Size = new Size(227, 35);
+            btnVerProductos.TabIndex = 7;
+            btnVerProductos.Text = "Ver Productos creados";
+            btnVerProductos.UseVisualStyleBackColor = false;
+            btnVerProductos.Click += btnVerProductos_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(btnDonaDefault);
             groupBox1.Controls.Add(btnChocolateDefault);
             groupBox1.Controls.Add(buttonCreate);
-            groupBox1.Font = new Font("Swis721 WGL4 BT", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(218, 105);
+            groupBox1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox1.Location = new Point(249, 140);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(355, 233);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(406, 311);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Linea produccion";
             // 
             // btnDonaDefault
             // 
-            btnDonaDefault.Location = new Point(88, 50);
+            btnDonaDefault.Location = new Point(101, 67);
+            btnDonaDefault.Margin = new Padding(3, 4, 3, 4);
             btnDonaDefault.Name = "btnDonaDefault";
-            btnDonaDefault.Size = new Size(172, 31);
+            btnDonaDefault.Size = new Size(197, 41);
             btnDonaDefault.TabIndex = 2;
             btnDonaDefault.Text = "Crear dona default";
             btnDonaDefault.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@
             // 
             // btnChocolateDefault
             // 
-            btnChocolateDefault.Location = new Point(88, 108);
+            btnChocolateDefault.Location = new Point(101, 144);
+            btnChocolateDefault.Margin = new Padding(3, 4, 3, 4);
             btnChocolateDefault.Name = "btnChocolateDefault";
-            btnChocolateDefault.Size = new Size(172, 32);
+            btnChocolateDefault.Size = new Size(197, 43);
             btnChocolateDefault.TabIndex = 1;
             btnChocolateDefault.Text = "Crear chocolate default";
             btnChocolateDefault.UseVisualStyleBackColor = true;
@@ -113,65 +119,70 @@
             // 
             // buttonCreate
             // 
-            buttonCreate.Location = new Point(88, 170);
+            buttonCreate.Location = new Point(101, 227);
+            buttonCreate.Margin = new Padding(3, 4, 3, 4);
             buttonCreate.Name = "buttonCreate";
-            buttonCreate.Size = new Size(172, 31);
+            buttonCreate.Size = new Size(197, 41);
             buttonCreate.TabIndex = 0;
             buttonCreate.Text = "Crear producto";
             buttonCreate.UseVisualStyleBackColor = true;
             buttonCreate.Click += buttonCreate_Click;
             // 
-            // button1
+            // btnCerrar
             // 
-            button1.BackColor = Color.Brown;
-            button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(33, 384);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 29);
-            button1.TabIndex = 10;
-            button1.Text = "Cerrar sesion";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnCerrar.BackColor = Color.Brown;
+            btnCerrar.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCerrar.ForeColor = SystemColors.ButtonHighlight;
+            btnCerrar.Location = new Point(38, 512);
+            btnCerrar.Margin = new Padding(3, 4, 3, 4);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(141, 39);
+            btnCerrar.TabIndex = 10;
+            btnCerrar.Text = "Cerrar sesion";
+            btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
-            // buttonOperariosConectados
+            // btnOperariosConectados
             // 
-            buttonOperariosConectados.BackColor = Color.LightGoldenrodYellow;
-            buttonOperariosConectados.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonOperariosConectados.Location = new Point(602, 203);
-            buttonOperariosConectados.Name = "buttonOperariosConectados";
-            buttonOperariosConectados.Size = new Size(186, 70);
-            buttonOperariosConectados.TabIndex = 11;
-            buttonOperariosConectados.Text = "Ver operarios conectados";
-            buttonOperariosConectados.UseVisualStyleBackColor = false;
-            buttonOperariosConectados.Click += buttonOperariosConectados_Click;
+            btnOperariosConectados.BackColor = Color.LightGoldenrodYellow;
+            btnOperariosConectados.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOperariosConectados.Location = new Point(688, 271);
+            btnOperariosConectados.Margin = new Padding(3, 4, 3, 4);
+            btnOperariosConectados.Name = "btnOperariosConectados";
+            btnOperariosConectados.Size = new Size(213, 93);
+            btnOperariosConectados.TabIndex = 11;
+            btnOperariosConectados.Text = "Ver operarios conectados";
+            btnOperariosConectados.UseVisualStyleBackColor = false;
+            btnOperariosConectados.Click += btnOperariosConectados_Click;
             // 
-            // button8
+            // btnRellenarStock
             // 
-            button8.BackColor = Color.LightGoldenrodYellow;
-            button8.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(12, 203);
-            button8.Name = "button8";
-            button8.Size = new Size(186, 70);
-            button8.TabIndex = 12;
-            button8.Text = "Rellenar stock";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            btnRellenarStock.BackColor = Color.LightGoldenrodYellow;
+            btnRellenarStock.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRellenarStock.Location = new Point(14, 271);
+            btnRellenarStock.Margin = new Padding(3, 4, 3, 4);
+            btnRellenarStock.Name = "btnRellenarStock";
+            btnRellenarStock.Size = new Size(213, 93);
+            btnRellenarStock.TabIndex = 12;
+            btnRellenarStock.Text = "Rellenar stock";
+            btnRellenarStock.UseVisualStyleBackColor = false;
+            btnRellenarStock.Click += btnRellenarStock_Click;
             // 
             // FormFabricaSupervisor
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button8);
-            Controls.Add(buttonOperariosConectados);
-            Controls.Add(button1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(btnRellenarStock);
+            Controls.Add(btnOperariosConectados);
+            Controls.Add(btnCerrar);
             Controls.Add(label3);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnVerStock);
+            Controls.Add(btnVerProductos);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormFabricaSupervisor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Supervisor";
@@ -183,14 +194,14 @@
         #endregion
 
         private Label label3;
-        private Button button3;
-        private Button button2;
+        private Button btnVerStock;
+        private Button btnVerProductos;
         private GroupBox groupBox1;
         private Button btnDonaDefault;
         private Button btnChocolateDefault;
         private Button buttonCreate;
-        private Button button1;
-        private Button buttonOperariosConectados;
-        private Button button8;
+        private Button btnCerrar;
+        private Button btnOperariosConectados;
+        private Button btnRellenarStock;
     }
 }

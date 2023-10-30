@@ -11,11 +11,6 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private string ObtenerSeleccion(GroupBox grupo)
         {
             foreach (Control item in grupo.Controls)
@@ -78,6 +73,11 @@ namespace Rarug.Francisco.Parcial
             Dona.ListaDonas.Add(dona);
 
             Produccion.Stock(donas, relleno);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

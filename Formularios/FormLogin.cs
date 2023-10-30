@@ -7,12 +7,6 @@ public partial class FormLogin : Form
     {
         InitializeComponent();
     }
-
-    private void button2_Click(object sender, EventArgs e)
-    {
-        Close();
-    }
-
     private void botonIngresar_Click(object sender, EventArgs e)
     {
         string usuario = this.textBoxUsername.Text;
@@ -80,5 +74,9 @@ public partial class FormLogin : Form
         Supervisor.InicializarSupervisores();
     }
 
+    private void btnCerrar_Click(object sender, EventArgs e)
+    {
+        Close();
+    }
 }
 

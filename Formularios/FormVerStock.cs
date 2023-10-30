@@ -19,7 +19,7 @@ namespace Rarug.Francisco.Parcial
             dataGridView1.DataSource = Produccion.Materiales.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
