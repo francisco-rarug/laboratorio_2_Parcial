@@ -54,7 +54,9 @@ namespace Fabrica
             ListaOperarios.Add(operario4);
             ListaOperarios.Add(operario5);
             ListaOperarios.Add(operario6);
+            
         }
+
 
         /// <summary>
         /// Busca un operario por su usuario, contraseña y rango.
@@ -65,14 +67,23 @@ namespace Fabrica
         /// <returns>Retorna el operario si se encuentra, de lo contrario retorna null.</returns>
         public static Operario BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
         {
-            foreach (Operario operario in ListaOperarios)
+            try
             {
-                if (operario.Autenticar(usuario, password) && operario.Rango == rango)
+                foreach (Operario operario in ListaOperarios)
                 {
-                    return operario;
+                    if (operario.Autenticar(usuario, password) && operario.Rango == rango)
+                    {
+                        return operario;
+                    }
                 }
+                return null;
             }
-            return null;
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error, no se encontro el operario"+ex.Message);
+                return null;
+            }
+            
         }
 
         /// <summary>

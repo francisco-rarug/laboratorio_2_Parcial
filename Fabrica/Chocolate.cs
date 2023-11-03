@@ -41,6 +41,24 @@ namespace Fabrica
         /// Obtiene o establece el tipo del chocolate.
         /// </summary>
         public string TipoChocolate { get => tipoChocolate; set => tipoChocolate = value; }
+
+        public static Chocolate CrearChocolateDefault()
+        {
+            string chocolates = "Amargo";
+            string tamaños = "2x2";
+
+            if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
+            {
+                return null; 
+            }
+
+            Chocolate chocolate = new Chocolate(tamaños, chocolates);
+            Chocolate.ListaChocolates.Add(chocolate);
+
+            Produccion.Stock(chocolates, tamaños);
+
+            return chocolate;
+        }
     }
 }
 

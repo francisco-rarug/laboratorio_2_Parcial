@@ -39,40 +39,54 @@ namespace Rarug.Francisco.Parcial
 
         private void btnCrearChocolate_Click_1(object sender, EventArgs e)
         {
-            string chocolates = ObtenerSeleccion(gbChocolate);
-            string tamaños = ObtenerSeleccion(gbTamaño);
-
-            if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
+            try
             {
-                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string chocolates = ObtenerSeleccion(gbChocolate);
+                string tamaños = ObtenerSeleccion(gbTamaño);
+
+                if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
+                {
+                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                MostrarFormularioModal();
+
+                Chocolate chocolate = new Chocolate(tamaños, chocolates);
+                Chocolate.ListaChocolates.Add(chocolate);
+
+                Produccion.Stock(chocolates, tamaños);
             }
-
-            MostrarFormularioModal();
-
-            Chocolate chocolate = new Chocolate(tamaños, chocolates);
-            Chocolate.ListaChocolates.Add(chocolate);
-
-            Produccion.Stock(chocolates, tamaños);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al crear el chocolate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCrearDona_Click_1(object sender, EventArgs e)
         {
-            string donas = ObtenerSeleccion(gbDonas);
-            string relleno = ObtenerSeleccion(gbRelleno);
-
-            if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+            try
             {
-                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string donas = ObtenerSeleccion(gbDonas);
+                string relleno = ObtenerSeleccion(gbRelleno);
+
+                if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+                {
+                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                MostrarFormularioModal();
+
+                Dona dona = new Dona(relleno, donas);
+                Dona.ListaDonas.Add(dona);
+
+                Produccion.Stock(donas, relleno);
             }
-
-            MostrarFormularioModal();
-
-            Dona dona = new Dona(relleno, donas);
-            Dona.ListaDonas.Add(dona);
-
-            Produccion.Stock(donas, relleno);
+            catch (Exception ex)
+            { 
+                MessageBox.Show("Ha ocurrido un error al crear la dona: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -39,8 +39,9 @@ namespace Fabrica
             Supervisor supervisor2 = new Supervisor("Raul", "1010", Rango.Supervisor, "11567");
 
             ListaSupervisor.Add(supervisor1);
-            ListaSupervisor.Add(supervisor2);
+            ListaSupervisor.Add(supervisor2);   
         }
+
 
         /// <summary>
         /// Busca un supervisor por su usuario, contraseña y rango.
@@ -51,19 +52,24 @@ namespace Fabrica
         /// <returns>Retorna el supervisor si se encuentra, de lo contrario retorna null.</returns>
         public static Supervisor BuscarPorUsuarioYRango(string usuario, string password, Rango rango)
         {
-            foreach (Supervisor supervisor in ListaSupervisor)
+            try
             {
-                if (supervisor.Autenticar(usuario, password) && supervisor.Rango == rango)
+                foreach (Supervisor supervisor in ListaSupervisor)
                 {
-                    return supervisor;
+                    if (supervisor.Autenticar(usuario, password) && supervisor.Rango == rango)
+                    {
+                        return supervisor;
+                    }
                 }
+                return null;
             }
-            return null;
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error, no se pudo encontrar el supervisor"+ex.Message);
+                return null;
+            }
+            
         }
-
-
-
-
         /// <summary>
         /// Proporciona una representación en texto de la información del supervisor.
         /// </summary>

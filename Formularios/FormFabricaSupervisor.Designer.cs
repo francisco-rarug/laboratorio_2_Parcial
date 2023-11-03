@@ -39,6 +39,7 @@
             btnCerrar = new Button();
             btnOperariosConectados = new Button();
             btnRellenarStock = new Button();
+            btnCrud = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -146,10 +147,10 @@
             // 
             btnOperariosConectados.BackColor = Color.LightGoldenrodYellow;
             btnOperariosConectados.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnOperariosConectados.Location = new Point(688, 271);
+            btnOperariosConectados.Location = new Point(673, 207);
             btnOperariosConectados.Margin = new Padding(3, 4, 3, 4);
             btnOperariosConectados.Name = "btnOperariosConectados";
-            btnOperariosConectados.Size = new Size(213, 93);
+            btnOperariosConectados.Size = new Size(227, 93);
             btnOperariosConectados.TabIndex = 11;
             btnOperariosConectados.Text = "Ver operarios conectados";
             btnOperariosConectados.UseVisualStyleBackColor = false;
@@ -159,14 +160,26 @@
             // 
             btnRellenarStock.BackColor = Color.LightGoldenrodYellow;
             btnRellenarStock.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRellenarStock.Location = new Point(14, 271);
+            btnRellenarStock.Location = new Point(1, 207);
             btnRellenarStock.Margin = new Padding(3, 4, 3, 4);
             btnRellenarStock.Name = "btnRellenarStock";
-            btnRellenarStock.Size = new Size(213, 93);
+            btnRellenarStock.Size = new Size(227, 93);
             btnRellenarStock.TabIndex = 12;
             btnRellenarStock.Text = "Rellenar stock";
             btnRellenarStock.UseVisualStyleBackColor = false;
             btnRellenarStock.Click += btnRellenarStock_Click;
+            // 
+            // btnCrud
+            // 
+            btnCrud.BackColor = Color.ForestGreen;
+            btnCrud.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCrud.Location = new Point(673, 367);
+            btnCrud.Margin = new Padding(3, 4, 3, 4);
+            btnCrud.Name = "btnCrud";
+            btnCrud.Size = new Size(227, 35);
+            btnCrud.TabIndex = 13;
+            btnCrud.Text = "CRUD";
+            btnCrud.UseVisualStyleBackColor = false;
             // 
             // FormFabricaSupervisor
             // 
@@ -174,6 +187,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(914, 600);
+            Controls.Add(btnCrud);
             Controls.Add(btnRellenarStock);
             Controls.Add(btnOperariosConectados);
             Controls.Add(btnCerrar);
@@ -203,5 +217,6 @@
         private Button btnCerrar;
         private Button btnOperariosConectados;
         private Button btnRellenarStock;
+        private Button btnCrud;
     }
 }

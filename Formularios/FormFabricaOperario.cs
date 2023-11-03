@@ -11,55 +11,58 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
-    public partial class FormFabricaOperario : Form
+    public partial class FormFabricaOperario : Form, IFormFabrica
     {
         public FormFabricaOperario()
         {
             InitializeComponent();
         }
+        public void CrearChocolateDefault()
+        {
+            try
+            {
+                Chocolate chocolate = Chocolate.CrearChocolateDefault();
+
+                if (chocolate != null)
+                {
+                    FormModal1 formProduct = new FormModal1();
+                    formProduct.ShowDialog();
+
+                    MessageBox.Show("Chocolate creado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al crear el chocolate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void CrearDonaDefault()
+        {
+            try
+            {
+                Dona dona = Dona.CrearDonaDefault();
+
+                if (dona != null)
+                {
+                    FormModal1 formProduct = new FormModal1();
+                    formProduct.ShowDialog();
+
+                    MessageBox.Show("Dona creada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al crear la dona: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnDonaDefault_Click(object sender, EventArgs e)
         {
-            string donas = "Glaseadas";
-            string relleno = "Dulce de leche";
-
-
-            if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
-            {
-                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
-            FormModal1 formProduct = new FormModal1();
-
-            formProduct.ShowDialog();
-
-            Dona dona = new Dona(relleno, donas);
-            Dona.ListaDonas.Add(dona);
-
-
-            Produccion.Stock(donas, relleno);
+            CrearDonaDefault();
         }
 
         private void btnChocoDefault_Click(object sender, EventArgs e)
         {
-            string chocolates = "Amargo";
-            string tamaños = "2x2";
-
-            if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
-            {
-                MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            FormModal1 formProduct = new FormModal1();
-
-            formProduct.ShowDialog();
-
-            Chocolate chocolate = new Chocolate(tamaños, chocolates);
-            Chocolate.ListaChocolates.Add(chocolate);
-
-            Produccion.Stock(chocolates, tamaños);
+            CrearChocolateDefault();
         }
 
         private void btnVerProductos_Click(object sender, EventArgs e)

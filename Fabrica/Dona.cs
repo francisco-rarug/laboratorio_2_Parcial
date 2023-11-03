@@ -41,6 +41,24 @@ namespace Fabrica
         /// Obtiene o establece la lista de donas.
         /// </summary>
         public static List<Dona> ListaDonas { get => listaDonas; set => listaDonas = value; }
+
+        public static Dona CrearDonaDefault()
+        {
+            string donas = "Glaseadas";
+            string relleno = "Dulce de leche";
+
+            if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+            {
+                throw new Exception("No queda stock");
+            }
+
+            Dona dona = new Dona(relleno, donas);
+            Dona.ListaDonas.Add(dona);
+
+            Produccion.Stock(donas, relleno);
+            return dona;
+        }
+
     }
 }
 

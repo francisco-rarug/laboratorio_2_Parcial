@@ -42,6 +42,8 @@
             label3 = new Label();
             HardSuper = new Button();
             HardOper = new Button();
+            btnNuevoOperario = new Button();
+            btnNuevoSupervisor = new Button();
             groupBox1.SuspendLayout();
             gbRango.SuspendLayout();
             SuspendLayout();
@@ -154,7 +156,7 @@
             btnCerrar.Location = new Point(61, 505);
             btnCerrar.Margin = new Padding(3, 4, 3, 4);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(125, 45);
+            btnCerrar.Size = new Size(146, 45);
             btnCerrar.TabIndex = 3;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -196,11 +198,35 @@
             HardOper.UseVisualStyleBackColor = true;
             HardOper.Click += HardOper_Click;
             // 
+            // btnNuevoOperario
+            // 
+            btnNuevoOperario.Font = new Font("Lucida Sans", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNuevoOperario.Location = new Point(61, 237);
+            btnNuevoOperario.Margin = new Padding(3, 4, 3, 4);
+            btnNuevoOperario.Name = "btnNuevoOperario";
+            btnNuevoOperario.Size = new Size(146, 56);
+            btnNuevoOperario.TabIndex = 7;
+            btnNuevoOperario.Text = "Agregar operario";
+            btnNuevoOperario.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoSupervisor
+            // 
+            btnNuevoSupervisor.Font = new Font("Lucida Sans", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNuevoSupervisor.Location = new Point(61, 328);
+            btnNuevoSupervisor.Margin = new Padding(3, 4, 3, 4);
+            btnNuevoSupervisor.Name = "btnNuevoSupervisor";
+            btnNuevoSupervisor.Size = new Size(146, 56);
+            btnNuevoSupervisor.TabIndex = 8;
+            btnNuevoSupervisor.Text = "Agregar supervisor";
+            btnNuevoSupervisor.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(btnNuevoSupervisor);
+            Controls.Add(btnNuevoOperario);
             Controls.Add(HardOper);
             Controls.Add(HardSuper);
             Controls.Add(label3);
@@ -237,5 +263,7 @@
         private Label label3;
         private Button HardSuper;
         private Button HardOper;
+        private Button btnNuevoOperario;
+        private Button btnNuevoSupervisor;
     }
 }

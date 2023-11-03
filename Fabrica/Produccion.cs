@@ -58,8 +58,15 @@ namespace Fabrica
         /// <param name="item">El ítem a decrementar.</param>
         public static void Stock(string tipoProducto, string item)
         {
-            DecrementarStock(tipoProducto, 30);
-            DecrementarStock(item, 20);
+            try
+            {
+                DecrementarStock(tipoProducto, 30);
+                DecrementarStock(item, 20);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar el stock: " + ex.Message);
+            }
         }
 
 
