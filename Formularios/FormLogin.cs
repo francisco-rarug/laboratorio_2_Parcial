@@ -83,5 +83,23 @@ public partial class FormLogin : Form
     {
         Close();
     }
+
+    private void btnNuevoSupervisor_Click(object sender, EventArgs e)
+    {
+        FormAgregarSupervisor formAgregarSupervisor = new FormAgregarSupervisor();
+        Hide();
+        DialogResult result = formAgregarSupervisor.ShowDialog();
+        if (result == DialogResult.Cancel) Show();
+        return;
+    }
+
+    private void btnNuevoOperario_Click(object sender, EventArgs e)
+    {
+        FormAgregarOperario formAgregarOperario = new FormAgregarOperario();
+        Hide();
+        DialogResult result = formAgregarOperario.ShowDialog();
+        if (result == DialogResult.Cancel) Show();
+        return;
+    }
 }
 

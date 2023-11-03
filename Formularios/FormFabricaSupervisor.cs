@@ -75,7 +75,6 @@ namespace Rarug.Francisco.Parcial
         {
             CrearDonaDefault();
         }
-
         private void btnVerStock_Click(object sender, EventArgs e)
         {
             FormVerStock formVerStock = new FormVerStock();
@@ -87,7 +86,6 @@ namespace Rarug.Francisco.Parcial
                 Show();
             }
         }
-
         private void btnVerProductos_Click(object sender, EventArgs e)
         {
             FormProductosCreados formProductosCreados = new FormProductosCreados();
@@ -99,7 +97,6 @@ namespace Rarug.Francisco.Parcial
                 Show();
             }
         }
-
         private void btnRellenarStock_Click(object sender, EventArgs e)
         {
             FormRellenarMateriaPrima formRellenarMateriaPrima = new FormRellenarMateriaPrima();
@@ -111,7 +108,6 @@ namespace Rarug.Francisco.Parcial
                 Show();
             }
         }
-
         private void btnOperariosConectados_Click(object sender, EventArgs e)
         {
             VerOperarios formOperarios = new VerOperarios();
@@ -128,8 +124,6 @@ namespace Rarug.Francisco.Parcial
         {
             Close();
         }
-
-
     }
 }
 
