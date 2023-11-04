@@ -23,5 +23,18 @@ namespace Rarug.Francisco.Parcial
         {
             Close();
         }
+
+        private void btnXml_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in Produccion.Materiales)
+            {
+                sb.AppendLine($"{item.Key}: {item.Value}");
+            }
+            string contenido = sb.ToString();
+            Archivos.CrearArchivo("Stock", ".xml", contenido);
+            MessageBox.Show("El stock actual fue guardado", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
     }
 }

@@ -84,3 +84,5 @@ C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormLogin.resources
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarOperario.resources
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarSupervisor.resources
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarOperario.resources
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarSupervisor.resources

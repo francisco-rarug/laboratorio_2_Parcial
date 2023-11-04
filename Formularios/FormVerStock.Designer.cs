@@ -42,9 +42,9 @@
             label1.BackColor = Color.Transparent;
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Arial Rounded MT Bold", 26.25F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(178, 63);
+            label1.Location = new Point(156, 47);
             label1.Name = "label1";
-            label1.Size = new Size(338, 53);
+            label1.Size = new Size(267, 42);
             label1.TabIndex = 1;
             label1.Text = "Stock restante";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -54,10 +54,9 @@
             btnCerrar.BackColor = Color.Brown;
             btnCerrar.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrar.ForeColor = SystemColors.Control;
-            btnCerrar.Location = new Point(35, 446);
-            btnCerrar.Margin = new Padding(3, 4, 3, 4);
+            btnCerrar.Location = new Point(31, 334);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(138, 66);
+            btnCerrar.Size = new Size(121, 50);
             btnCerrar.TabIndex = 2;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -66,12 +65,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(181, 168);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(158, 126);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(303, 243);
+            dataGridView1.Size = new Size(265, 182);
             dataGridView1.TabIndex = 0;
             // 
             // btnXml
@@ -79,26 +77,25 @@
             btnXml.BackColor = Color.DarkOliveGreen;
             btnXml.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnXml.ForeColor = SystemColors.Control;
-            btnXml.Location = new Point(480, 448);
-            btnXml.Margin = new Padding(3, 4, 3, 4);
+            btnXml.Location = new Point(420, 336);
             btnXml.Name = "btnXml";
-            btnXml.Size = new Size(138, 66);
+            btnXml.Size = new Size(121, 50);
             btnXml.TabIndex = 3;
             btnXml.Text = "Guardar en xml el stock";
             btnXml.UseVisualStyleBackColor = false;
+            btnXml.Click += btnXml_Click;
             // 
             // FormVerStock
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(653, 527);
+            ClientSize = new Size(571, 395);
             Controls.Add(btnXml);
             Controls.Add(btnCerrar);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormVerStock";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Stock disponible";

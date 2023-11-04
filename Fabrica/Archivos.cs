@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,30 +9,24 @@ namespace Fabrica
 {
     public class Archivos
     {
-        static void main(string[] args)
+       public static void CrearArchivo(string nombre, string extension, string informacion)
         {
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles));
-            string path=$"{Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles)}";
+            string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
 
-            path += @"\Directorio\";
-            Console.WriteLine(path);
-
-            if (!Directory.Exists(path))
+            if (!Directory.Exists(directorioPath))
             {
-                Directory.CreateDirectory(path);
-                Console.WriteLine("Creando directorio....");
+                Directory.CreateDirectory(directorioPath);
             }
 
-            if (Directory.Exists(path))
+            if (Directory.Exists(directorioPath))
             {
-                Console.WriteLine("el directorio existe...");
-                using (StreamWriter sw = new StreamWriter("ArchivoPrueba.txt")) 
+                string archivo = $"{directorioPath}/{nombre}.{extension}";
+                using (StreamWriter sw = new StreamWriter(archivo))
                 {
-                    sw.WriteLine("Linea 1");
+                    sw.WriteLine(informacion);
                 }
             }
-
-
+            
         }
     }
 }
