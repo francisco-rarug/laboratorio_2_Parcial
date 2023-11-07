@@ -43,18 +43,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(136, 49);
+            label1.Location = new Point(119, 37);
             label1.Name = "label1";
-            label1.Size = new Size(0, 20);
+            label1.Size = new Size(0, 15);
             label1.TabIndex = 0;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Sitka Small", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label5.Location = new Point(26, 59);
+            label5.Location = new Point(23, 44);
             label5.Name = "label5";
-            label5.Size = new Size(251, 34);
+            label5.Size = new Size(207, 28);
             label5.TabIndex = 7;
             label5.Text = "Agregar Supervisor";
             // 
@@ -62,9 +62,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(115, 131);
+            label6.Location = new Point(101, 98);
             label6.Name = "label6";
-            label6.Size = new Size(85, 28);
+            label6.Size = new Size(68, 21);
             label6.TabIndex = 8;
             label6.Text = "Nombre";
             // 
@@ -72,9 +72,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(115, 217);
+            label2.Location = new Point(101, 163);
             label2.Name = "label2";
-            label2.Size = new Size(70, 28);
+            label2.Size = new Size(56, 21);
             label2.TabIndex = 9;
             label2.Text = "Legajo";
             // 
@@ -82,50 +82,55 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(115, 324);
+            label3.Location = new Point(101, 243);
             label3.Name = "label3";
-            label3.Size = new Size(93, 28);
+            label3.Size = new Size(76, 21);
             label3.TabIndex = 10;
             label3.Text = "Password";
             // 
             // tbNombre
             // 
-            tbNombre.Location = new Point(73, 172);
+            tbNombre.Location = new Point(64, 129);
+            tbNombre.Margin = new Padding(3, 2, 3, 2);
             tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(163, 27);
+            tbNombre.Size = new Size(143, 23);
             tbNombre.TabIndex = 11;
             // 
             // tbLegajo
             // 
-            tbLegajo.Location = new Point(73, 272);
+            tbLegajo.Location = new Point(64, 204);
+            tbLegajo.Margin = new Padding(3, 2, 3, 2);
             tbLegajo.Name = "tbLegajo";
-            tbLegajo.Size = new Size(163, 27);
+            tbLegajo.Size = new Size(143, 23);
             tbLegajo.TabIndex = 12;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(73, 369);
+            tbPassword.Location = new Point(64, 277);
+            tbPassword.Margin = new Padding(3, 2, 3, 2);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(163, 27);
+            tbPassword.Size = new Size(143, 23);
             tbPassword.TabIndex = 13;
             // 
             // btnRegistro
             // 
             btnRegistro.BackColor = Color.CadetBlue;
             btnRegistro.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegistro.Location = new Point(90, 436);
+            btnRegistro.Location = new Point(79, 327);
+            btnRegistro.Margin = new Padding(3, 2, 3, 2);
             btnRegistro.Name = "btnRegistro";
-            btnRegistro.Size = new Size(130, 32);
+            btnRegistro.Size = new Size(114, 24);
             btnRegistro.TabIndex = 14;
             btnRegistro.Text = "Registrar";
             btnRegistro.UseVisualStyleBackColor = false;
+            btnRegistro.Click += btnRegistro_Click;
             // 
             // FormAgregarSupervisor
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
-            ClientSize = new Size(300, 496);
+            ClientSize = new Size(262, 372);
             Controls.Add(btnRegistro);
             Controls.Add(tbPassword);
             Controls.Add(tbLegajo);
@@ -136,6 +141,7 @@
             Controls.Add(label5);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormAgregarSupervisor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrar Supervisor";

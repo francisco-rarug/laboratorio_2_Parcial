@@ -26,7 +26,7 @@ public partial class FormLogin : Form
 
             if (rangoAuxiliar == Rango.Operario)
             {
-                Operario operario = Operario.BuscarPorUsuarioYRango(usuario, password, rangoAuxiliar);
+                Operario operario = Operario.BuscarPorUsuarioYRango(usuario, password, rangoAuxiliar, BaseDeDatosDAO.LeerOperarios());
                 if (operario != null)
                 {
                     MessageBox.Show(operario.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -39,7 +39,7 @@ public partial class FormLogin : Form
             }
             else
             {
-                Supervisor supervisor = Supervisor.BuscarPorUsuarioYRango(usuario, password, rangoAuxiliar);
+                Supervisor supervisor = Supervisor.BuscarPorUsuarioYRango(usuario, password, rangoAuxiliar, BaseDeDatosDAO.LeerSupervisor());
                 if (supervisor != null)
                 {
                     MessageBox.Show(supervisor.Mostrar(), "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -57,26 +57,6 @@ public partial class FormLogin : Form
         {
             MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-    }
-    private void HardSuper_Click(object sender, EventArgs e)
-    {
-        this.textBoxUsername.Text = "Francisco";
-        this.textBoxPassword.Text = "7777";
-        this.rbSupervisor.Checked = true;
-
-    }
-
-    private void HardOper_Click(object sender, EventArgs e)
-    {
-        this.textBoxUsername.Text = "Lauti";
-        this.textBoxPassword.Text = "profe";
-        this.rbOperario.Checked = true;
-    }
-
-    private void Form1_Load(object sender, EventArgs e)
-    {
-        Operario.InicializarOperarios();
-        Supervisor.InicializarSupervisores();
     }
 
     private void btnCerrar_Click(object sender, EventArgs e)
@@ -101,5 +81,8 @@ public partial class FormLogin : Form
         if (result == DialogResult.Cancel) Show();
         return;
     }
+
+    
 }
+
 

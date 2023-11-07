@@ -60,10 +60,6 @@ namespace Fabrica
         /// </summary>
         /// <param name="usuario">Nombre de usuario a verificar.</param>
         /// <returns>Verdadero si coincide, falso de lo contrario.</returns>
-        public bool Autenticar(string usuario)
-        {
-            return this.usuario == usuario;
-        }
 
         /// <summary>
         /// Verifica si el nombre de usuario y contraseña proporcionados coinciden con los del objeto actual.
@@ -71,9 +67,9 @@ namespace Fabrica
         /// <param name="usuario">Nombre de usuario a verificar.</param>
         /// <param name="password">Contraseña a verificar.</param>
         /// <returns>Verdadero si ambos coinciden, falso de lo contrario.</returns>
-        public bool Autenticar(string usuario, string password)
+        public bool Autenticar(string usuarioIngresado, string passwordIngresado, string usuarioBd, string passwordBd)
         {
-            return this.usuario == usuario && this.password == password;
+            return usuarioIngresado == usuarioBd && passwordIngresado == passwordBd;
         }
 
 

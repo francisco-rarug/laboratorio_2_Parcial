@@ -16,7 +16,7 @@ namespace Rarug.Francisco.Parcial
         public VerOperarios()
         {
             InitializeComponent();
-            dataOperarios.DataSource = Operario.ListaOperarios;
+            dataOperarios.DataSource = BaseDeDatosDAO.LeerOperarios();
         }
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {

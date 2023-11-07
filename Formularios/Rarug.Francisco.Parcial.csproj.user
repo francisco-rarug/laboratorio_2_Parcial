@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="FormCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormAgregarOperario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -9,6 +12,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormCrearProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCrudOperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCrudSupervisor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormFabricaOperario.cs">

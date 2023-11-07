@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace Rarug.Francisco.Parcial
         public FormAgregarOperario()
         {
             InitializeComponent();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            const string rango="Operario";
+            string nombre=tbNombre.Text;
+            string apellido = tbApellido.Text;
+            string password = tbPassword.Text;
+
+            BaseDeDatosDAO.GuardarOperario(nombre, apellido, password, rango);
+            MessageBox.Show("Operario registrado correctamente", "Registrado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           
         }
     }
 }

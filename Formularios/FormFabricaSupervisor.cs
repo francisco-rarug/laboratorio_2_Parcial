@@ -124,6 +124,18 @@ namespace Rarug.Francisco.Parcial
         {
             Close();
         }
+
+        private void btnCrud_Click(object sender, EventArgs e)
+        {
+            FormCrud crud = new FormCrud();
+            Hide();
+            DialogResult result = crud.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Show();
+            }
+        }
     }
 }
 

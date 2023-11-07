@@ -184,7 +184,7 @@
             HardSuper.TabIndex = 5;
             HardSuper.Text = "Hardcode supervisor";
             HardSuper.UseVisualStyleBackColor = true;
-            HardSuper.Click += HardSuper_Click;
+
             // 
             // HardOper
             // 
@@ -196,7 +196,7 @@
             HardOper.TabIndex = 6;
             HardOper.Text = "Hardcode operario";
             HardOper.UseVisualStyleBackColor = true;
-            HardOper.Click += HardOper_Click;
+
             // 
             // btnNuevoOperario
             // 
@@ -241,7 +241,6 @@
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MísticaMousse";
-            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             gbRango.ResumeLayout(false);

@@ -41,32 +41,35 @@
             // 
             // tbNombre
             // 
-            tbNombre.Location = new Point(84, 176);
+            tbNombre.Location = new Point(74, 132);
+            tbNombre.Margin = new Padding(3, 2, 3, 2);
             tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(163, 27);
+            tbNombre.Size = new Size(143, 23);
             tbNombre.TabIndex = 0;
             // 
             // tbApellido
             // 
-            tbApellido.Location = new Point(84, 275);
+            tbApellido.Location = new Point(74, 206);
+            tbApellido.Margin = new Padding(3, 2, 3, 2);
             tbApellido.Name = "tbApellido";
-            tbApellido.Size = new Size(163, 27);
+            tbApellido.Size = new Size(143, 23);
             tbApellido.TabIndex = 1;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(84, 376);
+            tbPassword.Location = new Point(74, 282);
+            tbPassword.Margin = new Padding(3, 2, 3, 2);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(163, 27);
+            tbPassword.Size = new Size(143, 23);
             tbPassword.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(121, 135);
+            label1.Location = new Point(106, 101);
             label1.Name = "label1";
-            label1.Size = new Size(85, 28);
+            label1.Size = new Size(68, 21);
             label1.TabIndex = 3;
             label1.Text = "Nombre";
             // 
@@ -74,9 +77,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(120, 231);
+            label2.Location = new Point(105, 173);
             label2.Name = "label2";
-            label2.Size = new Size(86, 28);
+            label2.Size = new Size(67, 21);
             label2.TabIndex = 4;
             label2.Text = "Apellido";
             // 
@@ -84,9 +87,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(120, 336);
+            label3.Location = new Point(105, 252);
             label3.Name = "label3";
-            label3.Size = new Size(93, 28);
+            label3.Size = new Size(76, 21);
             label3.TabIndex = 5;
             label3.Text = "Password";
             // 
@@ -94,9 +97,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Sitka Small", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label4.Location = new Point(62, 53);
+            label4.Location = new Point(54, 40);
             label4.Name = "label4";
-            label4.Size = new Size(223, 34);
+            label4.Size = new Size(185, 28);
             label4.TabIndex = 6;
             label4.Text = "Agregar operario";
             // 
@@ -104,19 +107,21 @@
             // 
             btnRegistrar.BackColor = Color.CadetBlue;
             btnRegistrar.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegistrar.Location = new Point(98, 452);
+            btnRegistrar.Location = new Point(86, 339);
+            btnRegistrar.Margin = new Padding(3, 2, 3, 2);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(130, 32);
+            btnRegistrar.Size = new Size(114, 24);
             btnRegistrar.TabIndex = 15;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // FormAgregarOperario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
-            ClientSize = new Size(321, 511);
+            ClientSize = new Size(281, 383);
             Controls.Add(btnRegistrar);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -126,6 +131,7 @@
             Controls.Add(tbApellido);
             Controls.Add(tbNombre);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormAgregarOperario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrar Operario";

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfComponenteCantidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ComponenteCantidad>
+    <Componente>Amargo</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Vegano</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Con mani</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Chocolate Blanco</Componente>
+    <Cantidad>50</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>2x2</Componente>
+    <Cantidad>50</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>6x6</Componente>
+    <Cantidad>50</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Glaseadas</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Cubiertas</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Con chispas</Componente>
+    <Cantidad>100</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Cereza</Componente>
+    <Cantidad>50</Cantidad>
+  </ComponenteCantidad>
+  <ComponenteCantidad>
+    <Componente>Dulce de leche</Componente>
+    <Cantidad>50</Cantidad>
+  </ComponenteCantidad>
+</ArrayOfComponenteCantidad>

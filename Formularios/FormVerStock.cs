@@ -26,14 +26,29 @@ namespace Rarug.Francisco.Parcial
 
         private void btnXml_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
+            string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
+            string nombreArchivo = "Stock.xml";
+            string rutaCompleta = Path.Combine(directorioPath, nombreArchivo);
+
+            List<ComponenteCantidad> datos = new List<ComponenteCantidad>();
             foreach (var item in Produccion.Materiales)
             {
-                sb.AppendLine($"{item.Key}: {item.Value}");
+                var elemento = new ComponenteCantidad(item.Key, item.Value);
+                datos.Add(elemento);
             }
-            string contenido = sb.ToString();
-            Archivos.CrearArchivo("Stock", ".xml", contenido);
-            MessageBox.Show("El stock actual fue guardado", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            Archivos<List<ComponenteCantidad>>.Escribir_XML(rutaCompleta, datos);
+
+            MessageBox.Show("El stock actual fue guardado en un archivo XML", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            //StringBuilder sb = new StringBuilder();
+            //foreach (var item in Produccion.Materiales)
+            //{
+            //    sb.AppendLine($"{item.Key}: {item.Value}");
+            //}
+            //string contenido = sb.ToString();
+            //Archivos<string>.CrearArchivo("Stock", "xml", contenido);
+            //MessageBox.Show("El stock actual fue guardado", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
         }
     }
