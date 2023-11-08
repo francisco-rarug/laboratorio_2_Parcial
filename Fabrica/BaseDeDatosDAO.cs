@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Fabrica
         const string APELLIDO_TABLA = "APELLIDO";
         const string PASSWORD_TABLA = "CONTRASEÑA";
         const string LEGAJO_TABLA = "LEGAJO";
+        const string ID_TABLA = "ID";
 
 
         static BaseDeDatosDAO()
@@ -66,27 +68,53 @@ namespace Fabrica
             finally { connection.Close(); }
         }
 
-        //public static void Modificar(string nuevoNombre, int id)
-        //{
-        //    try
-        //    {
-        //        command.Parameters.Clear();
-        //        connection.Open();
-        //        command.CommandText = $"UPDATE Personas SET Nombre = @Nombre WHERE ID = @ID";
-        //        command.Parameters.AddWithValue("@Nombre", nuevoNombre);
-        //        command.Parameters.AddWithValue("@ID", id);
-        //        int rows = command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception)
-        //    {
+        public static void ModificarOperario(string nuevoNombre, int id, string nuevoApellido, string nuevoPassword)
+        {
+            try
+            {
+                command.Parameters.Clear();
+                connection.Open();
+                command.CommandText = "UPDATE Operario SET NOMBRE = @NOMBRE, APELLIDO = @APELLIDO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
+                command.Parameters.AddWithValue("@NOMBRE", nuevoNombre);
+                command.Parameters.AddWithValue("@APELLIDO", nuevoApellido);
+                command.Parameters.AddWithValue("@CONTRASEÑA", nuevoPassword);
+                command.Parameters.AddWithValue("@ID", id);
+                int rows = command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //}
+
+        public static void ModificarSupervisor(string nuevoNombre, int id, string nuevoLegajo, string nuevoPassword)
+        {
+            try
+            {
+                command.Parameters.Clear();
+                connection.Open();
+                command.CommandText = "UPDATE Supervisor SET NOMBRE = @NOMBRE, LEGAJO = @LEGAJO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
+                command.Parameters.AddWithValue("@NOMBRE", nuevoNombre);
+                command.Parameters.AddWithValue("@LEGAJO", nuevoLegajo);
+                command.Parameters.AddWithValue("@CONTRASEÑA", nuevoPassword);
+                command.Parameters.AddWithValue("@ID", id);
+                int rows = command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
 
 
@@ -102,7 +130,7 @@ namespace Fabrica
                 {
                     while (reader.Read())
                     {
-                        operarios.Add(new Operario(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(),Rango.Operario, reader[APELLIDO_TABLA].ToString()));
+                        operarios.Add(new Operario(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(),Rango.Operario, reader[APELLIDO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA])));
                     }
                 }
 
@@ -129,7 +157,7 @@ namespace Fabrica
                 {
                     while (reader.Read())
                     {
-                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[LEGAJO_TABLA].ToString(), Rango.Supervisor, reader["CONTRASEÑA"].ToString()));
+                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[LEGAJO_TABLA].ToString(), Rango.Supervisor, reader["CONTRASEÑA"].ToString(), Convert.ToInt32(reader[ID_TABLA ])));
                     }
                 }
 

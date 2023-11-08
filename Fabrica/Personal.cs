@@ -26,18 +26,15 @@ namespace Fabrica
         private string usuario;
         private string password;
         private Rango rango;
+        private int id;
 
-        /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="Personal"/> con los valores especificados.
-        /// </summary>
-        /// <param name="usuario">Nombre de usuario del personal.</param>
-        /// <param name="password">Contraseña asociada al nombre de usuario.</param>
-        /// <param name="rango">Rango o nivel de autoridad del empleado.</param>
-        public Personal(string usuario, string password, Rango rango)
+
+        public Personal(string usuario, string password, Rango rango, int id)
         {
             this.usuario = usuario;
             this.password = password;
             this.rango = rango;
+            this.id = id;
         }
 
         /// <summary>
@@ -54,6 +51,8 @@ namespace Fabrica
         /// Obtiene o establece el rango o nivel de autoridad del empleado.
         /// </summary>
         public Rango Rango { get => rango; set => rango = value; }
+
+        public int Id { get => id; set => id = value; }
 
         /// <summary>
         /// Verifica si el nombre de usuario proporcionado coincide con el nombre de usuario del objeto actual.

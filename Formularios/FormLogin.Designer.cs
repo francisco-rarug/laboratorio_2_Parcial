@@ -208,7 +208,7 @@
             btnNuevoOperario.TabIndex = 7;
             btnNuevoOperario.Text = "Agregar operario";
             btnNuevoOperario.UseVisualStyleBackColor = true;
-            btnNuevoOperario.Click += btnNuevoOperario_Click;
+            //btnNuevoOperario.Click += btnNuevoOperario_Click;
             // 
             // btnNuevoSupervisor
             // 
@@ -220,7 +220,7 @@
             btnNuevoSupervisor.TabIndex = 8;
             btnNuevoSupervisor.Text = "Agregar supervisor";
             btnNuevoSupervisor.UseVisualStyleBackColor = true;
-            btnNuevoSupervisor.Click += btnNuevoSupervisor_Click;
+            //btnNuevoSupervisor.Click += btnNuevoSupervisor_Click;
             // 
             // FormLogin
             // 

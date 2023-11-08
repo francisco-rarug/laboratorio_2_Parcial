@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Rarug.Francisco.Parcial
         public FormCrudSupervisor()
         {
             InitializeComponent();
+            dgSupervisor.DataSource = BaseDeDatosDAO.LeerSupervisor();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -22,13 +24,33 @@ namespace Rarug.Francisco.Parcial
             Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormAgregarSupervisor formAgregarSupervisor = new FormAgregarSupervisor();
-            Hide();
-            DialogResult result = formAgregarSupervisor.ShowDialog();
-            if (result == DialogResult.Cancel) Show();
-            return;
+            //FormActualizarSupervisor formAgregarSupervisor = new FormActualizarSupervisor();
+            //Hide();
+            //DialogResult result = formAgregarSupervisor.ShowDialog();
+            //if (result == DialogResult.Cancel) Show();
+            //return;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgSupervisor.SelectedRows.Count > 0)
+            {
+                Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
+                BaseDeDatosDAO.EliminarSupervisor(supervisor.Id);
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgSupervisor.SelectedRows.Count > 0)
+            {
+                Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
+                FormActualizarSupervisor formAgregarOperario = new FormActualizarSupervisor(supervisor.Id);
+                formAgregarOperario.Show();
+
+            }
         }
     }
 }

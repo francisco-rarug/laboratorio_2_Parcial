@@ -1,6 +1,6 @@
 ﻿namespace Rarug.Francisco.Parcial
 {
-    partial class FormAgregarOperario
+    partial class FormActualizarOperario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarOperario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActualizarOperario));
             tbNombre = new TextBox();
             tbApellido = new TextBox();
             tbPassword = new TextBox();
@@ -36,7 +36,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            btnRegistrar = new Button();
+            btnActualizar = new Button();
             SuspendLayout();
             // 
             // tbNombre
@@ -103,18 +103,18 @@
             label4.TabIndex = 6;
             label4.Text = "Agregar operario";
             // 
-            // btnRegistrar
+            // btnActualizar
             // 
-            btnRegistrar.BackColor = Color.CadetBlue;
-            btnRegistrar.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegistrar.Location = new Point(86, 339);
-            btnRegistrar.Margin = new Padding(3, 2, 3, 2);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(114, 24);
-            btnRegistrar.TabIndex = 15;
-            btnRegistrar.Text = "Registrar";
-            btnRegistrar.UseVisualStyleBackColor = false;
-            btnRegistrar.Click += btnRegistrar_Click;
+            btnActualizar.BackColor = Color.CadetBlue;
+            btnActualizar.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnActualizar.Location = new Point(87, 332);
+            btnActualizar.Margin = new Padding(3, 2, 3, 2);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(114, 24);
+            btnActualizar.TabIndex = 16;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // FormAgregarOperario
             // 
@@ -122,7 +122,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
             ClientSize = new Size(281, 383);
-            Controls.Add(btnRegistrar);
+            Controls.Add(btnActualizar);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -148,6 +148,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button btnRegistrar;
+        private Button btnActualizar;
     }
 }

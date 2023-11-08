@@ -1,6 +1,6 @@
 ﻿namespace Rarug.Francisco.Parcial
 {
-    partial class FormAgregarSupervisor
+    partial class FormActualizarSupervisor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarSupervisor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActualizarSupervisor));
             label1 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -37,7 +37,7 @@
             tbNombre = new TextBox();
             tbLegajo = new TextBox();
             tbPassword = new TextBox();
-            btnRegistro = new Button();
+            btnActualizar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -112,26 +112,26 @@
             tbPassword.Size = new Size(143, 23);
             tbPassword.TabIndex = 13;
             // 
-            // btnRegistro
+            // btnActualizar
             // 
-            btnRegistro.BackColor = Color.CadetBlue;
-            btnRegistro.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegistro.Location = new Point(79, 327);
-            btnRegistro.Margin = new Padding(3, 2, 3, 2);
-            btnRegistro.Name = "btnRegistro";
-            btnRegistro.Size = new Size(114, 24);
-            btnRegistro.TabIndex = 14;
-            btnRegistro.Text = "Registrar";
-            btnRegistro.UseVisualStyleBackColor = false;
-            btnRegistro.Click += btnRegistro_Click;
+            btnActualizar.BackColor = Color.CadetBlue;
+            btnActualizar.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnActualizar.Location = new Point(79, 327);
+            btnActualizar.Margin = new Padding(3, 2, 3, 2);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(114, 34);
+            btnActualizar.TabIndex = 14;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
-            // FormAgregarSupervisor
+            // FormActualizarSupervisor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
             ClientSize = new Size(262, 372);
-            Controls.Add(btnRegistro);
+            Controls.Add(btnActualizar);
             Controls.Add(tbPassword);
             Controls.Add(tbLegajo);
             Controls.Add(tbNombre);
@@ -142,7 +142,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormAgregarSupervisor";
+            Name = "FormActualizarSupervisor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrar Supervisor";
             ResumeLayout(false);
@@ -159,6 +159,6 @@
         private TextBox tbNombre;
         private TextBox tbLegajo;
         private TextBox tbPassword;
-        private Button btnRegistro;
+        private Button btnActualizar;
     }
 }

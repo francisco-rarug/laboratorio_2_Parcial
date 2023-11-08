@@ -13,7 +13,7 @@ namespace Fabrica
 
         public static List<Supervisor> ListaSupervisor { get => supervisor; set => supervisor = value; }
 
-        public Supervisor(string usuario, string password, Rango rango, string legajo) : base(usuario, password, rango)
+        public Supervisor(string usuario, string password, Rango rango, string legajo, int id) : base(usuario, password, rango, id)
         {
             this.legajo = legajo;
         }

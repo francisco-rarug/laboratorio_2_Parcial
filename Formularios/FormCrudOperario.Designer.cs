@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrudOperario));
-            dataGridView1 = new DataGridView();
+            dgOperario = new DataGridView();
             btnCerrar = new Button();
             btnModificar = new Button();
             btnAgregar = new Button();
             btnEliminar = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgOperario).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgOperario
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 87);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(376, 150);
-            dataGridView1.TabIndex = 0;
+            dgOperario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgOperario.Location = new Point(24, 87);
+            dgOperario.Name = "dgOperario";
+            dgOperario.RowTemplate.Height = 25;
+            dgOperario.Size = new Size(376, 150);
+            dgOperario.TabIndex = 0;
             // 
             // btnCerrar
             // 
@@ -69,6 +69,7 @@
             btnModificar.TabIndex = 2;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnAgregar
             // 
@@ -80,7 +81,7 @@
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
-            btnAgregar.Click += btnAgregar_Click;
+            //btnAgregar.Click += btnAgregar_Click;
             // 
             // btnEliminar
             // 
@@ -92,6 +93,7 @@
             btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // FormCrudOperario
             // 
@@ -103,19 +105,19 @@
             Controls.Add(btnAgregar);
             Controls.Add(btnModificar);
             Controls.Add(btnCerrar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgOperario);
             ForeColor = SystemColors.ActiveCaptionText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCrudOperario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUD Operario";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgOperario).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgOperario;
         private Button btnCerrar;
         private Button btnModificar;
         private Button btnAgregar;

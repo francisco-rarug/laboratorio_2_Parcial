@@ -14,8 +14,8 @@ namespace Fabrica
 
         public static List<Operario> ListaOperarios { get => operarios; set => operarios = value; }
 
-
-        public Operario(string nombre, string password, Rango rango, string apellido) : base(nombre, password, rango)
+                                  
+        public Operario(string nombre, string password, Rango rango, string apellido, int id) : base(nombre, password, rango, id)
         {
             this.apellido = apellido;
         }

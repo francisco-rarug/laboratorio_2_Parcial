@@ -5,10 +5,10 @@
     <Compile Update="FormCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormAgregarOperario.cs">
+    <Compile Update="FormActualizarOperario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormAgregarSupervisor.cs">
+    <Compile Update="FormActualizarSupervisor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormCrearProducto.cs">
