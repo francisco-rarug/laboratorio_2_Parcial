@@ -81,7 +81,6 @@ C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.genruntimeconfig.cache
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\ref\Rarug.Francisco.Parcial.dll
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormLogin.resources
-C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormLogin.resources
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarOperario.resources
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormAgregarSupervisor.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
@@ -95,3 +94,4 @@ C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormCrudSupervisor.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormActualizarOperario.resources
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FormActualizarSupervisor.resources
+C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Formularios\obj\Debug\net6.0-windows\Rarug.Francisco.Parcial.FrmLogin.resources
