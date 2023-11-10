@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -12,10 +13,13 @@ using System.Windows.Forms;
 namespace Rarug.Francisco.Parcial
 {
     public partial class FormFabricaSupervisor : Form, IFormFabrica
+
     {
+        private ModoOscuro modoOscuro;
         public FormFabricaSupervisor()
         {
             InitializeComponent();
+            modoOscuro = new ModoOscuro(this);
         }
         public void CrearChocolateDefault()
         {
@@ -135,6 +139,16 @@ namespace Rarug.Francisco.Parcial
             {
                 Show();
             }
+        }
+
+        private void btnOscuro_Click(object sender, EventArgs e)
+        {
+            modoOscuro.AplicarModoOscuro();
+        }
+
+        private void btnClaro_Click(object sender, EventArgs e)
+        {
+            modoOscuro.AplicarModoClaro();
         }
     }
 }

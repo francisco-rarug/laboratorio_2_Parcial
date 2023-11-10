@@ -1,0 +1,16 @@
+{
+  "BotonRellenarStock": "white",
+  "BotonCrearChocolate": "white",
+  "BotonCrud": "white",
+  "BotonVerStock":"white",
+  "BotonVerProductos": "white",
+  "BotonOperariosConectados": "white",
+  "BotonCerrar": "white",
+  "BotonCrearProducto": "white",
+  "BotonCrearDona": "white",
+  "LabelTitulo": "white",
+  "Form": "gray",
+  "BotonModoOscuro": "white",
+  "BotonModoClaro": "white"
+
+}

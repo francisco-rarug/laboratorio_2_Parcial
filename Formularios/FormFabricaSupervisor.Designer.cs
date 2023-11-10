@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFabricaSupervisor));
-            label3 = new Label();
+            labelTitulo = new Label();
             btnVerStock = new Button();
             btnVerProductos = new Button();
             groupBox1 = new GroupBox();
@@ -40,20 +40,22 @@
             btnOperariosConectados = new Button();
             btnRellenarStock = new Button();
             btnCrud = new Button();
+            btnOscuro = new Button();
+            btnClaro = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // label3
+            // labelTitulo
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.CadetBlue;
-            label3.Font = new Font("Castellar", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(178, 48);
-            label3.Name = "label3";
-            label3.Size = new Size(436, 19);
-            label3.TabIndex = 9;
-            label3.Text = "Bienvenido a la fabrica MísticaMousse";
+            labelTitulo.AutoSize = true;
+            labelTitulo.BackColor = Color.CadetBlue;
+            labelTitulo.Font = new Font("Castellar", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTitulo.ForeColor = Color.Black;
+            labelTitulo.Location = new Point(178, 48);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(436, 19);
+            labelTitulo.TabIndex = 9;
+            labelTitulo.Text = "Bienvenido a la fabrica MísticaMousse";
             // 
             // btnVerStock
             // 
@@ -94,39 +96,42 @@
             // 
             // btnDonaDefault
             // 
+            btnDonaDefault.BackColor = Color.LightSkyBlue;
             btnDonaDefault.Location = new Point(88, 50);
             btnDonaDefault.Name = "btnDonaDefault";
             btnDonaDefault.Size = new Size(172, 31);
             btnDonaDefault.TabIndex = 2;
             btnDonaDefault.Text = "Crear dona default";
-            btnDonaDefault.UseVisualStyleBackColor = true;
+            btnDonaDefault.UseVisualStyleBackColor = false;
             btnDonaDefault.Click += btnDonaDefault_Click;
             // 
             // btnChocolateDefault
             // 
+            btnChocolateDefault.BackColor = Color.LightSkyBlue;
             btnChocolateDefault.Location = new Point(88, 108);
             btnChocolateDefault.Name = "btnChocolateDefault";
             btnChocolateDefault.Size = new Size(172, 32);
             btnChocolateDefault.TabIndex = 1;
             btnChocolateDefault.Text = "Crear chocolate default";
-            btnChocolateDefault.UseVisualStyleBackColor = true;
+            btnChocolateDefault.UseVisualStyleBackColor = false;
             btnChocolateDefault.Click += btnChocolateDefault_Click;
             // 
             // buttonCreate
             // 
+            buttonCreate.BackColor = Color.LightSkyBlue;
             buttonCreate.Location = new Point(88, 170);
             buttonCreate.Name = "buttonCreate";
             buttonCreate.Size = new Size(172, 31);
             buttonCreate.TabIndex = 0;
             buttonCreate.Text = "Crear producto";
-            buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.UseVisualStyleBackColor = false;
             buttonCreate.Click += buttonCreate_Click;
             // 
             // btnCerrar
             // 
             btnCerrar.BackColor = Color.Brown;
             btnCerrar.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCerrar.ForeColor = SystemColors.ButtonHighlight;
+            btnCerrar.ForeColor = Color.Black;
             btnCerrar.Location = new Point(33, 384);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(123, 29);
@@ -171,17 +176,43 @@
             btnCrud.UseVisualStyleBackColor = false;
             btnCrud.Click += btnCrud_Click;
             // 
+            // btnOscuro
+            // 
+            btnOscuro.BackColor = Color.MediumOrchid;
+            btnOscuro.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnOscuro.Location = new Point(33, 252);
+            btnOscuro.Name = "btnOscuro";
+            btnOscuro.Size = new Size(123, 33);
+            btnOscuro.TabIndex = 14;
+            btnOscuro.Text = "Modo oscuro";
+            btnOscuro.UseVisualStyleBackColor = false;
+            btnOscuro.Click += btnOscuro_Click;
+            // 
+            // btnClaro
+            // 
+            btnClaro.BackColor = Color.PaleVioletRed;
+            btnClaro.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnClaro.Location = new Point(33, 307);
+            btnClaro.Name = "btnClaro";
+            btnClaro.Size = new Size(123, 31);
+            btnClaro.TabIndex = 15;
+            btnClaro.Text = "Modo Claro";
+            btnClaro.UseVisualStyleBackColor = false;
+            btnClaro.Click += btnClaro_Click;
+            // 
             // FormFabricaSupervisor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClaro);
+            Controls.Add(btnOscuro);
             Controls.Add(btnCrud);
             Controls.Add(btnRellenarStock);
             Controls.Add(btnOperariosConectados);
             Controls.Add(btnCerrar);
-            Controls.Add(label3);
+            Controls.Add(labelTitulo);
             Controls.Add(btnVerStock);
             Controls.Add(btnVerProductos);
             Controls.Add(groupBox1);
@@ -196,7 +227,7 @@
 
         #endregion
 
-        private Label label3;
+        private Label labelTitulo;
         private Button btnVerStock;
         private Button btnVerProductos;
         private GroupBox groupBox1;
@@ -207,5 +238,21 @@
         private Button btnOperariosConectados;
         private Button btnRellenarStock;
         private Button btnCrud;
+        private Button btnOscuro;
+        private Button btnClaro;
+
+        public Label LabelTitulo { get => labelTitulo; set => labelTitulo = value; }
+        public Button BtnVerStock { get => btnVerStock; set => btnVerStock = value; }
+        public Button BtnVerProductos { get => btnVerProductos; set => btnVerProductos = value; }
+        public GroupBox GroupBox1 { get => groupBox1; set => groupBox1 = value; }
+        public Button BtnDonaDefault { get => btnDonaDefault; set => btnDonaDefault = value; }
+        public Button BtnChocolateDefault { get => btnChocolateDefault; set => btnChocolateDefault = value; }
+        public Button ButtonCreate { get => buttonCreate; set => buttonCreate = value; }
+        public Button BtnCerrar { get => btnCerrar; set => btnCerrar = value; }
+        public Button BtnOperariosConectados { get => btnOperariosConectados; set => btnOperariosConectados = value; }
+        public Button BtnRellenarStock { get => btnRellenarStock; set => btnRellenarStock = value; }
+        public Button BtnCrud { get => btnCrud; set => btnCrud = value; }
+        public Button BtnOscuro { get => btnOscuro; set => btnOscuro = value; }
+        public Button BtnClaro { get => btnClaro; set => btnClaro = value; }
     }
 }

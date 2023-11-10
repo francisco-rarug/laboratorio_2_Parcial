@@ -7,35 +7,6 @@ public partial class FrmLogin : Form
     {
         InitializeComponent();
     }
-    private void FormLogin_Load(object sender, EventArgs e)
-    {
-        string rutaArchivo = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos\config.json";
-        ConfigSettings configuracion;
-
-        if (File.Exists(rutaArchivo))
-        {
-            configuracion = Archivos<string>.Leer_JSON<ConfigSettings>(rutaArchivo);
-        }
-        else
-        {
-            configuracion = new ConfigSettings
-            {
-                BotonIngresar = ColorTranslator.ToHtml(btnIngresar.BackColor),
-                BotonCerrar = btnCerrar.Text,
-                BotonHardSupervisor = btnHardSuper.Text,
-                BotonHardOperario = btnHardOper.Text,
-                LabelTitulo = lblTitulo.Text,
-            };
-            Archivos<string>.EscribirJson(rutaArchivo, configuracion);
-        }
-        btnIngresar.BackColor = ColorTranslator.FromHtml(configuracion.BotonIngresar);
-        btnCerrar.Text = configuracion.BotonCerrar;
-        btnHardSuper.Text = configuracion.BotonHardSupervisor;
-        btnHardOper.Text = configuracion.BotonHardOperario;
-        lblTitulo.Text = configuracion.LabelTitulo;
-        lblTitulo.BackColor = ColorTranslator.FromHtml(configuracion.LabelTitulo);
-        MessageBox.Show("Configuración cargada.");
-    }
 
     private void btnIngresar_Click_1(object sender, EventArgs e)
     {

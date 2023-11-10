@@ -153,7 +153,7 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.BackColor = SystemColors.GrayText;
+            lblTitulo.BackColor = Color.Teal;
             lblTitulo.Font = new Font("Castellar", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo.ForeColor = SystemColors.ButtonHighlight;
             lblTitulo.Location = new Point(174, 71);
@@ -198,7 +198,6 @@
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MísticaMousse";
-            Load += FormLogin_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             gbRango.ResumeLayout(false);
