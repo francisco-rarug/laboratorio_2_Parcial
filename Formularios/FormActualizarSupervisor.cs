@@ -17,7 +17,7 @@ namespace Rarug.Francisco.Parcial
         public FormActualizarSupervisor(int id)
         {
             InitializeComponent();
-            this.id=id;
+            this.id = id;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

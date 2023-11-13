@@ -26,11 +26,11 @@ namespace Rarug.Francisco.Parcial
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //FormActualizarSupervisor formAgregarSupervisor = new FormActualizarSupervisor();
-            //Hide();
-            //DialogResult result = formAgregarSupervisor.ShowDialog();
-            //if (result == DialogResult.Cancel) Show();
-            //return;
+            FormAgregarSupervisor formAgregarSupervisor = new FormAgregarSupervisor();
+            Hide();
+            DialogResult result = formAgregarSupervisor.ShowDialog();
+            if (result == DialogResult.Cancel) Show();
+            return;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -47,8 +47,8 @@ namespace Rarug.Francisco.Parcial
             if (dgSupervisor.SelectedRows.Count > 0)
             {
                 Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
-                FormActualizarSupervisor formAgregarOperario = new FormActualizarSupervisor(supervisor.Id);
-                formAgregarOperario.Show();
+                FormActualizarSupervisor formActualizarOperario = new FormActualizarSupervisor(supervisor.Id);
+                formActualizarOperario.Show();
 
             }
         }

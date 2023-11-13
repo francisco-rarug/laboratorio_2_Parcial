@@ -22,3 +22,15 @@ C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.pdb
 C:\Users\frarug\Desktop\Labo parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\ref\Fabrica.dll
 C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Fabrica\obj\Debug\net6.0\Fabrica.csproj.AssemblyReference.cache
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\bin\Debug\net6.0\Fabrica.deps.json
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\bin\Debug\net6.0\Fabrica.dll
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\bin\Debug\net6.0\Fabrica.pdb
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.csproj.AssemblyReference.cache
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.AssemblyInfoInputs.cache
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.AssemblyInfo.cs
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.csproj.CoreCompileInputs.cache
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.dll
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\refint\Fabrica.dll
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\Fabrica.pdb
+C:\Users\frarug\Desktop\Labo_parcial\laboratorio_2_Parcial\Fabrica\obj\Debug\net6.0\ref\Fabrica.dll

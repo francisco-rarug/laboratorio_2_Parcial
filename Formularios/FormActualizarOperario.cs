@@ -19,9 +19,6 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
             this.id = id;
         }
-
-
-
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string nombre = tbNombre.Text;
@@ -29,7 +26,7 @@ namespace Rarug.Francisco.Parcial
             string password = tbPassword.Text;
 
             BaseDeDatosDAO.ModificarOperario(nombre, id, apellido, password);
-            MessageBox.Show("Operario Actualizado correctamente", "Registrado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Operario Actualizado correctamente", "Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

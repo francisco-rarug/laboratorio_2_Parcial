@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj": {}
+    "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\Fabrica.csproj": {
+    "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\Fabrica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\Fabrica.csproj",
+        "projectUniqueName": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\Fabrica.csproj",
         "projectName": "Fabrica",
-        "projectPath": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\Fabrica.csproj",
-        "packagesPath": "C:\\Users\\NoxiePC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\obj\\",
+        "projectPath": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\Fabrica.csproj",
+        "packagesPath": "C:\\Users\\frarug\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NoxiePC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frarug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,21 +65,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj": {
+    "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj",
+        "projectUniqueName": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj",
         "projectName": "Rarug.Francisco.Parcial",
-        "projectPath": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj",
-        "packagesPath": "C:\\Users\\NoxiePC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Formularios\\obj\\",
+        "projectPath": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Formularios\\Rarug.Francisco.Parcial.csproj",
+        "packagesPath": "C:\\Users\\frarug\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Formularios\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NoxiePC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frarug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +97,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\Fabrica.csproj": {
-                "projectPath": "C:\\Users\\NoxiePC\\source\\repos\\Rarug.Francisco.Parcial\\Fabrica\\Fabrica.csproj"
+              "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\Fabrica.csproj": {
+                "projectPath": "C:\\Users\\frarug\\Desktop\\Labo_parcial\\laboratorio_2_Parcial\\Fabrica\\Fabrica.csproj"
               }
             }
           }
@@ -123,7 +131,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

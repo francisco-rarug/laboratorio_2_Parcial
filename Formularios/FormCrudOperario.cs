@@ -24,14 +24,14 @@ namespace Rarug.Francisco.Parcial
             Close();
         }
 
-        //private void btnAgregar_Click(object sender, EventArgs e)
-        //{
-        //    FormAgregarOperario formAgregarOperario = new FormAgregarOperario();
-        //    Hide();
-        //    DialogResult result = formAgregarOperario.ShowDialog();
-        //    if (result == DialogResult.Cancel) Show();
-        //    return;
-        //}
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregarOperario formAgregarOperario = new FormAgregarOperario();
+            Hide();
+            DialogResult result = formAgregarOperario.ShowDialog();
+            if (result == DialogResult.Cancel) Show();
+            return;
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -47,8 +47,8 @@ namespace Rarug.Francisco.Parcial
             if (dgOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)dgOperario.CurrentRow.DataBoundItem;
-                FormActualizarOperario formAgregarOperario = new FormActualizarOperario(operario.Id);
-                formAgregarOperario.Show();
+                FormActualizarOperario formActualizarOperario = new FormActualizarOperario(operario.Id);
+                formActualizarOperario.Show();
                 
             }
         }

@@ -13,7 +13,7 @@ namespace Rarug.Francisco.Parcial
         public ModoOscuro(FormFabricaSupervisor form)
         {
             this.form = form;
-            this.configuracionInicial = ObtenerConfiguracionActual();
+            configuracionInicial = ObtenerConfiguracionActual();
         }
 
         private ConfigSettings ObtenerConfiguracionActual()
