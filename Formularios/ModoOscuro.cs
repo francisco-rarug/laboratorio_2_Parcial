@@ -1,6 +1,8 @@
 ﻿using Fabrica;
+using Rarug.Francisco.Parcial;
 using System;
 using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
@@ -30,7 +32,7 @@ namespace Rarug.Francisco.Parcial
                 BotonCrearProducto = ColorTranslator.ToHtml(form.ButtonCreate.BackColor),
                 BotonCrearDona = ColorTranslator.ToHtml(form.BtnDonaDefault.BackColor),
                 BotonModoOscuro = ColorTranslator.ToHtml(form.BtnOscuro.BackColor),
-                BotonModoClaro= ColorTranslator.ToHtml(form.BtnClaro.BackColor),
+                BotonModoClaro = ColorTranslator.ToHtml(form.BtnClaro.BackColor),
                 Form = ColorTranslator.ToHtml(form.BackColor),
                 LabelTitulo = ColorTranslator.ToHtml(form.LabelTitulo.ForeColor),
             };
@@ -42,7 +44,8 @@ namespace Rarug.Francisco.Parcial
 
             if (File.Exists(rutaArchivo))
             {
-                configuracion = Archivos<string>.Leer_JSON<ConfigSettings>(rutaArchivo);
+                var archivosManager = new Archivos<string>();
+                configuracion = archivosManager.Leer_JSON<ConfigSettings>(rutaArchivo);
 
                 form.BtnRellenarStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonRellenarStock);
                 form.BtnVerStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonVerStock);
@@ -80,7 +83,7 @@ namespace Rarug.Francisco.Parcial
                 {
                     BotonRellenarStock = "",
                     BotonCrearChocolate = "",
-                    BotonVerStock="",
+                    BotonVerStock = "",
                     BotonCrud = "",
                     BotonOperariosConectados = "",
                     BotonVerProductos = "",
@@ -89,11 +92,15 @@ namespace Rarug.Francisco.Parcial
                     BotonCrearDona = "",
                     Form = "",
                     LabelTitulo = "",
-                    BotonModoClaro="",
-                    BotonModoOscuro="",
+                    BotonModoClaro = "",
+                    BotonModoOscuro = "",
                 };
 
-                Archivos<string>.EscribirJson(rutaArchivo, configuracion);
+                string configuracionString = JsonSerializer.Serialize(configuracion);
+                var archivosManager = new Archivos<string>();
+                archivosManager.EscribirJson(rutaArchivo, configuracionString);
+
+
 
                 MessageBox.Show("Se creo el archivo de configuración.", "Archivo JSON", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -133,3 +140,4 @@ namespace Rarug.Francisco.Parcial
         }
     }
 }
+

@@ -42,6 +42,7 @@
             lblTitulo = new Label();
             btnHardSuper = new Button();
             btnHardOper = new Button();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             gbRango.SuspendLayout();
             SuspendLayout();
@@ -182,11 +183,21 @@
             btnHardOper.Text = "Hardcode operario";
             btnHardOper.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Location = new Point(679, 351);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 7;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(btnHardOper);
             Controls.Add(btnHardSuper);
             Controls.Add(lblTitulo);
@@ -221,5 +232,6 @@
         private Label lblTitulo;
         private Button btnHardSuper;
         private Button btnHardOper;
+        private Button button1;
     }
 }

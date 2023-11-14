@@ -9,9 +9,9 @@ using System.Xml.Serialization;
 
 namespace Fabrica
 {
-    public class Archivos<T>
+    public class Archivos<T> : Iarchivos<T>
     {
-       public static void CrearArchivo(string nombre, string extension, string informacion)
+        public void CrearArchivo(string nombre, string extension, string informacion)
         {
             string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
 
@@ -23,16 +23,16 @@ namespace Fabrica
             if (Directory.Exists(directorioPath))
             {
                 string fechaHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                string archivo = $"{directorioPath}/{nombre}.{extension}"; 
+                string archivo = $"{directorioPath}/{nombre}.{extension}";
                 using (StreamWriter sw = new StreamWriter(archivo))
                 {
                     sw.WriteLine(fechaHora);
                     sw.WriteLine(informacion);
                 }
             }
-            
         }
-        public static void EscribirJson<T>(string path, T objeto)
+
+        public void EscribirJson(string path, T objeto)
         {
             string directorio = Path.GetDirectoryName(path);
 
@@ -40,6 +40,7 @@ namespace Fabrica
             {
                 Directory.CreateDirectory(directorio);
             }
+
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.WriteIndented = true;
 
@@ -48,15 +49,14 @@ namespace Fabrica
             File.WriteAllText(path, jsonString);
         }
 
-        public static T Leer_JSON<T>(string path)
+        public T Leer_JSON<T>(string path)
         {
             string jsonString = File.ReadAllText(path);
             T objeto = JsonSerializer.Deserialize<T>(jsonString);
-
             return objeto;
         }
 
-        public static void Escribir_XML<T>(string path, T objeto)
+        public void Escribir_XML(string path, T objeto)
         {
             string directorio = Path.GetDirectoryName(path);
 
@@ -72,17 +72,16 @@ namespace Fabrica
             }
         }
 
-        public static T Leer_XML<T>(string path)
+        public T LeerXml(string path)
         {
-
             using (StreamReader sw = new StreamReader(path))
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
                 return (T)xmlSerializer.Deserialize(sw);
             }
         }
-        
     }
 }
+
 
 

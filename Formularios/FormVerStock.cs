@@ -26,30 +26,34 @@ namespace Rarug.Francisco.Parcial
 
         private void btnXml_Click(object sender, EventArgs e)
         {
-            string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
-            string nombreArchivo = "Stock.xml";
-            string rutaCompleta = Path.Combine(directorioPath, nombreArchivo);
-
-            List<ComponenteCantidad> datos = new List<ComponenteCantidad>();
-            foreach (var item in Produccion.Materiales)
+            try
             {
-                var elemento = new ComponenteCantidad(item.Key, item.Value);
-                datos.Add(elemento);
+                string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
+                string nombreArchivo = "Stock.xml";
+                string rutaCompleta = Path.Combine(directorioPath, nombreArchivo);
+
+                List<ComponenteCantidad> datos = new List<ComponenteCantidad>();
+                foreach (var item in Produccion.Materiales)
+                {
+                    var elemento = new ComponenteCantidad(item.Key, item.Value);
+                    datos.Add(elemento);
+                }
+
+                if (datos != null && datos.Count > 0)
+                {
+                    var archivosManager = new Archivos<List<ComponenteCantidad>>();
+                    archivosManager.Escribir_XML(rutaCompleta, datos);
+                    MessageBox.Show("El stock actual fue guardado en un archivo XML", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("La lista de datos está vacía o nula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-            Archivos<List<ComponenteCantidad>>.Escribir_XML(rutaCompleta, datos);
-
-            MessageBox.Show("El stock actual fue guardado en un archivo XML", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            //StringBuilder sb = new StringBuilder();
-            //foreach (var item in Produccion.Materiales)
-            //{
-            //    sb.AppendLine($"{item.Key}: {item.Value}");
-            //}
-            //string contenido = sb.ToString();
-            //Archivos<string>.CrearArchivo("Stock", "xml", contenido);
-            //MessageBox.Show("El stock actual fue guardado", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+            catch (IOException ex)
+            {
+                MessageBox.Show($"Error al escribir en el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

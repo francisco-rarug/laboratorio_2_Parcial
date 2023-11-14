@@ -74,7 +74,7 @@ namespace Fabrica
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = "UPDATE Operario SET NOMBRE = @NOMBRE, APELLIDO = @APELLIDO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
+                command.CommandText = "UPDATE OPERARIO SET NOMBRE = @NOMBRE, APELLIDO = @APELLIDO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
                 command.Parameters.AddWithValue("@NOMBRE", nuevoNombre);
                 command.Parameters.AddWithValue("@APELLIDO", nuevoApellido);
                 command.Parameters.AddWithValue("@CONTRASEÑA", nuevoPassword);
@@ -98,7 +98,7 @@ namespace Fabrica
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = "UPDATE Supervisor SET NOMBRE = @NOMBRE, LEGAJO = @LEGAJO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
+                command.CommandText = "UPDATE SUPERVISOR SET NOMBRE = @NOMBRE, LEGAJO = @LEGAJO, CONTRASEÑA = @CONTRASEÑA WHERE ID = @ID";
                 command.Parameters.AddWithValue("@NOMBRE", nuevoNombre);
                 command.Parameters.AddWithValue("@LEGAJO", nuevoLegajo);
                 command.Parameters.AddWithValue("@CONTRASEÑA", nuevoPassword);
@@ -157,7 +157,7 @@ namespace Fabrica
                 {
                     while (reader.Read())
                     {
-                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[LEGAJO_TABLA].ToString(), Rango.Supervisor, reader["CONTRASEÑA"].ToString(), Convert.ToInt32(reader[ID_TABLA ])));
+                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(), Rango.Supervisor, reader[LEGAJO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA ])));
                     }
                 }
 

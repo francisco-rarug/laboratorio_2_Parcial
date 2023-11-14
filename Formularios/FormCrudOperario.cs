@@ -23,22 +23,22 @@ namespace Rarug.Francisco.Parcial
         {
             Close();
         }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void Refrescar()
         {
-            FormAgregarOperario formAgregarOperario = new FormAgregarOperario();
-            Hide();
-            DialogResult result = formAgregarOperario.ShowDialog();
-            if (result == DialogResult.Cancel) Show();
-            return;
+            dgOperario.DataSource = null;
+            dgOperario.DataSource = BaseDeDatosDAO.LeerOperarios();
+            dgOperario.Refresh();
+            dgOperario.Update();
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)dgOperario.CurrentRow.DataBoundItem;
                 BaseDeDatosDAO.EliminarOperario(operario.Id);
+                Refrescar();
+
+                MessageBox.Show("Operario eliminado correctamente", "Operario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -48,9 +48,16 @@ namespace Rarug.Francisco.Parcial
             {
                 Operario operario = (Operario)dgOperario.CurrentRow.DataBoundItem;
                 FormActualizarOperario formActualizarOperario = new FormActualizarOperario(operario.Id);
-                formActualizarOperario.Show();
-                
+                formActualizarOperario.ShowDialog();
+                Refrescar();
             }
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            FormAgregarOperario formAgregarOperario = new FormAgregarOperario();
+            formAgregarOperario.ShowDialog();
+            Refrescar();
         }
     }
 }

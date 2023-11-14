@@ -2,7 +2,6 @@
   "BotonRellenarStock": "white",
   "BotonCrearChocolate": "white",
   "BotonCrud": "white",
-  "BotonVerStock":"white",
   "BotonVerProductos": "white",
   "BotonOperariosConectados": "white",
   "BotonCerrar": "white",
@@ -11,6 +10,6 @@
   "LabelTitulo": "white",
   "Form": "gray",
   "BotonModoOscuro": "white",
-  "BotonModoClaro": "white"
-
+  "BotonModoClaro": "white",
+  "BotonVerStock": "white"
 }

@@ -24,13 +24,19 @@ namespace Rarug.Francisco.Parcial
             Close();
         }
 
+        private void Refrescar()
+        {
+            dgSupervisor.DataSource = null;
+            dgSupervisor.DataSource = BaseDeDatosDAO.LeerSupervisor();
+            dgSupervisor.Refresh();
+            dgSupervisor.Update();
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregarSupervisor formAgregarSupervisor = new FormAgregarSupervisor();
-            Hide();
-            DialogResult result = formAgregarSupervisor.ShowDialog();
-            if (result == DialogResult.Cancel) Show();
-            return;
+            formAgregarSupervisor.ShowDialog();
+            Refrescar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -39,6 +45,9 @@ namespace Rarug.Francisco.Parcial
             {
                 Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
                 BaseDeDatosDAO.EliminarSupervisor(supervisor.Id);
+                Refrescar();
+
+                MessageBox.Show("Supervisor eliminado correctamente", "Supervisor Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -47,9 +56,9 @@ namespace Rarug.Francisco.Parcial
             if (dgSupervisor.SelectedRows.Count > 0)
             {
                 Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
-                FormActualizarSupervisor formActualizarOperario = new FormActualizarSupervisor(supervisor.Id);
-                formActualizarOperario.Show();
-
+                FormActualizarSupervisor formActualizarSupervisor = new FormActualizarSupervisor(supervisor.Id);
+                formActualizarSupervisor.ShowDialog();
+                Refrescar();
             }
         }
     }
