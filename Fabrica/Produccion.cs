@@ -33,11 +33,6 @@ namespace Fabrica
             }
         }
 
-        public static void Stock(string tipoProducto)
-        {
-            DecrementarStock(tipoProducto, 30);
-        }
-
         public static void Stock(string tipoProducto, string item)
         {
             try
@@ -71,16 +66,25 @@ namespace Fabrica
             return tieneStockTipo && tieneStockItem;
         }
 
-        public static Dictionary<string, int> ObtenerMateriales()
-        {
-            return new Dictionary<string, int>(Materiales);
-        }
-
-        public static List<KeyValuePair<string, int>> ObtenerMaterialesOrdenados()
+        public static List<object> ObtenerMaterialesOrdenados()
         {
             var materialesOrdenados = Materiales.OrderByDescending(material => material.Value).ToList();
-            return materialesOrdenados;
+            var resultado = new List<object>();
+
+            foreach (var material in materialesOrdenados)
+            {
+                var elemento = new
+                {
+                    Componente = material.Key,
+                    Cantidad = material.Value
+                };
+                resultado.Add(elemento);
+            }
+
+            return resultado;
         }
+
+
     }
 }
 

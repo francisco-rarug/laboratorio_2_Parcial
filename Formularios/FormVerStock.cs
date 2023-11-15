@@ -16,7 +16,7 @@ namespace Rarug.Francisco.Parcial
         public FormVerStock()
         {
             InitializeComponent();
-            dataGridView1.DataSource = Produccion.Materiales.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
+            dataGridView1.DataSource = Produccion.ObtenerMaterialesOrdenados();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

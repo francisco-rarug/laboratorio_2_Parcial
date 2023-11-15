@@ -25,7 +25,7 @@ namespace Rarug.Francisco.Parcial
         {
             try
             {
-                if (Crear(crearMetodo))
+                if (crearMetodo())
                 {
                     FormModal1 formProduct = new FormModal1();
                     formProduct.ShowDialog();
@@ -37,11 +37,6 @@ namespace Rarug.Francisco.Parcial
             {
                 MessageBox.Show($"Ha ocurrido un error al crear el producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private bool Crear(Func<bool> metodo)
-        {
-            return metodo();
         }
 
         private void btnChocolateDefault_Click(object sender, EventArgs e)

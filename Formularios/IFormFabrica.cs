@@ -8,7 +8,6 @@ namespace Rarug.Francisco.Parcial
 {
     public interface IFormFabrica
     {
-        void CrearDonaDefault();
-        void CrearChocolateDefault();
+        void CrearProductoDefault();
     }
 }

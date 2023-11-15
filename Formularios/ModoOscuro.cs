@@ -47,17 +47,25 @@ namespace Rarug.Francisco.Parcial
                 var archivosManager = new Archivos<string>();
                 configuracion = archivosManager.Leer_JSON<ConfigSettings>(rutaArchivo);
 
-                form.BtnRellenarStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonRellenarStock);
-                form.BtnVerStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonVerStock);
-                form.BtnChocolateDefault.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearChocolate);
-                form.BtnCrud.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrud);
-                form.BtnOperariosConectados.BackColor = ColorTranslator.FromHtml(configuracion.BotonOperariosConectados);
-                form.BtnVerProductos.BackColor = ColorTranslator.FromHtml(configuracion.BotonVerProductos);
-                form.BtnCerrar.BackColor = ColorTranslator.FromHtml(configuracion.BotonCerrar);
-                form.ButtonCreate.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearProducto);
-                form.BtnDonaDefault.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearDona);
-                form.BtnClaro.BackColor = ColorTranslator.FromHtml(configuracion.BotonModoClaro);
-                form.BtnOscuro.BackColor = ColorTranslator.FromHtml(configuracion.BotonModoOscuro);
+                try 
+                {
+                    form.BtnRellenarStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonRellenarStock);
+                    form.BtnVerStock.BackColor = ColorTranslator.FromHtml(configuracion.BotonVerStock);
+                    form.BtnChocolateDefault.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearChocolate);
+                    form.BtnCrud.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrud);
+                    form.BtnOperariosConectados.BackColor = ColorTranslator.FromHtml(configuracion.BotonOperariosConectados);
+                    form.BtnVerProductos.BackColor = ColorTranslator.FromHtml(configuracion.BotonVerProductos);
+                    form.BtnCerrar.BackColor = ColorTranslator.FromHtml(configuracion.BotonCerrar);
+                    form.ButtonCreate.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearProducto);
+                    form.BtnDonaDefault.BackColor = ColorTranslator.FromHtml(configuracion.BotonCrearDona);
+                    form.BtnClaro.BackColor = ColorTranslator.FromHtml(configuracion.BotonModoClaro);
+                    form.BtnOscuro.BackColor = ColorTranslator.FromHtml(configuracion.BotonModoOscuro);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Error al aplicar el color al boton: " + ex.Message);
+                }
+
+                
 
                 try
                 {
