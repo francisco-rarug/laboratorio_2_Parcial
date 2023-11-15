@@ -11,19 +11,12 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
         }
 
-        private string ObtenerSeleccion(GroupBox grupo)
+        private void MostrarMensajeAdvertencia(string mensaje)
         {
-            foreach (Control item in grupo.Controls)
-            {
-                if (item is RadioButton && ((RadioButton)item).Checked)
-                {
-                    return ((RadioButton)item).Text;
-                }
-            }
-            return string.Empty;
+            MessageBox.Show(mensaje, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private DialogResult MostrarFormularioModal()
+        private void MostrarFormularioModal()
         {
             using (FormModal1 formProduct = new FormModal1())
             {
@@ -33,59 +26,37 @@ namespace Rarug.Francisco.Parcial
                 {
                     Show();
                 }
-                return result;
             }
         }
 
         private void btnCrearChocolate_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                string chocolates = ObtenerSeleccion(gbChocolate);
-                string tamaños = ObtenerSeleccion(gbTamaño);
-
-                if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
-                {
-                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                MostrarFormularioModal();
-
-                Chocolate chocolate = new Chocolate(tamaños, chocolates);
-                Chocolate.ListaChocolates.Add(chocolate);
-
-                Produccion.Stock(chocolates, tamaños);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ha ocurrido un error al crear el chocolate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Chocolate nuevoChocolate;
+            CrearProducto(() => Chocolate.CrearChocolateDefault(out nuevoChocolate), "Chocolate creado", "Ha ocurrido un error al crear el chocolate");
         }
 
         private void btnCrearDona_Click_1(object sender, EventArgs e)
         {
+            Dona nuevaDona;
+            CrearProducto(() => Dona.CrearDonaDefault(out nuevaDona), "Dona creada", "Ha ocurrido un error al crear la dona");
+        }
+
+        private void CrearProducto(Func<bool> crearMetodo, string mensajeExito, string mensajeError)
+        {
             try
             {
-                string donas = ObtenerSeleccion(gbDonas);
-                string relleno = ObtenerSeleccion(gbRelleno);
-
-                if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
+                if (crearMetodo())
                 {
-                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    MostrarFormularioModal();
                 }
-
-                MostrarFormularioModal();
-
-                Dona dona = new Dona(relleno, donas);
-                Dona.ListaDonas.Add(dona);
-
-                Produccion.Stock(donas, relleno);
+                else
+                {
+                    MostrarMensajeAdvertencia("No queda stock");
+                }
             }
             catch (Exception ex)
-            { 
-                MessageBox.Show("Ha ocurrido un error al crear la dona: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show(mensajeError + ": " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
