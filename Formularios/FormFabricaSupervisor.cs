@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
-    public partial class FormFabricaSupervisor : Form, IFormFabrica
+    public partial class FormFabricaSupervisor : Form
 
     {
         private ModoOscuro modoOscuro;
@@ -21,48 +21,39 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
             modoOscuro = new ModoOscuro(this);
         }
-        public void CrearChocolateDefault()
+        public void CrearProductoDefault(Func<bool> crearMetodo, string exitoMensaje, string errorMensaje)
         {
             try
             {
-                Chocolate chocolate = Chocolate.CrearChocolateDefault();
-
-                if (chocolate != null)
+                if (Crear(crearMetodo))
                 {
                     FormModal1 formProduct = new FormModal1();
                     formProduct.ShowDialog();
 
-                    MessageBox.Show("Chocolate creado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"{exitoMensaje} exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error al crear el chocolate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        public void CrearDonaDefault()
-        {
-            try
-            {
-                Dona dona = Dona.CrearDonaDefault();
-
-                if (dona != null)
-                {
-                    FormModal1 formProduct = new FormModal1();
-                    formProduct.ShowDialog();
-
-                    MessageBox.Show("Dona creada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ha ocurrido un error al crear la dona: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ha ocurrido un error al crear el producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void CrearPorDefault()
+        private bool Crear(Func<bool> metodo)
         {
+            return metodo();
+        }
 
+        private void btnChocolateDefault_Click(object sender, EventArgs e)
+        {
+            Chocolate nuevoChocolate;
+            CrearProductoDefault(() => Chocolate.CrearChocolateDefault(out nuevoChocolate), "Chocolate creado", "Ha ocurrido un error al crear el chocolate");
+        }
+         
+        private void btnDonaDefault_Click(object sender, EventArgs e)
+        {
+            Dona nuevaDona;
+            CrearProductoDefault(() => Dona.CrearDonaDefault(out nuevaDona), "Dona creada", "Ha ocurrido un error al crear la dona");
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
@@ -75,14 +66,6 @@ namespace Rarug.Francisco.Parcial
             {
                 Show();
             }
-        }
-        private void btnChocolateDefault_Click(object sender, EventArgs e)
-        {
-            CrearChocolateDefault();
-        }
-        private void btnDonaDefault_Click(object sender, EventArgs e)
-        {
-            CrearDonaDefault();
         }
         private void btnVerStock_Click(object sender, EventArgs e)
         {

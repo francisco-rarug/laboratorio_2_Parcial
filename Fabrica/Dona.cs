@@ -42,7 +42,7 @@ namespace Fabrica
         /// </summary>
         public static List<Dona> ListaDonas { get => listaDonas; set => listaDonas = value; }
 
-        public static Dona CrearDonaDefault()
+        public static bool CrearDonaDefault(out Dona nuevaDona)
         {
             string donas = "Glaseadas";
             string relleno = "Dulce de leche";
@@ -52,11 +52,11 @@ namespace Fabrica
                 throw new Exception("No queda stock");
             }
 
-            Dona dona = new Dona(relleno, donas);
-            Dona.ListaDonas.Add(dona);
+            nuevaDona = new Dona(relleno, donas);
+            ListaDonas.Add(nuevaDona);
 
             Produccion.Stock(donas, relleno);
-            return dona;
+            return true;
         }
 
     }

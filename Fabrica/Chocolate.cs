@@ -42,23 +42,28 @@ namespace Fabrica
         /// </summary>
         public string TipoChocolate { get => tipoChocolate; set => tipoChocolate = value; }
 
-        public static Chocolate CrearChocolateDefault()
+        public static bool CrearChocolateDefault(out Chocolate nuevoChocolate)
         {
             string chocolates = "Amargo";
             string tamaños = "2x2";
 
             if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
             {
-                return null; 
+                nuevoChocolate = null;
+                return false;
             }
 
-            Chocolate chocolate = new Chocolate(tamaños, chocolates);
-            Chocolate.ListaChocolates.Add(chocolate);
+            nuevoChocolate = new Chocolate(tamaños, chocolates);
+            ListaChocolates.Add(nuevoChocolate);
 
             Produccion.Stock(chocolates, tamaños);
 
-            return chocolate;
+            return true;
         }
+
+
     }
 }
+
+
 
