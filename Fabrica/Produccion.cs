@@ -69,7 +69,7 @@ namespace Fabrica
         public static List<object> ObtenerMaterialesOrdenados()
         {
             var materialesOrdenados = Materiales.ToList();
-            materialesOrdenados.Sort((clave, valor) => valor.Value - clave.Value);
+            materialesOrdenados.Sort((x, y) => x.Value - y.Value);
 
             var resultado = new List<object>();
 

@@ -1,0 +1,5 @@
+Fecha y hora: 16/11/2023 17:38:41
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
