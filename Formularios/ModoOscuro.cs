@@ -2,6 +2,7 @@
 using Rarug.Francisco.Parcial;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Text.Json;
 using System.Windows.Forms;
 
@@ -64,9 +65,6 @@ namespace Rarug.Francisco.Parcial
                 {
                     MessageBox.Show("Error al aplicar el color al boton: " + ex.Message);
                 }
-
-                
-
                 try
                 {
                     form.BackColor = ColorTranslator.FromHtml(configuracion.Form);
@@ -74,6 +72,7 @@ namespace Rarug.Francisco.Parcial
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al aplicar el color de fondo al formulario: " + ex.Message);
+                    Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 }
 
                 try

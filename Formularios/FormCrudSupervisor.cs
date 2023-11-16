@@ -13,10 +13,13 @@ namespace Rarug.Francisco.Parcial
 {
     public partial class FormCrudSupervisor : Form
     {
-        public FormCrudSupervisor()
+        CambiarColor instancia;
+        public FormCrudSupervisor(CambiarColor instancia)
         {
             InitializeComponent();
             dgSupervisor.DataSource = BaseDeDatosDAO.LeerSupervisor();
+            this.instancia = instancia;
+            instancia(this);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

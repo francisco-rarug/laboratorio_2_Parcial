@@ -8,7 +8,7 @@ namespace Fabrica
 {
     public interface Iarchivos<T>
     {
-        void CrearArchivo(string nombre, string extension, string informacion);
+        bool Escribir_TXT(string path, string datos);
         void EscribirJson(string path, T objeto);
         void Escribir_XML(string path, T objeto);
         T LeerXml(string path);

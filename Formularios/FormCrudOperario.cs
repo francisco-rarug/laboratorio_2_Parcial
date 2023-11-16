@@ -11,12 +11,16 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
+
     public partial class FormCrudOperario : Form
     {
-        public FormCrudOperario()
+        CambiarColor instancia;
+        public FormCrudOperario(CambiarColor instancia)
         {
             InitializeComponent();
             dgOperario.DataSource = BaseDeDatosDAO.LeerOperarios();
+            this.instancia = instancia;
+            instancia(this);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

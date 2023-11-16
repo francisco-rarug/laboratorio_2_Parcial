@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -11,24 +12,22 @@ namespace Fabrica
 {
     public class Archivos<T> : Iarchivos<T>
     {
-        public void CrearArchivo(string nombre, string extension, string informacion)
+
+        public bool Escribir_TXT(string path, string datos)
         {
-            string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
-
-            if (!Directory.Exists(directorioPath))
+            try
             {
-                Directory.CreateDirectory(directorioPath);
-            }
-
-            if (Directory.Exists(directorioPath))
-            {
-                string fechaHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                string archivo = $"{directorioPath}/{nombre}.{extension}";
-                using (StreamWriter sw = new StreamWriter(archivo))
+                using (StreamWriter sw = new StreamWriter(path, true))
                 {
-                    sw.WriteLine(fechaHora);
-                    sw.WriteLine(informacion);
+                    sw.WriteLine(datos);
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return false;
             }
         }
 
@@ -80,7 +79,24 @@ namespace Fabrica
                 return (T)xmlSerializer.Deserialize(sw);
             }
         }
+
+
+        public static void Errores(DateTime fechaYhora, string clase, string metodo, string mensaje)
+        {
+            string path = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos\archivo_txt.txt";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Fecha y hora: {fechaYhora}");
+            sb.AppendLine($"Clase: {clase}");
+            sb.AppendLine($"Metodo: {metodo}");                    
+            sb.AppendLine($"Mensaje: {mensaje}");
+
+            Archivos<string> crear = new Archivos<string>();
+            crear.Escribir_TXT(path, sb.ToString());
+        }
     }
+
+    
+    
 }
 
 
