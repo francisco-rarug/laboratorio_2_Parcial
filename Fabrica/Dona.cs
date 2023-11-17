@@ -42,7 +42,15 @@ namespace Fabrica
             Produccion.Stock(donas, relleno);
             return true;
         }
+        public static bool VerificarStockDona(string tipo, string detalle)
+        {
+            return Produccion.HayStockSuficiente(tipo, detalle, 30, 20);
+        }
 
+        public static void AgregarDona(string tipo, string detalle)
+        {
+            ListaDonas.Add(new Dona(detalle, tipo));
+        }
     }
 }
 

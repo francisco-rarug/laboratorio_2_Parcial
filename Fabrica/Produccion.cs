@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Fabrica
 {
@@ -42,7 +43,7 @@ namespace Fabrica
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al actualizar el stock: " + ex.Message);
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
 

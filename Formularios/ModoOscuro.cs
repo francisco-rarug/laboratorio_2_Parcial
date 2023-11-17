@@ -63,7 +63,7 @@ namespace Rarug.Francisco.Parcial
                     form.BtnOscuro.BackColor = ColorTranslator.FromHtml(configuracion.BotonModoOscuro);
                 }catch(Exception ex)
                 {
-                    MessageBox.Show("Error al aplicar el color al boton: " + ex.Message);
+                    Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 }
                 try
                 {
@@ -71,7 +71,6 @@ namespace Rarug.Francisco.Parcial
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al aplicar el color de fondo al formulario: " + ex.Message);
                     Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 }
 
@@ -81,7 +80,7 @@ namespace Rarug.Francisco.Parcial
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al aplicar el color del label: " + ex.Message);
+                    Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 }
             }
             else
@@ -117,9 +116,63 @@ namespace Rarug.Francisco.Parcial
         public void AplicarModoOscuro()
         {
             string rutaArchivo = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos\modoOscuro.json";
-            AplicarModo(rutaArchivo);
-            MessageBox.Show("Modo oscuro aplicado", "Modo Oscuro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            try
+            {
+                if (PuedenAplicarseColores(rutaArchivo))
+                {
+                    AplicarModo(rutaArchivo);
+                    MessageBox.Show("Modo oscuro aplicado", "Modo Oscuro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pueden aplicar todos los colores. Verifica la configuración.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
         }
+
+        private bool PuedenAplicarseColores(string rutaArchivo)
+        {
+            ConfigSettings configuracion;
+
+            if (File.Exists(rutaArchivo))
+            {
+                var archivosManager = new Archivos<string>();
+                configuracion = archivosManager.Leer_JSON<ConfigSettings>(rutaArchivo);
+
+                try
+                {
+                    ColorTranslator.FromHtml(configuracion.BotonRellenarStock);
+                    ColorTranslator.FromHtml(configuracion.BotonVerStock);
+                    ColorTranslator.FromHtml(configuracion.BotonCrearChocolate);
+                    ColorTranslator.FromHtml(configuracion.BotonCrud);
+                    ColorTranslator.FromHtml(configuracion.BotonOperariosConectados);
+                    ColorTranslator.FromHtml(configuracion.BotonVerProductos);
+                    ColorTranslator.FromHtml(configuracion.BotonCerrar);
+                    ColorTranslator.FromHtml(configuracion.BotonCrearProducto);
+                    ColorTranslator.FromHtml(configuracion.BotonCrearDona);
+                    ColorTranslator.FromHtml(configuracion.BotonModoClaro);
+                    ColorTranslator.FromHtml(configuracion.BotonModoOscuro);
+                    ColorTranslator.FromHtml(configuracion.Form);
+                    ColorTranslator.FromHtml(configuracion.LabelTitulo);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al verificar los colores: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public void AplicarModoClaro()
         {

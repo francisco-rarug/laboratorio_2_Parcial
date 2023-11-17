@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,9 +29,8 @@ namespace Rarug.Francisco.Parcial
         {
             try
             {
-                string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos";
-                string nombreArchivo = "Stock.xml";
-                string rutaCompleta = Path.Combine(directorioPath, nombreArchivo);
+                string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos\Stock.xml";
+                
 
                 List<ComponenteCantidad> datos = new List<ComponenteCantidad>();
                 foreach (var item in Produccion.Materiales)
@@ -42,7 +42,7 @@ namespace Rarug.Francisco.Parcial
                 if (datos != null && datos.Count > 0)
                 {
                     var archivosManager = new Archivos<List<ComponenteCantidad>>();
-                    archivosManager.Escribir_XML(rutaCompleta, datos);
+                    archivosManager.Escribir_XML(directorioPath, datos);
                     MessageBox.Show("El stock actual fue guardado en un archivo XML", "Archivo guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -50,9 +50,9 @@ namespace Rarug.Francisco.Parcial
                     MessageBox.Show("La lista de datos está vacía o nula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (IOException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Error al escribir en el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
     }

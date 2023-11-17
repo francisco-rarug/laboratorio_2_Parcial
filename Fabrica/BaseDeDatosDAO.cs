@@ -43,8 +43,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@CONTRASEÑA", password);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally { connection.Close(); }
@@ -62,8 +63,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@LEGAJO", legajo);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally { connection.Close(); }
@@ -82,8 +84,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -106,9 +109,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -165,8 +168,9 @@ namespace Fabrica
 
                 return supervisores;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -185,9 +189,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -205,8 +209,9 @@ namespace Fabrica
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
 
                 throw;
             }

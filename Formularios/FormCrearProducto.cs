@@ -1,11 +1,12 @@
 ﻿using Fabrica;
-using System;
-using System.Windows.Forms;
-
+using System.Reflection;
 namespace Rarug.Francisco.Parcial
 {
     public partial class FormCrearProducto : Form
     {
+        private delegate bool VerificarStockDelegate(string tipo, string detalle);
+        private delegate void AgregarProductoDelegate(string tipo, string detalle);
+
         public FormCrearProducto()
         {
             InitializeComponent();
@@ -37,14 +38,14 @@ namespace Rarug.Francisco.Parcial
             }
         }
 
-        private void btnCrearChocolate_Click_1(object sender, EventArgs e)
+        private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, AgregarProductoDelegate agregarProductoALista)
         {
             try
             {
-                string chocolates = ObtenerSeleccion(gbChocolate);
-                string tamaños = ObtenerSeleccion(gbTamaño);
+                string tipo = ObtenerSeleccion(tipoGroupBox);
+                string detalle = ObtenerSeleccion(detalleGroupBox);
 
-                if (!Produccion.HayStockSuficiente(chocolates, tamaños, 30, 20))
+                if (!verificarStock(tipo, detalle))
                 {
                     MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -52,41 +53,24 @@ namespace Rarug.Francisco.Parcial
 
                 MostrarFormularioModal();
 
-                Chocolate chocolate = new Chocolate(tamaños, chocolates);
-                Chocolate.ListaChocolates.Add(chocolate);
+                agregarProductoALista(tipo, detalle);
 
-                Produccion.Stock(chocolates, tamaños);
+                Produccion.Stock(tipo, detalle);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error al crear el chocolate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
+        }
+
+        private void btnCrearChocolate_Click_1(object sender, EventArgs e)
+        {
+            CrearProducto(gbChocolate, gbTamaño, Chocolate.VerificarStockChocolate, Chocolate.AgregarChocolate);
         }
 
         private void btnCrearDona_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                string donas = ObtenerSeleccion(gbDonas);
-                string relleno = ObtenerSeleccion(gbRelleno);
-
-                if (!Produccion.HayStockSuficiente(donas, relleno, 30, 20))
-                {
-                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                MostrarFormularioModal();
-
-                Dona dona = new Dona(relleno, donas);
-                Dona.ListaDonas.Add(dona);
-
-                Produccion.Stock(donas, relleno);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ha ocurrido un error al crear la dona: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            CrearProducto(gbDonas, gbRelleno, Dona.VerificarStockDona, Dona.AgregarDona);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

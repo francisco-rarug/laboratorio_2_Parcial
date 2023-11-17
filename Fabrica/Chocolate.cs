@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fabrica
 {
     /// <summary>
     /// Representa un chocolate en la fábrica.
     /// </summary>
-    public class Chocolate:Producto
+    public class Chocolate : Producto
     {
+        private string tipoChocolate;
+        private string tamaño;
         private static List<Chocolate> listaChocolates = new List<Chocolate>();
 
         /// <summary>
@@ -20,12 +19,16 @@ namespace Fabrica
         /// <param name="tipoChocolate">Tipo del chocolate (ej. "Amargo", "Chocolate blanco", etc.)</param>
         public Chocolate(string tamaño, string tipoChocolate) : base(tamaño, tipoChocolate)
         {
+            this.tamaño = tamaño;
+            this.tipoChocolate = tipoChocolate;
         }
+
         /// <summary>
         /// Obtiene o establece la lista de chocolates.
         /// </summary>
         public static List<Chocolate> ListaChocolates { get => listaChocolates; set => listaChocolates = value; }
-
+        public string TipoChocolate { get => tipoChocolate; set => tipoChocolate = value; }
+        public string Tamaño { get => tamaño; set => tamaño = value; }
 
         public static bool CrearChocolateDefault(out Chocolate nuevoChocolate)
         {
@@ -46,9 +49,18 @@ namespace Fabrica
             return true;
         }
 
+        public static bool VerificarStockChocolate(string tipo, string detalle)
+        {
+            return Produccion.HayStockSuficiente(tipo, detalle, 30, 20);
+        }
 
+        public static void AgregarChocolate(string tipo, string detalle)
+        {
+            ListaChocolates.Add(new Chocolate(detalle, tipo));
+        }
     }
 }
+
 
 
 

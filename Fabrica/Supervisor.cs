@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace Fabrica
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Error, no se pudo encontrar el supervisor"+ex.Message);
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 return null;
             }
             
