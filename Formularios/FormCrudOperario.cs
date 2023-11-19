@@ -39,7 +39,7 @@ namespace Rarug.Francisco.Parcial
             if (dgOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)dgOperario.CurrentRow.DataBoundItem;
-                BaseDeDatosDAO.EliminarOperario(operario.Id);
+                BaseDeDatosDAO.Eliminar(operario.Id);
                 Refrescar();
 
                 MessageBox.Show("Operario eliminado correctamente", "Operario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);

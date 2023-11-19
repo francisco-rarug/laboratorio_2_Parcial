@@ -47,7 +47,7 @@ namespace Rarug.Francisco.Parcial
             if (dgSupervisor.SelectedRows.Count > 0)
             {
                 Supervisor supervisor = (Supervisor)dgSupervisor.CurrentRow.DataBoundItem;
-                BaseDeDatosDAO.EliminarSupervisor(supervisor.Id);
+                BaseDeDatosDAO.Eliminar(supervisor.Id, "SUPERVISOR");
                 Refrescar();
 
                 MessageBox.Show("Supervisor eliminado correctamente", "Supervisor Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);

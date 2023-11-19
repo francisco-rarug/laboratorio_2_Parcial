@@ -179,7 +179,7 @@ namespace Fabrica
             }
         }
 
-        public static void EliminarOperario(int id)
+        public static void Eliminar(int id)
         {
             try
             {
@@ -199,13 +199,13 @@ namespace Fabrica
                 connection.Close();
             }
         }
-        public static void EliminarSupervisor(int id)
+        public static void Eliminar(int id, string labor)
         {
             try
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = $"DELETE FROM SUPERVISOR WHERE ID = {id}";
+                command.CommandText = $"DELETE FROM {labor} WHERE ID = {id}";
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }

@@ -163,7 +163,7 @@ namespace Rarug.Francisco.Parcial
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al verificar los colores: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                     return false;
                 }
             }

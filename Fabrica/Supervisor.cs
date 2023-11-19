@@ -19,6 +19,7 @@ namespace Fabrica
             this.legajo = legajo;
         }
         public string Legajo { get => legajo; set => legajo = value; }
+
         public static Supervisor BuscarPorUsuarioYRango(string usuario, string password, Rango rango, List<Supervisor> listaPersonal)
         {
             try
