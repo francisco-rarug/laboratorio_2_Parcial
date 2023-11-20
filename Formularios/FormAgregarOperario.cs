@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,13 +21,19 @@ namespace Rarug.Francisco.Parcial
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string nombre = tbNombre.Text;
-            string apellido = tbApellido.Text;
-            string password = tbPassword.Text;
-            string rango = "Operario";
+            try
+            {
+                string nombre = tbNombre.Text;
+                string apellido = tbApellido.Text;
+                string password = tbPassword.Text;
+                string rango = "Operario";
 
-            BaseDeDatosDAO.GuardarOperario(nombre, apellido, password, rango);
-            MessageBox.Show("Operario registrado correctamente", "Registrado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                BaseDeDatosDAO.GuardarOperario(nombre, apellido, password, rango);
+                MessageBox.Show("Operario registrado correctamente", "Registrado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }catch (Exception ex)
+            {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Fabrica
     public class Operario : Personal
     {
         private string apellido;
+
         private static List<Operario> operarios = new List<Operario>();
 
         public static List<Operario> ListaOperarios { get => operarios; set => operarios = value; }
@@ -36,13 +37,13 @@ namespace Fabrica
                 }
                 return null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 return null;
             }
-            
         }
+
 
         public override string Mostrar()
         {

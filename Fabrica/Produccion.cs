@@ -70,7 +70,7 @@ namespace Fabrica
         public static List<object> ObtenerMaterialesOrdenados()
         {
             var materialesOrdenados = Materiales.ToList();
-            materialesOrdenados.Sort((x, y) => x.Value - y.Value);
+            materialesOrdenados.Sort((x, y) => y.Value - x.Value);
 
             var resultado = new List<object>();
 
@@ -85,6 +85,21 @@ namespace Fabrica
             }
 
             return resultado;
+        }
+
+        public static void ActualizarMateriales(int cantidad, List<string> productosSeleccionados)
+        {
+            foreach (string producto in productosSeleccionados)
+            {
+                if (Materiales.ContainsKey(producto))
+                {
+                    Materiales[producto] += cantidad;
+                }
+                else
+                {
+                    Materiales.Add(producto, cantidad);
+                }
+            }
         }
 
 

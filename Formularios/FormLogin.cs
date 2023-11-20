@@ -96,8 +96,7 @@ public partial class FrmLogin : Form
         {
             List<Operario> operario = BaseDeDatosDAO.LeerOperarios();
 
-
-            textBoxUsername.Text = operario[20].Usuario;
+            textBoxUsername.Text = operario[0].Usuario;
             textBoxPassword.Text = operario[0].Password;
             rbOperario.Checked = true;
             

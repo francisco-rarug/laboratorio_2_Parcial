@@ -47,9 +47,10 @@ namespace Fabrica
             return Produccion.HayStockSuficiente(tipo, detalle, 30, 20);
         }
 
-        public static void AgregarDona(string tipo, string detalle)
+        public static bool AgregarDona(string tipo, string detalle)
         {
             ListaDonas.Add(new Dona(detalle, tipo));
+            return true;
         }
     }
 }

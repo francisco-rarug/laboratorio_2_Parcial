@@ -8,3 +8,58 @@ Clase: FrmLogin
 Metodo: btnHardOper_Click
 Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
 
+Fecha y hora: 20/11/2023 19:45:46
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 19:45:47
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 19:45:50
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:23
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:25
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:28
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:28
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:28
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:00:28
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:01:54
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+Fecha y hora: 20/11/2023 20:01:56
+Clase: FrmLogin
+Metodo: btnHardOper_Click
+Mensaje: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+

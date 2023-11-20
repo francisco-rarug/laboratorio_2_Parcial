@@ -33,13 +33,14 @@ namespace Fabrica
                 }
                 return null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 return null;
             }
-            
         }
+
+    
 
         public override string Mostrar()
         {

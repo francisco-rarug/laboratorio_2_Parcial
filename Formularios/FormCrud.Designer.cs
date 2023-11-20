@@ -115,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.InactiveCaption;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(285, 225);
             Controls.Add(btnClaro);
             Controls.Add(btnOscuro);
@@ -127,6 +127,7 @@
             Name = "FormCrud";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Crud";
+            Load += FormCrud_Load;
             ResumeLayout(false);
             PerformLayout();
         }

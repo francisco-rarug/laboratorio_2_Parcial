@@ -22,7 +22,7 @@ namespace Rarug.Francisco.Parcial
         {
             try
             {
-                if (Crear(crearMetodo))
+                if (crearMetodo())
                 {
                     FormModal1 formProduct = new FormModal1();
                     formProduct.ShowDialog();
@@ -34,11 +34,6 @@ namespace Rarug.Francisco.Parcial
             {
                 Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
-        }
-
-        private bool Crear(Func<bool> metodo)
-        {
-            return metodo();
         }
 
         private void btnDonaDefault_Click(object sender, EventArgs e)

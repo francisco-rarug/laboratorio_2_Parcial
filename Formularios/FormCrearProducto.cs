@@ -5,7 +5,8 @@ namespace Rarug.Francisco.Parcial
     public partial class FormCrearProducto : Form
     {
         private delegate bool VerificarStockDelegate(string tipo, string detalle);
-        private delegate void AgregarProductoDelegate(string tipo, string detalle);
+        private delegate bool ProductoOperationDelegate(string tipo, string detalle);
+
 
         public FormCrearProducto()
         {
@@ -26,6 +27,7 @@ namespace Rarug.Francisco.Parcial
 
         private DialogResult MostrarFormularioModal()
         {
+
             using (FormModal1 formProduct = new FormModal1())
             {
                 Hide();
@@ -38,7 +40,7 @@ namespace Rarug.Francisco.Parcial
             }
         }
 
-        private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, AgregarProductoDelegate agregarProductoALista)
+        private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, ProductoOperationDelegate agregarProductoALista)
         {
             try
             {
@@ -66,6 +68,7 @@ namespace Rarug.Francisco.Parcial
         private void btnCrearChocolate_Click_1(object sender, EventArgs e)
         {
             CrearProducto(gbChocolate, gbTamaño, Chocolate.VerificarStockChocolate, Chocolate.AgregarChocolate);
+
         }
 
         private void btnCrearDona_Click_1(object sender, EventArgs e)

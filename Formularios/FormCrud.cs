@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace Rarug.Francisco.Parcial
 {
     public delegate void CambiarColor(Form instancia);
 
-    
+
     public partial class FormCrud : Form
     {
         Color tema = Color.AliceBlue;
+        private Newsletter newsletter;
         public FormCrud()
         {
             InitializeComponent();
@@ -53,12 +55,32 @@ namespace Rarug.Francisco.Parcial
         {
             tema = Color.Gray;
             cambiarColor(this);
+            newsletter.botonOscuro();
         }
 
         private void btnClaro_Click(object sender, EventArgs e)
         {
             tema = Color.AliceBlue;
             cambiarColor(this);
+            newsletter.botonClaro();
+        }
+
+        private void MostrarMensajeClaro(object sender, EventArgs e)
+        {
+            MessageBox.Show("Color oscuro aplicado", "Color Cambiado");
+        }
+
+        private void MostrarMensajeOscuro(object sender, EventArgs e)
+        {
+            MessageBox.Show("Color oscuro aplicado", "Color Cambiado");
+        }
+
+        private void FormCrud_Load(object sender, EventArgs e)
+        {
+            newsletter = new Newsletter();
+
+            newsletter.MensajeClaro += MostrarMensajeClaro;
+            newsletter.MensajeOscuro += MostrarMensajeOscuro;
         }
     }
 }

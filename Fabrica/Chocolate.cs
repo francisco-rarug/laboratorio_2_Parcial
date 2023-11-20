@@ -54,9 +54,10 @@ namespace Fabrica
             return Produccion.HayStockSuficiente(tipo, detalle, 30, 20);
         }
 
-        public static void AgregarChocolate(string tipo, string detalle)
+        public static bool AgregarChocolate(string tipo, string detalle)
         {
             ListaChocolates.Add(new Chocolate(detalle, tipo));
+            return true; 
         }
     }
 }

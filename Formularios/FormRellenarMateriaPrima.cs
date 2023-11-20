@@ -1,6 +1,7 @@
 ﻿using Fabrica;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
@@ -38,27 +39,24 @@ namespace Rarug.Francisco.Parcial
 
         private void btnRellenar_Click(object sender, EventArgs e)
         {
-            int cantidad = (int)numCantidad.Value;
-
-            productosSeleccionados.Clear();
-            RecopilarProductosSeleccionados(gbChocolates);
-            RecopilarProductosSeleccionados(gbDonas);
-
-            foreach (string producto in productosSeleccionados)
+            try
             {
-                foreach (string clave in Produccion.Materiales.Keys)
-                {
-                    if (producto == clave)
-                    {
-                        Produccion.Materiales[producto] += cantidad;
-                        break;
-                    }
-                }
-            }
+                int cantidad = (int)numCantidad.Value;
 
-            MessageBox.Show("Se agregó el stock correctamente", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DesmarcarCheckBoxes(gbChocolates);
-            DesmarcarCheckBoxes(gbDonas);
+                productosSeleccionados.Clear();
+                RecopilarProductosSeleccionados(gbChocolates);
+                RecopilarProductosSeleccionados(gbDonas);
+
+                Produccion.ActualizarMateriales(cantidad, productosSeleccionados);
+
+                MessageBox.Show("Se agregó el stock correctamente", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DesmarcarCheckBoxes(gbChocolates);
+                DesmarcarCheckBoxes(gbDonas);
+            }catch (Exception ex)
+            {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
