@@ -77,8 +77,6 @@ namespace Fabrica
         /// </summary>
         /// <returns>Una cadena que representa la información del personal.</returns>
         /// 
-
-        ///No encontre un mejor uso de polimorfismo al menos en esta parte del parcial, mediante avance con la segunda parte le agregare en alguna cosa que me parecezca mejor usarlo 
         public abstract string Mostrar();
     }
 }

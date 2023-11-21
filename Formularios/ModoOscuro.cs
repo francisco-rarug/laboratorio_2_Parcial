@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace Rarug.Francisco.Parcial
 {
+    /// <summary>
+    /// Clase para aplicar y gestionar el modo oscuro en la interfaz de usuario.
+    /// </summary>
     public class ModoOscuro
     {
         private FormFabricaSupervisor form;
@@ -19,6 +22,10 @@ namespace Rarug.Francisco.Parcial
             configuracionInicial = ObtenerConfiguracionActual();
         }
 
+        /// <summary>
+        /// Obtiene la configuración actual de colores para el modo oscuro.
+        /// </summary>
+        /// <returns>Configuración actual de colores.</returns>
         private ConfigSettings ObtenerConfiguracionActual()
         {
             return new ConfigSettings
@@ -39,6 +46,10 @@ namespace Rarug.Francisco.Parcial
             };
         }
 
+        /// <summary>
+        /// Aplica el modo oscuro utilizando la configuración guardada en un archivo JSON.
+        /// </summary>
+        /// <param name="rutaArchivo">Ruta del archivo JSON con la configuración de colores.</param>
         private void AplicarModo(string rutaArchivo)
         {
             ConfigSettings configuracion;
@@ -135,6 +146,11 @@ namespace Rarug.Francisco.Parcial
             }
         }
 
+        /// <summary>
+        /// Verifica si se pueden aplicar los colores del modo oscuro.
+        /// </summary>
+        /// <param name="rutaArchivo">Ruta del archivo JSON con la configuración de colores.</param>
+        /// <returns>True si se pueden aplicar los colores, false en caso contrario.</returns>
         private bool PuedenAplicarseColores(string rutaArchivo)
         {
             ConfigSettings configuracion;
@@ -174,11 +190,17 @@ namespace Rarug.Francisco.Parcial
         }
 
 
+        /// <summary>
+        /// Aplica el modo claro utilizando la configuración inicial.
+        /// </summary>
         public void AplicarModoClaro()
         {
             AplicarModoInicial();
         }
 
+        /// <summary>
+        /// Aplica el modo claro restaurando la configuración inicial de colores.
+        /// </summary>
         private void AplicarModoInicial()
         {
             form.BtnRellenarStock.BackColor = ColorTranslator.FromHtml(configuracionInicial.BotonRellenarStock);

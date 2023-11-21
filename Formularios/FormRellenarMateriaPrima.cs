@@ -15,6 +15,11 @@ namespace Rarug.Francisco.Parcial
 
         private List<string> productosSeleccionados = new List<string>();
 
+
+        /// <summary>
+        /// Recopila los productos seleccionados en un control GroupBox con CheckBoxes.
+        /// </summary>
+        /// <param name="groupBox">Control GroupBox que contiene los CheckBoxes de productos.</param>
         private void RecopilarProductosSeleccionados(GroupBox groupBox)
         {
             foreach (Control control in groupBox.Controls)
@@ -25,6 +30,11 @@ namespace Rarug.Francisco.Parcial
                 }
             }
         }
+
+        /// <summary>
+        /// Desmarca todos los CheckBoxes en un control GroupBox.
+        /// </summary>
+        /// <param name="groupBox">Control GroupBox que contiene los CheckBoxes a desmarcar.</param>
         private void DesmarcarCheckBoxes(GroupBox groupBox)
         {
             foreach (Control control in groupBox.Controls)

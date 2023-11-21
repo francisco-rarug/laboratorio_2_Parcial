@@ -18,6 +18,13 @@ namespace Rarug.Francisco.Parcial
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Crea un producto utilizando un método específico y muestra un mensaje de éxito o error.
+        /// </summary>
+        /// <param name="crearMetodo">Función que realiza la creación del producto y devuelve un resultado booleano.</param>
+        /// <param name="exitoMensaje">Mensaje a mostrar en caso de éxito.</param>
+        /// <param name="errorMensaje">Mensaje a mostrar en caso de error.</param>
         public void CrearProductoDefault(Func<bool> crearMetodo, string exitoMensaje, string errorMensaje)
         {
             try

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Fabrica
 {
+    /// <summary>
+    /// Clase que proporciona métodos para interactuar con la base de datos.
+    /// </summary>
     public class BaseDeDatosDAO
     {
         static string connectionString;
@@ -20,7 +23,6 @@ namespace Fabrica
         const string LEGAJO_TABLA = "LEGAJO";
         const string ID_TABLA = "ID";
 
-
         static BaseDeDatosDAO()
         {
             connectionString = @"Data Source=.;Initial Catalog=MISTICAMOUSSE;Integrated Security=True";
@@ -30,6 +32,13 @@ namespace Fabrica
             command.Connection = connection;
         }
 
+        /// <summary>
+        /// Guarda un operario en la base de datos.
+        /// </summary>
+        /// <param name="nombre">Nombre del operario.</param>
+        /// <param name="apellido">Apellido del operario.</param>
+        /// <param name="password">Contraseña del operario.</param>
+        /// <param name="rango">Rango del operario.</param>
         public static void GuardarOperario(string nombre, string apellido, string password, string rango)
         {
             try
@@ -50,6 +59,14 @@ namespace Fabrica
             }
             finally { connection.Close(); }
         }
+
+        /// <summary>
+        /// Guarda un supervisor en la base de datos.
+        /// </summary>
+        /// <param name="nombre">Nombre del supervisor.</param>
+        /// <param name="password">Contraseña del supervisor.</param>
+        /// <param name="legajo">Legajo del supervisor.</param>
+        /// <param name="rango">Rango del supervisor.</param>
         public static void GuardarSupervisor(string nombre, string password, string legajo, string rango)
         {
             try
@@ -71,6 +88,13 @@ namespace Fabrica
             finally { connection.Close(); }
         }
 
+        /// <summary>
+        /// Modifica los datos de un operario en la base de datos.
+        /// </summary>
+        /// <param name="nuevoNombre">Nuevo nombre del operario.</param>
+        /// <param name="id">ID del operario a modificar.</param>
+        /// <param name="nuevoApellido">Nuevo apellido del operario.</param>
+        /// <param name="nuevoPassword">Nueva contraseña del operario.</param>
         public static void ModificarOperario(string nuevoNombre, int id, string nuevoApellido, string nuevoPassword)
         {
             try
@@ -95,7 +119,13 @@ namespace Fabrica
             }
         }
 
-
+        /// <summary>
+        /// Modifica los datos de un supervisor en la base de datos.
+        /// </summary>
+        /// <param name="nuevoNombre">Nuevo nombre del supervisor.</param>
+        /// <param name="id">ID del supervisor a modificar.</param>
+        /// <param name="nuevoLegajo">Nuevo legajo del supervisor.</param>
+        /// <param name="nuevoPassword">Nueva contraseña del supervisor.</param>
         public static void ModificarSupervisor(string nuevoNombre, int id, string nuevoLegajo, string nuevoPassword)
         {
             try
@@ -120,8 +150,10 @@ namespace Fabrica
             }
         }
 
-
-
+        /// <summary>
+        /// Lee la lista de operarios desde la base de datos.
+        /// </summary>
+        /// <returns>Lista de operarios.</returns>
         public static List<Operario> LeerOperarios()
         {
             List<Operario> operarios = new List<Operario>();
@@ -134,7 +166,7 @@ namespace Fabrica
                 {
                     while (reader.Read())
                     {
-                        operarios.Add(new Operario(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(),Rango.Operario, reader[APELLIDO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA])));
+                        operarios.Add(new Operario(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(), Rango.Operario, reader[APELLIDO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA])));
                     }
                 }
 
@@ -150,6 +182,11 @@ namespace Fabrica
                 connection.Close();
             }
         }
+
+        /// <summary>
+        /// Lee la lista de supervisores desde la base de datos.
+        /// </summary>
+        /// <returns>Lista de supervisores.</returns>
         public static List<Supervisor> LeerSupervisor()
         {
             List<Supervisor> supervisores = new List<Supervisor>();
@@ -162,7 +199,7 @@ namespace Fabrica
                 {
                     while (reader.Read())
                     {
-                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(), Rango.Supervisor, reader[LEGAJO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA ])));
+                        supervisores.Add(new Supervisor(reader[NOMBRE_TABLA].ToString(), reader[PASSWORD_TABLA].ToString(), Rango.Supervisor, reader[LEGAJO_TABLA].ToString(), Convert.ToInt32(reader[ID_TABLA])));
                     }
                 }
 
@@ -179,6 +216,10 @@ namespace Fabrica
             }
         }
 
+        /// <summary>
+        /// Elimina un operario de la base de datos.
+        /// </summary>
+        /// <param name="id">ID del operario a eliminar.</param>
         public static void Eliminar(int id)
         {
             try
@@ -199,6 +240,12 @@ namespace Fabrica
                 connection.Close();
             }
         }
+
+        /// <summary>
+        /// Elimina un operario o supervisor de la base de datos.
+        /// </summary>
+        /// <param name="id">ID del operario o supervisor a eliminar.</param>
+        /// <param name="labor">Tipo de trabajo (operario o supervisor).</param>
         public static void Eliminar(int id, string labor)
         {
             try
@@ -212,7 +259,6 @@ namespace Fabrica
             catch (Exception ex)
             {
                 Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
-
                 throw;
             }
             finally

@@ -13,7 +13,13 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Método para crear un producto genérico.
+        /// </summary>
+        /// <param name="tipoGroupBox">GroupBox que contiene los controles de selección del tipo de producto.</param>
+        /// <param name="detalleGroupBox">GroupBox que contiene los controles de selección del detalle del producto.</param>
+        /// <param name="verificarStock">Delegado para verificar el stock del producto.</param>
+        /// <param name="agregarProductoALista">Delegado para agregar el producto a la lista correspondiente.</param>
         private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, ProductoOperationDelegate agregarProductoALista)
         {
             try
@@ -39,6 +45,11 @@ namespace Rarug.Francisco.Parcial
             }
         }
 
+        /// <summary>
+        /// Método para obtener la selección de un grupo de controles tipo RadioButton.
+        /// </summary>
+        /// <param name="grupo">GroupBox que contiene los controles RadioButton.</param>
+        /// <returns>Texto del control RadioButton seleccionado.</returns>
         private string ObtenerSeleccion(GroupBox grupo)
         {
             foreach (Control item in grupo.Controls)
@@ -51,6 +62,10 @@ namespace Rarug.Francisco.Parcial
             return string.Empty;
         }
 
+        /// <summary>
+        /// Método para mostrar un formulario modal.
+        /// </summary>
+        /// <returns>Resultado de la operación del formulario modal.</returns>
         private DialogResult MostrarFormularioModal()
         {
 
