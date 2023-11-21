@@ -6,16 +6,18 @@ MisticaMousse es una fabrica que se dedica a crear chocolates y donas de chocola
 
 
 ### `Login`
-![](https://github.com/francisco-rarug/rarugFrancisco-pygame-tp-final/assets/108198686/6e406c88-6e95-430f-95c6-7fa79d96be9d)
+![image](https://github.com/francisco-rarug/laboratorio_2_Parcial/assets/108198686/105f6640-659d-4349-bb93-6bb8151c1874)
 
 El login cuenta con dos inputs para logear a un supervisor o operario con su respectivo usuario y contraseña, además tiene dos botones para rellenar esos datos automáticamente y poder ingresar al área de producción. 
 
 ### `Produccion(Supervisor)`
 
-![](https://github.com/francisco-rarug/rarugFrancisco-pygame-tp-final/assets/108198686/8f9775f5-f9cf-4782-9f54-508c9a81b9e6)
+![image](https://github.com/francisco-rarug/laboratorio_2_Parcial/assets/108198686/f53243fe-4d64-467a-b45c-a765694cce49)
 
-En el área de producción (Vista desde el perfil de supervisor) cuenta con todo lo necesario para que se pueda gestionar todos los procesos, desde crear productos hasta poder rellenar el stock en caso de que haga falta, además de ver el stock de productos que hay disponible y los productos creados anteriormente.
-Cuenta con botones para poder crear los productos por default que en el caso de chocolate es un chocolate amargo de tamaño 2x2 y en el caso de la dona es una dona glaseada rellena de dulce de leche. Además cuenta con un botón para ver los operarios que hay registrados.
+
+En el área de producción (Vista desde el perfil de supervisor) cuenta con todo lo necesario para que se pueda gestionar todos los procesos, desde crear productos hasta cambiar el tema de fondo, hasta poder rellenar el stock en caso de que haga falta, además de ver el stock de productos que hay disponible y los productos creados anteriormente.
+Cuenta con botones para poder crear los productos por default que en el caso de chocolate es un chocolate amargo de tamaño 2x2 y en el caso de la dona es una dona glaseada rellena de dulce de leche. Además cuenta con un botón para ver los operarios que hay registrados y un botón de “Crud” donde se puede eliminar, modificar y agregar tanto supervisores como operarios
+
 
 ### `Produccion(Operario)`
 
@@ -52,6 +54,13 @@ En el apartado de “ver productos creados” se puede visibilizar la cantidad d
 ![image](https://github.com/francisco-rarug/laboratorio_2_Parcial/assets/108198686/4f86feb3-5dcd-4f1b-931e-8bf13a18d550)
 
 En el apartado de “ver stock” nos encontramos con la lista de stock disponible con el que la fabrica puede operar creando los productos.
+
+### `Crud`
+
+![image](https://github.com/francisco-rarug/laboratorio_2_Parcial/assets/108198686/78ba314e-2ffc-4c56-820b-b304ae2ce0b5)
+
+
+Desde el lado del supervisor se pueden hacer operaciones de tipo “crud” es decir, se puede agregar, modificar, y eliminar tanto usuarios como operarios, además de contar con la opción de poder cambiar le tema de fondo.
 
 
 
