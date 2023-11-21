@@ -46,21 +46,18 @@
             groupBox1.Controls.Add(btnChocoDefault);
             groupBox1.Controls.Add(btnCrearProducto);
             groupBox1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(231, 137);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Location = new Point(202, 103);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(429, 311);
+            groupBox1.Size = new Size(375, 233);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Linea produccion";
             // 
             // btnDonaDefault
             // 
-            btnDonaDefault.Location = new Point(134, 81);
-            btnDonaDefault.Margin = new Padding(3, 4, 3, 4);
+            btnDonaDefault.Location = new Point(117, 61);
             btnDonaDefault.Name = "btnDonaDefault";
-            btnDonaDefault.Size = new Size(197, 41);
+            btnDonaDefault.Size = new Size(172, 31);
             btnDonaDefault.TabIndex = 2;
             btnDonaDefault.Text = "Crear dona default";
             btnDonaDefault.UseVisualStyleBackColor = true;
@@ -68,10 +65,9 @@
             // 
             // btnChocoDefault
             // 
-            btnChocoDefault.Location = new Point(134, 156);
-            btnChocoDefault.Margin = new Padding(3, 4, 3, 4);
+            btnChocoDefault.Location = new Point(117, 117);
             btnChocoDefault.Name = "btnChocoDefault";
-            btnChocoDefault.Size = new Size(197, 43);
+            btnChocoDefault.Size = new Size(172, 32);
             btnChocoDefault.TabIndex = 1;
             btnChocoDefault.Text = "Crear chocolate default";
             btnChocoDefault.UseVisualStyleBackColor = true;
@@ -79,10 +75,9 @@
             // 
             // btnCrearProducto
             // 
-            btnCrearProducto.Location = new Point(134, 231);
-            btnCrearProducto.Margin = new Padding(3, 4, 3, 4);
+            btnCrearProducto.Location = new Point(117, 173);
             btnCrearProducto.Name = "btnCrearProducto";
-            btnCrearProducto.Size = new Size(197, 41);
+            btnCrearProducto.Size = new Size(172, 31);
             btnCrearProducto.TabIndex = 0;
             btnCrearProducto.Text = "Crear producto";
             btnCrearProducto.UseVisualStyleBackColor = true;
@@ -93,10 +88,9 @@
             btnCerrar.BackColor = Color.Brown;
             btnCerrar.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrar.ForeColor = SystemColors.ButtonHighlight;
-            btnCerrar.Location = new Point(53, 517);
-            btnCerrar.Margin = new Padding(3, 4, 3, 4);
+            btnCerrar.Location = new Point(46, 388);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(141, 39);
+            btnCerrar.Size = new Size(123, 29);
             btnCerrar.TabIndex = 1;
             btnCerrar.Text = "Cerrar sesion";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -106,10 +100,9 @@
             // 
             btnVerProductos.BackColor = Color.DarkSeaGreen;
             btnVerProductos.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnVerProductos.Location = new Point(704, 265);
-            btnVerProductos.Margin = new Padding(3, 4, 3, 4);
+            btnVerProductos.Location = new Point(616, 199);
             btnVerProductos.Name = "btnVerProductos";
-            btnVerProductos.Size = new Size(197, 71);
+            btnVerProductos.Size = new Size(172, 53);
             btnVerProductos.TabIndex = 2;
             btnVerProductos.Text = "Ver productos creados";
             btnVerProductos.UseVisualStyleBackColor = false;
@@ -119,10 +112,9 @@
             // 
             btnVerStock.BackColor = Color.MediumPurple;
             btnVerStock.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnVerStock.Location = new Point(704, 375);
-            btnVerStock.Margin = new Padding(3, 4, 3, 4);
+            btnVerStock.Location = new Point(616, 281);
             btnVerStock.Name = "btnVerStock";
-            btnVerStock.Size = new Size(197, 73);
+            btnVerStock.Size = new Size(172, 55);
             btnVerStock.TabIndex = 3;
             btnVerStock.Text = "Ver stock";
             btnVerStock.UseVisualStyleBackColor = false;
@@ -134,18 +126,18 @@
             label3.BackColor = Color.CadetBlue;
             label3.Font = new Font("Castellar", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(208, 61);
+            label3.Location = new Point(182, 46);
             label3.Name = "label3";
-            label3.Size = new Size(531, 25);
+            label3.Size = new Size(436, 19);
             label3.TabIndex = 5;
             label3.Text = "Bienvenido a la fabrica MísticaMousse";
             // 
             // FormFabricaOperario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(label3);
             Controls.Add(btnVerStock);
             Controls.Add(btnVerProductos);
@@ -153,10 +145,10 @@
             Controls.Add(groupBox1);
             ForeColor = SystemColors.ActiveCaptionText;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormFabricaOperario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Operario";
+            Load += FormFabricaOperario_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

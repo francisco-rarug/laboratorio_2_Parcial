@@ -220,6 +220,7 @@
             Name = "FormFabricaSupervisor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Supervisor";
+            Load += FormFabricaSupervisor_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

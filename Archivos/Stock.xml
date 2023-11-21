@@ -2,7 +2,7 @@
 <ArrayOfComponenteCantidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ComponenteCantidad>
     <Componente>Amargo</Componente>
-    <Cantidad>100</Cantidad>
+    <Cantidad>200</Cantidad>
   </ComponenteCantidad>
   <ComponenteCantidad>
     <Componente>Vegano</Componente>
@@ -26,11 +26,11 @@
   </ComponenteCantidad>
   <ComponenteCantidad>
     <Componente>Glaseadas</Componente>
-    <Cantidad>100</Cantidad>
+    <Cantidad>200</Cantidad>
   </ComponenteCantidad>
   <ComponenteCantidad>
     <Componente>Cubiertas</Componente>
-    <Cantidad>100</Cantidad>
+    <Cantidad>200</Cantidad>
   </ComponenteCantidad>
   <ComponenteCantidad>
     <Componente>Con chispas</Componente>

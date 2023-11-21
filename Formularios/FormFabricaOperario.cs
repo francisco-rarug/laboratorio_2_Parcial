@@ -14,6 +14,7 @@ namespace Rarug.Francisco.Parcial
 {
     public partial class FormFabricaOperario : Form
     {
+        private Newsletter newsletter;
         public FormFabricaOperario()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Rarug.Francisco.Parcial
         /// <param name="crearMetodo">Función que realiza la creación del producto y devuelve un resultado booleano.</param>
         /// <param name="exitoMensaje">Mensaje a mostrar en caso de éxito.</param>
         /// <param name="errorMensaje">Mensaje a mostrar en caso de error.</param>
-        public void CrearProductoDefault(Func<bool> crearMetodo, string exitoMensaje, string errorMensaje)
+        public void CrearProductoDefault(Func<bool> crearMetodo)
         {
             try
             {
@@ -33,8 +34,6 @@ namespace Rarug.Francisco.Parcial
                 {
                     FormModal1 formProduct = new FormModal1();
                     formProduct.ShowDialog();
-
-                    MessageBox.Show($"{exitoMensaje} exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -46,13 +45,15 @@ namespace Rarug.Francisco.Parcial
         private void btnDonaDefault_Click(object sender, EventArgs e)
         {
             Chocolate nuevoChocolate;
-            CrearProductoDefault(() => Chocolate.CrearChocolateDefault(out nuevoChocolate), "Chocolate creado", "Ha ocurrido un error al crear el chocolate");
+            CrearProductoDefault(() => Chocolate.CrearChocolateDefault(out nuevoChocolate));
+            newsletter.botonDonaDefault();
         }
 
         private void btnChocoDefault_Click(object sender, EventArgs e)
         {
             Dona nuevaDona;
-            CrearProductoDefault(() => Dona.CrearDonaDefault(out nuevaDona), "Dona creada", "Ha ocurrido un error al crear la dona");
+            CrearProductoDefault(() => Dona.CrearDonaDefault(out nuevaDona));
+            newsletter.botonChocolateDefault();
         }
 
         private void btnVerProductos_Click(object sender, EventArgs e)
@@ -94,6 +95,24 @@ namespace Rarug.Francisco.Parcial
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MostrarMensajeDona(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dona creada", "Producto default");
+        }
+
+        private void MostrarMensajeChocolate(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chocolate creado", "Producto default");
+        }
+
+        private void FormFabricaOperario_Load(object sender, EventArgs e)
+        {
+            newsletter = new Newsletter();
+
+            newsletter.MensajeDona += MostrarMensajeDona;
+            newsletter.MensajeChocolate += MostrarMensajeChocolate;
         }
     }
 }

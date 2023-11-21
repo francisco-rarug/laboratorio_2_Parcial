@@ -134,5 +134,32 @@ namespace Fabrica
                 }
             }
         }
+
+        public static void AgregarXml()
+        {
+            try
+            {
+                string directorioPath = @"C:\Users\NoxiePC\source\repos\Rarug.Francisco.Parcial\Archivos\Stock.xml";
+
+
+                List<ComponenteCantidad> datos = new List<ComponenteCantidad>();
+                foreach (var item in Produccion.Materiales)
+                {
+                    var elemento = new ComponenteCantidad(item.Key, item.Value);
+                    datos.Add(elemento);
+                }
+
+                if (datos != null && datos.Count > 0)
+                {
+                    var archivosManager = new Archivos<List<ComponenteCantidad>>();
+                    archivosManager.Escribir_XML(directorioPath, datos);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+        }
     }
 }

@@ -11,28 +11,28 @@ namespace Fabrica
     public class Newsletter
     {
 
-        public event MensajeEventHandler MensajeClaro;
+        public event MensajeEventHandler MensajeDona;
 
-        public event MensajeEventHandler MensajeOscuro;
+        public event MensajeEventHandler MensajeChocolate;
 
-        public void botonClaro()
+        public void botonDonaDefault()
         {
-            mensajeClaro();
+            mensajeDona();
         }
 
-        public void botonOscuro()
+        public void botonChocolateDefault()
         {
-            mensajeOscuro();
+            mensajeChocolate();
         }
 
-        protected virtual void mensajeClaro()
+        protected virtual void mensajeDona()
         {
-            MensajeClaro.Invoke(this, EventArgs.Empty);
+            MensajeDona.Invoke(this, EventArgs.Empty);
         }
 
-        protected virtual void mensajeOscuro()
+        protected virtual void mensajeChocolate()
         {
-            MensajeOscuro.Invoke(this, EventArgs.Empty);
+            MensajeChocolate.Invoke(this, EventArgs.Empty);
         }
     }
 }

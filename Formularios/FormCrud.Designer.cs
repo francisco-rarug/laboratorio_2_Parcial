@@ -127,7 +127,6 @@
             Name = "FormCrud";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Crud";
-            Load += FormCrud_Load;
             ResumeLayout(false);
             PerformLayout();
         }
