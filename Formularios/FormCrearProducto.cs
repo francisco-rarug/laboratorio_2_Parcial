@@ -13,6 +13,32 @@ namespace Rarug.Francisco.Parcial
             InitializeComponent();
         }
 
+
+        private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, ProductoOperationDelegate agregarProductoALista)
+        {
+            try
+            {
+                string tipo = ObtenerSeleccion(tipoGroupBox);
+                string detalle = ObtenerSeleccion(detalleGroupBox);
+
+                if (!verificarStock(tipo, detalle))
+                {
+                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                MostrarFormularioModal();
+
+                agregarProductoALista(tipo, detalle);
+
+                Produccion.Stock(tipo, detalle);
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+        }
+
         private string ObtenerSeleccion(GroupBox grupo)
         {
             foreach (Control item in grupo.Controls)
@@ -40,30 +66,7 @@ namespace Rarug.Francisco.Parcial
             }
         }
 
-        private void CrearProducto(GroupBox tipoGroupBox, GroupBox detalleGroupBox, VerificarStockDelegate verificarStock, ProductoOperationDelegate agregarProductoALista)
-        {
-            try
-            {
-                string tipo = ObtenerSeleccion(tipoGroupBox);
-                string detalle = ObtenerSeleccion(detalleGroupBox);
-
-                if (!verificarStock(tipo, detalle))
-                {
-                    MessageBox.Show("No queda stock", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                MostrarFormularioModal();
-
-                agregarProductoALista(tipo, detalle);
-
-                Produccion.Stock(tipo, detalle);
-            }
-            catch (Exception ex)
-            {
-                Archivos<string>.Errores(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
-            }
-        }
+        
 
         private void btnCrearChocolate_Click_1(object sender, EventArgs e)
         {
